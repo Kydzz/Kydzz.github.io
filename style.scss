@@ -1,0 +1,160 @@
+
+@mixin colorBorder($social) {
+    color: $social;
+    background-color: #efefef;
+    border: 2px solid $social;
+}
+$font-family: 'Oswald', sans-serif;
+@mixin clearfix() {
+    overflow: hidden;
+}
+%transform{
+    transition:  all 0.2s;
+}
+$facebook: #4267B2;
+$twitter: #1CB7EB;
+$github: #24292E;
+$ig: black;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(bg2.jpg) no-repeat center; 
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+ //canvas JS
+canvas.particles-js-canvas-el {
+    position: absolute;
+}
+//nav
+
+.nav{ 
+    overflow: hidden;
+    height: auto;
+    width: 783px;
+    margin: 0 auto;
+    a{
+        position: relative;
+        top: 17px;
+        @include clearfix();
+        img{
+            position: absolute;
+            max-width: 240px;
+        }
+    }
+    .menu{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .link{
+        display:block;
+        transition: 0.3s linear;
+    }
+}
+//nav a share
+.share{
+    float: right;
+    display: inline-block;
+    margin: 10px;
+    padding: 11px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 999px;
+    cursor: pointer;
+    .ngayxua,.ngayxua1,.ngayxua2{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    &.abc:hover{
+        @include colorBorder($facebook);
+        @extend %transform;
+    }
+    &.twitters:hover{
+        @include colorBorder($twitter);
+        @extend %transform;
+    }
+    &.github:hover{
+        @include colorBorder($github);
+        @extend %transform;
+
+    }
+    &.instagram:hover{
+        @include colorBorder($ig);
+        @extend %transform;
+    }
+    ul{
+        list-style: none;
+        li {
+            i.fab{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+// LINE
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff96;
+}
+//CV
+.title{
+    text-align: center;
+        h1{
+            font-size: 3rem;
+            font-family: 'Oswald', sans-serif;
+            color: #efefef;
+            margin: 20px 0 10px 0;
+            user-select: none;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        img{
+            border-radius: 50%;
+            
+        }
+}
+.myCV section{
+    // width: 100vw;
+    // height: 100vh;
+    color: #efefef;
+    text-align: center;
+    transform: translate(0,3%);
+    line-height: 4rem;
+    user-select: none;
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    button{
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    transition: all 0.2s;
+    &:hover{
+        background-color: #efefef;
+        color: black;
+        border: 1px solid black;
+    }
+    }
+}
+@import "responsive";
+@import "responsive2";

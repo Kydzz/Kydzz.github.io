@@ -1,0 +1,177 @@
+.share.abc:hover, .share.twitters:hover, .share.github:hover, .share.instagram:hover {
+  transition: all 0.2s; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: url(bg2.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden; }
+
+canvas.particles-js-canvas-el {
+  position: absolute; }
+
+.nav {
+  overflow: hidden;
+  height: auto;
+  width: 783px;
+  margin: 0 auto; }
+  .nav a {
+    position: relative;
+    top: 17px;
+    overflow: hidden; }
+    .nav a img {
+      position: absolute;
+      max-width: 240px; }
+  .nav .menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden; }
+  .nav .link {
+    display: block;
+    transition: 0.3s linear; }
+
+.share {
+  float: right;
+  display: inline-block;
+  margin: 10px;
+  padding: 11px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 999px;
+  cursor: pointer; }
+  .share .ngayxua, .share .ngayxua1, .share .ngayxua2 {
+    opacity: 0;
+    visibility: hidden;
+    display: none; }
+  .share.abc:hover {
+    color: #4267B2;
+    background-color: #efefef;
+    border: 2px solid #4267B2; }
+  .share.twitters:hover {
+    color: #1CB7EB;
+    background-color: #efefef;
+    border: 2px solid #1CB7EB; }
+  .share.github:hover {
+    color: #24292E;
+    background-color: #efefef;
+    border: 2px solid #24292E; }
+  .share.instagram:hover {
+    color: black;
+    background-color: #efefef;
+    border: 2px solid black; }
+  .share ul {
+    list-style: none; }
+    .share ul li i.fab {
+      font-size: 25px; }
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff96; }
+
+.title {
+  text-align: center; }
+  .title h1 {
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+    color: #efefef;
+    margin: 20px 0 10px 0;
+    user-select: none;
+    text-align: center;
+    text-transform: capitalize; }
+  .title img {
+    border-radius: 50%; }
+
+.myCV section {
+  color: #efefef;
+  text-align: center;
+  transform: translate(0, 3%);
+  line-height: 4rem;
+  user-select: none; }
+  .myCV section h1 {
+    font-size: 3rem; }
+  .myCV section h2 {
+    font-size: 2rem; }
+  .myCV section p {
+    font-size: 1rem; }
+  .myCV section button {
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    transition: all 0.2s; }
+    .myCV section button:hover {
+      background-color: #efefef;
+      color: black;
+      border: 1px solid black; }
+
+.hidden {
+  display: block !important; }
+
+.nav {
+  font-family: 'Oswald', sans-serif; }
+  @media screen and (max-width: 320px) {
+    .nav {
+      overflow: hidden;
+      padding: 7px; }
+      .nav a {
+        top: 0px;
+        width: 100%; }
+        .nav a img {
+          position: relative;
+          max-width: 100%; }
+      .nav .menu {
+        color: #fff;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        left: 112px;
+        margin-top: 10px;
+        font-size: 25px;
+        text-transform: uppercase; }
+        .nav .menu:hover {
+          color: aqua; }
+      .nav .link {
+        display: none; } }
+
+@media screen and (max-width: 320px) {
+  .share {
+    display: block;
+    float: none;
+    text-transform: uppercase; }
+    .share .ngayxua {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      text-align: center;
+      left: 120px;
+      top: 18px; }
+    .share .ngayxua1 {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      text-align: center;
+      left: 125px;
+      top: 170px; }
+    .share .ngayxua2 {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      text-align: center;
+      left: 127px;
+      top: 290px; } }
+
+/*# sourceMappingURL=style.css.map */
