@@ -4,7 +4,7 @@
     background-color: #efefef;
     border: 2px solid $social;
 }
-$font-family: 'Oswald', sans-serif;
+$font-family: 'Pacifico', cursive;;
 @mixin clearfix() {
     overflow: hidden;
 }
@@ -66,7 +66,7 @@ canvas.particles-js-canvas-el {
     color: #fff;
     width: 50px;
     height: 50px;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     text-align: center;
     border-radius: 999px;
     cursor: pointer;
@@ -113,7 +113,7 @@ canvas.particles-js-canvas-el {
     text-align: center;
         h1{
             font-size: 3rem;
-            font-family: 'Oswald', sans-serif;
+            font-family: $font-family;
             color: #efefef;
             margin: 20px 0 10px 0;
             user-select: none;
@@ -122,7 +122,7 @@ canvas.particles-js-canvas-el {
         }
         img{
             border-radius: 50%;
-            
+            border:5px solid aqua;
         }
 }
 .myCV section{

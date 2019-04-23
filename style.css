@@ -10,20 +10,20 @@ body {
   background: url(bg2.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 canvas.particles-js-canvas-el {
   position: absolute; }
 
 .nav {
-  overflow-x: hidden;
+  overflow: hidden;
   height: auto;
   width: 783px;
   margin: 0 auto; }
   .nav a {
     position: relative;
     top: 17px;
-    overflow-x: hidden; }
+    overflow: hidden; }
     .nav a img {
       position: absolute;
       max-width: 240px; }
@@ -43,7 +43,6 @@ canvas.particles-js-canvas-el {
   color: #fff;
   width: 50px;
   height: 50px;
-  /* border: 1px solid #ccc; */
   text-align: center;
   border-radius: 999px;
   cursor: pointer; }
@@ -81,14 +80,15 @@ canvas.particles-js-canvas-el {
   text-align: center; }
   .title h1 {
     font-size: 3rem;
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     color: #efefef;
     margin: 20px 0 10px 0;
     user-select: none;
     text-align: center;
     text-transform: capitalize; }
   .title img {
-    border-radius: 50%; }
+    border-radius: 50%;
+    border: 5px solid aqua; }
 
 .myCV section {
   color: #efefef;
@@ -118,10 +118,10 @@ canvas.particles-js-canvas-el {
   display: block !important; }
 
 .nav {
-  font-family: 'Pacifico', cursive; }
+  font-family: 'Oswald', sans-serif; }
   @media screen and (max-width: 320px) {
     .nav {
-      overflow-x: hidden;
+      overflow: hidden;
       padding: 7px; }
       .nav a {
         top: 0px;
@@ -148,8 +148,7 @@ canvas.particles-js-canvas-el {
   .share {
     display: block;
     float: none;
-   /* text-transform: uppercase;  */
-  } 
+    text-transform: uppercase; }
     .share .ngayxua {
       display: block;
       opacity: 1;
@@ -164,15 +163,15 @@ canvas.particles-js-canvas-el {
       visibility: visible;
       position: absolute;
       text-align: center;
-      left: 117px;
-      top: 17px; }
+      left: 125px;
+      top: 170px; }
     .share .ngayxua2 {
       display: block;
       opacity: 1;
       visibility: visible;
       position: absolute;
       text-align: center;
-      left: 117px;
-      top: 17px; } }
+      left: 127px;
+      top: 290px; } }
 
 /*# sourceMappingURL=style.css.map */
