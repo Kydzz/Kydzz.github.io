@@ -10,20 +10,20 @@ body {
   background: url(bg2.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 canvas.particles-js-canvas-el {
   position: absolute; }
 
 .nav {
-  overflow: hidden;
+  overflow-x: hidden;
   height: auto;
   width: 783px;
   margin: 0 auto; }
   .nav a {
     position: relative;
     top: 17px;
-    overflow: hidden; }
+    overflow-x-x: hidden; }
     .nav a img {
       position: absolute;
       max-width: 240px; }
@@ -77,25 +77,34 @@ canvas.particles-js-canvas-el {
   background-color: #ffffff96; }
 
 .title {
-  text-align: center; }
-  .title h1 {
-    font-size: 3rem;
-    font-family: "Pacifico", cursive;
-    color: #efefef;
-    margin: 20px 0 10px 0;
-    user-select: none;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .title .outline {
+    height: 150px;
     text-align: center;
-    text-transform: capitalize; }
-  .title img {
-    border-radius: 50%;
-    border: 5px solid aqua; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .title .outline::before {
+      content: "";
+      background: transparent;
+      border-radius: 50%;
+      border: 4px solid #1CB7EB;
+      height: 110px;
+      width: 110px; }
+    .title .outline img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      position: absolute; }
 
 .myCV section {
   color: #efefef;
   text-align: center;
-  transform: translate(0, 3%);
-  line-height: 4rem;
-  user-select: none; }
+  line-height: 4rem; }
   .myCV section h1 {
     font-size: 3rem; }
   .myCV section h2 {

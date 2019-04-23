@@ -5,3 +5,8 @@ console.log(menu);
 menu.addEventListener("click",()=>{
     link.classList.toggle("hidden");
 })
+
+navigator.geolocation.getCurrentPosition(function(event){
+
+    
+})
