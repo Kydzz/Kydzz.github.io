@@ -10,20 +10,20 @@ body {
   background: url(bg2.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 canvas.particles-js-canvas-el {
   position: absolute; }
 
 .nav {
-  overflow: hidden;
+  overflow-x: hidden;
   height: auto;
   width: 783px;
   margin: 0 auto; }
   .nav a {
     position: relative;
     top: 17px;
-    overflow: hidden; }
+    overflow-x: hidden; }
     .nav a img {
       position: absolute;
       max-width: 240px; }
@@ -81,7 +81,7 @@ canvas.particles-js-canvas-el {
   text-align: center; }
   .title h1 {
     font-size: 3rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Pacifico', cursive;
     color: #efefef;
     margin: 20px 0 10px 0;
     user-select: none;
@@ -118,10 +118,10 @@ canvas.particles-js-canvas-el {
   display: block !important; }
 
 .nav {
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Pacifico', cursive; }
   @media screen and (max-width: 320px) {
     .nav {
-      overflow: hidden;
+      overflow-x: hidden;
       padding: 7px; }
       .nav a {
         top: 0px;
@@ -148,7 +148,8 @@ canvas.particles-js-canvas-el {
   .share {
     display: block;
     float: none;
-    text-transform: uppercase; }
+   /* text-transform: uppercase;  */
+  } 
     .share .ngayxua {
       display: block;
       opacity: 1;
@@ -163,15 +164,15 @@ canvas.particles-js-canvas-el {
       visibility: visible;
       position: absolute;
       text-align: center;
-      left: 125px;
-      top: 170px; }
+      left: 117px;
+      top: 17px; }
     .share .ngayxua2 {
       display: block;
       opacity: 1;
       visibility: visible;
       position: absolute;
       text-align: center;
-      left: 127px;
-      top: 290px; } }
+      left: 117px;
+      top: 17px; } }
 
 /*# sourceMappingURL=style.css.map */
