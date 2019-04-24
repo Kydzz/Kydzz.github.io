@@ -98,6 +98,9 @@ $font-family: 'Pacifico', cursive;
 }
 .title{
     .outline{
+        &::before{
+            position: absolute;
+        }
         img{
             position: absolute;
         }

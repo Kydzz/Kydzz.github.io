@@ -230,6 +230,8 @@ canvas.particles-js-canvas-el {
   .myCV {
     width: 100%; } }
 
+.title .outline::before {
+  position: absolute; }
 .title .outline img {
   position: absolute; }
 
