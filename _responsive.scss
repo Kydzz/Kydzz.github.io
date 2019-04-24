@@ -1,6 +1,7 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$font-family: 'Pacifico', cursive;
 @mixin mobile{
     @media screen and (max-width: 320px){
         @content;
@@ -27,7 +28,7 @@ $desktop-width: 1024px;
     text-align: center;
 }
 .nav{
-    font-family: 'Oswald', sans-serif;
+    font-family: $font-family;
     @include mobile{
         overflow: hidden;
         padding: 7px;
@@ -48,7 +49,6 @@ $desktop-width: 1024px;
             left: 112px;
             margin-top: 10px;
             font-size: 25px;
-            text-transform: uppercase;
             &:hover{
                 color: aqua;
             }
@@ -62,7 +62,6 @@ $desktop-width: 1024px;
     @include mobile{
         display:block;
         float:none;
-        text-transform: uppercase;
         .ngayxua{
             display: block;
             opacity: 1;
@@ -78,8 +77,8 @@ $desktop-width: 1024px;
             visibility: visible;
             position: absolute;
             text-align: center;
-            left: 125px;
-            top: 170px;
+            left: 119px;
+            top: 17px;
         }
         .ngayxua2{
             display: block;
@@ -87,9 +86,14 @@ $desktop-width: 1024px;
             visibility: visible;
             position: absolute;
             text-align: center;
-            left: 127px;
-            top: 290px;
+            left: 119px;
+            top: 14px;
         }
+    }
+}
+.myCV{
+    @include mobile{
+        width:100%;
     }
 }
 

@@ -172,7 +172,7 @@ canvas.particles-js-canvas-el {
   display: block !important; }
 
 .nav {
-  font-family: 'Oswald', sans-serif; }
+  font-family: "Pacifico", cursive; }
   @media screen and (max-width: 320px) {
     .nav {
       overflow: hidden;
@@ -191,8 +191,7 @@ canvas.particles-js-canvas-el {
         position: relative;
         left: 112px;
         margin-top: 10px;
-        font-size: 25px;
-        text-transform: uppercase; }
+        font-size: 25px; }
         .nav .menu:hover {
           color: aqua; }
       .nav .link {
@@ -201,8 +200,7 @@ canvas.particles-js-canvas-el {
 @media screen and (max-width: 320px) {
   .share {
     display: block;
-    float: none;
-    text-transform: uppercase; }
+    float: none; }
     .share .ngayxua {
       display: block;
       opacity: 1;
@@ -217,15 +215,19 @@ canvas.particles-js-canvas-el {
       visibility: visible;
       position: absolute;
       text-align: center;
-      left: 125px;
-      top: 170px; }
+      left: 119px;
+      top: 17px; }
     .share .ngayxua2 {
       display: block;
       opacity: 1;
       visibility: visible;
       position: absolute;
       text-align: center;
-      left: 127px;
-      top: 290px; } }
+      left: 119px;
+      top: 14px; } }
+
+@media screen and (max-width: 320px) {
+  .myCV {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
