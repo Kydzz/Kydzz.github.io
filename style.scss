@@ -6,7 +6,7 @@
 }
 $font-family: 'Pacifico', cursive;;
 @mixin clearfix() {
-    overflow-x-x: hidden;
+    overflow-x: hidden;
 }
 %transform{
     transition:  all 0.2s;
@@ -141,36 +141,93 @@ canvas.particles-js-canvas-el {
         
     }
 }
-.myCV section{
-    // width: 100vw;
-    // height: 100vh;
-    color: #efefef;
-    text-align: center;
-    // transform: translate(0,3%);
-    line-height: 4rem;
-    // user-select: none;
-    h1{
-        font-size: 3rem;
+.myCV {
+    width:25%;
+    margin: 0 auto;
+    section {
+        // width: 100vw;
+        // height: 100vh;
+        color: #efefef;
+        text-align: center;
+        // transform: translate(0,3%);
+        line-height: 4rem;
+        // user-select: none;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 999px;
+            border: 1px solid #fff;
+            background: none;
+            color: #fff;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: #efefef;
+                color: black;
+                border: 1px solid black;
+            }
+        }
     }
-    h2{
-        font-size: 2rem;
-    }
-    p{
-        font-size: 1rem;
-    }
-    button{
-    padding: 10px 20px;
-    border-radius: 999px;
-    border: 1px solid #fff;
-    background: none;
-    color: #fff;
-    transition: all 0.2s;
-    &:hover{
-        background-color: #efefef;
-        color: black;
-        border: 1px solid black;
-    }
-    }
+}
+
+.modal{
+        font-family: $font-family;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+        z-index: 9999;
+        &-content{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            background-color: white;
+            color:black;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            h2{
+                width: 150px;
+            }
+        }
+        &-close{
+            // position: absolute;
+            float: right;
+            width: 1.3rem;
+            // line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            background-color: lightgray
+        }
+}
+.show-modal{
+    visibility: visible;
+    opacity: 1;
+    transition: .3s linear;
+}
+#map {
+    width: 50%;
+    height: 300px;
+    margin:0 auto;
+    background-color: grey;
 }
 @import "responsive";
 @import "responsive2";
