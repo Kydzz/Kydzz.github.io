@@ -230,4 +230,7 @@ canvas.particles-js-canvas-el {
   .myCV {
     width: 100%; } }
 
+.title .outline img {
+  position: absolute; }
+
 /*# sourceMappingURL=style.css.map */
