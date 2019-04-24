@@ -28,9 +28,10 @@ $font-family: 'Pacifico', cursive;
     text-align: center;
 }
 .nav{
+    overflow-x: hidden;
     font-family: $font-family;
     @include mobile{
-        overflow: hidden;
+        overflow-x: hidden;
         padding: 7px;
         a{
             top: 0px;
@@ -60,6 +61,7 @@ $font-family: 'Pacifico', cursive;
 }
 .share{
     @include mobile{
+        overflow-x: hidden;
         display:block;
         float:none;
         .ngayxua{
@@ -93,10 +95,12 @@ $font-family: 'Pacifico', cursive;
 }
 .myCV{
     @include mobile{
+        overflow-x: hidden;
         width:100%;
     }
 }
 .title{
+    overflow-x: hidden;
     .outline{
         &::before{
             position: absolute;

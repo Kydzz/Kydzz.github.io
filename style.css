@@ -172,10 +172,11 @@ canvas.particles-js-canvas-el {
   display: block !important; }
 
 .nav {
+  overflow-x: hidden;
   font-family: "Pacifico", cursive; }
   @media screen and (max-width: 320px) {
     .nav {
-      overflow: hidden;
+      overflow-x: hidden;
       padding: 7px; }
       .nav a {
         top: 0px;
@@ -199,6 +200,7 @@ canvas.particles-js-canvas-el {
 
 @media screen and (max-width: 320px) {
   .share {
+    overflow-x: hidden;
     display: block;
     float: none; }
     .share .ngayxua {
@@ -228,11 +230,14 @@ canvas.particles-js-canvas-el {
 
 @media screen and (max-width: 320px) {
   .myCV {
+    overflow-x: hidden;
     width: 100%; } }
 
-.title .outline::before {
-  position: absolute; }
-.title .outline img {
-  position: absolute; }
+.title {
+  overflow-x: hidden; }
+  .title .outline::before {
+    position: absolute; }
+  .title .outline img {
+    position: absolute; }
 
 /*# sourceMappingURL=style.css.map */
