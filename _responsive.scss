@@ -8,12 +8,17 @@ $font-family: 'Pacifico', cursive;
     }
 }
 @mixin iphone6s{
-    @media screen and (max-width: 414px) {
+    @media screen and (min-width: 321px) and (max-width: 766px) {
         @content;
     }
 }
 @mixin tablet{
     @media screen and (min-width: 768px) and (max-width: 1024px){
+        @content;
+    }
+}
+@mixin mobile3{
+    @media screen and (max-width: 766px) {
         @content;
     }
 }
@@ -31,7 +36,7 @@ $font-family: 'Pacifico', cursive;
     overflow-x: hidden;
     font-family: $font-family;
     @include mobile{
-        overflow-x: hidden;
+        overflow: hidden;
         padding: 7px;
         a{
             top: 0px;
@@ -58,10 +63,45 @@ $font-family: 'Pacifico', cursive;
             display:none;
         }
     }  
+    @include iphone6s{
+        overflow: hidden;
+        padding: 7px;
+        a{
+            top: 0px;
+            width: 100%;
+            img{
+                // position: relative;
+                display:none;
+            }
+        }
+        .menu{
+            color: #fff;
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            left: 112px;
+            margin-top: 10px;
+            font-size: 25px;
+            &:hover{
+                color: aqua;
+            }
+        }
+        .link{
+            display:none;
+        }
+    }
+    
+
+}
+.line{
+    @include iphone6s{
+        display:none;
+    }
 }
 .share{
     @include mobile{
-        overflow-x: hidden;
+        overflow: hidden;
         display:block;
         float:none;
         .ngayxua{
@@ -92,11 +132,18 @@ $font-family: 'Pacifico', cursive;
             top: 14px;
         }
     }
+    @include iphone6s{
+        float:none;
+    }
+    
 }
 .myCV{
     @include mobile{
         overflow-x: hidden;
         width:100%;
+    }
+    @include iphone6s{
+        width:90%;
     }
 }
 .title{

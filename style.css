@@ -176,7 +176,7 @@ canvas.particles-js-canvas-el {
   font-family: "Pacifico", cursive; }
   @media screen and (max-width: 320px) {
     .nav {
-      overflow-x: hidden;
+      overflow: hidden;
       padding: 7px; }
       .nav a {
         top: 0px;
@@ -197,10 +197,36 @@ canvas.particles-js-canvas-el {
           color: aqua; }
       .nav .link {
         display: none; } }
+  @media screen and (min-width: 321px) and (max-width: 766px) {
+    .nav {
+      overflow: hidden;
+      padding: 7px; }
+      .nav a {
+        top: 0px;
+        width: 100%; }
+        .nav a img {
+          display: none; }
+      .nav .menu {
+        color: #fff;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        left: 112px;
+        margin-top: 10px;
+        font-size: 25px; }
+        .nav .menu:hover {
+          color: aqua; }
+      .nav .link {
+        display: none; } }
+
+@media screen and (min-width: 321px) and (max-width: 766px) {
+  .line {
+    display: none; } }
 
 @media screen and (max-width: 320px) {
   .share {
-    overflow-x: hidden;
+    overflow: hidden;
     display: block;
     float: none; }
     .share .ngayxua {
@@ -227,11 +253,17 @@ canvas.particles-js-canvas-el {
       text-align: center;
       left: 119px;
       top: 14px; } }
+@media screen and (min-width: 321px) and (max-width: 766px) {
+  .share {
+    float: none; } }
 
 @media screen and (max-width: 320px) {
   .myCV {
     overflow-x: hidden;
     width: 100%; } }
+@media screen and (min-width: 321px) and (max-width: 766px) {
+  .myCV {
+    width: 90%; } }
 
 .title {
   overflow-x: hidden; }

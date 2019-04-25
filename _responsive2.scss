@@ -1,4 +1,10 @@
-// @mixin mobile{
+// $mobile-width: 320px;
+// $tablet-width: 768px;
+// $desktop-width: 1024px;
+// $font-family: 'Pacifico', cursive;
+
+
+// @mixin mobile2{
 //     @media screen and (max-width: 414px){
 //         @content;
 //     }
@@ -15,28 +21,29 @@
 //     text-align: center;
 // }
 // .nav{
-//     font-family: 'Oswald', sans-serif;
-//     @include mobile{
+//     transition: 0.2s all;
+//     font-family: $font-family;
+//     @include mobile2{
 //         overflow: hidden;
 //         padding: 7px;
 //         a{
 //             top: 0px;
-//             width: 100%;
+//             left: 57px;
 //             img{
 //                 position: relative;
-//                 max-width: 100%;
+                
 //             }
 //         }
 //         .menu{
+//             transition: 0.2s linear;
 //             color: #fff;
 //             display: block;
 //             opacity: 1;
 //             visibility: visible;
 //             position: relative;
-//             left: 112px;
+//             left: 125px;
 //             margin-top: 10px;
 //             font-size: 25px;
-//             text-transform: uppercase;
 //             &:hover{
 //                 color: aqua;
 //             }
@@ -47,18 +54,17 @@
 //     }  
 // }
 // .share{
-//     @include mobile{
+//     @include mobile2{
 //         display:block;
 //         float:none;
-//         text-transform: uppercase;
 //         .ngayxua{
 //             display: block;
 //             opacity: 1;
 //             visibility: visible;
 //             position: absolute;
 //             text-align: center;
-//             left: 120px;
-//             top: 18px;
+//             left: 117px;
+//             top: 14px;
 //         }
 //         .ngayxua1{
 //             display: block;
@@ -66,8 +72,8 @@
 //             visibility: visible;
 //             position: absolute;
 //             text-align: center;
-//             left: 125px;
-//             top: 170px;
+//             left: 117px;
+//             top: 14px;
 //         }
 //         .ngayxua2{
 //             display: block;
@@ -75,8 +81,13 @@
 //             visibility: visible;
 //             position: absolute;
 //             text-align: center;
-//             left: 127px;
-//             top: 290px;
+//             left: 117px;
+//             top: 14px;
 //         }
+//     }
+// }
+// .myCV{
+//     @include mobile2{
+//     width: 100% !important;
 //     }
 // }
