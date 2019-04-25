@@ -17,6 +17,7 @@
 </head>
 
 <body>
+        <span class="container" style="position:absolute;z-index: inherit 99999;margin:0;padding:0"></span>
     <div id="particles-js"></div>
     <!-- END particles-js -->
     <div class="nav animated bounceInLeft">
@@ -25,7 +26,8 @@
         </a>
         <div class="menu">
             <p>Menu
-                <span><i class="fas fa-bars"></i></span>
+                <span><i class="fas fa-bars" style="font-size:20px"></i></span>
+                <span<i class="fas fa-times" style="font-size:20px"></i></span>
             </p>
         </div>
         <div class="link">
@@ -100,7 +102,6 @@
     </div>
 
 
-
     <script>
         function initMap() {
             // The location of Uluru
@@ -124,6 +125,7 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNSGR1QgRqLI2ZtWHlF3BvokLNIy_3QtA&callback=initMap">
     </script>
+    <script src="cursor.js"></script>
     <script src="main.js"></script>
     <script src="particles.min.js"></script>
     <script src="app.js"></script>

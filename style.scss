@@ -104,9 +104,11 @@ canvas.particles-js-canvas-el {
 
 // LINE
 .line{
-    height: 1px;
-    width: 100%;
+    height: 2px;
+    width: 30%;
     background-color: #ffffff96;
+    position: relative;
+    left: 35%;
 }
 //CV
 .title {

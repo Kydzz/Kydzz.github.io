@@ -89,6 +89,8 @@ $font-family: 'Pacifico', cursive;
         }
         .link{
             display:none;
+            position: relative;
+            left:12%;
         }
     }
     
@@ -134,6 +136,10 @@ $font-family: 'Pacifico', cursive;
     }
     @include iphone6s{
         float:none;
+        &.abc:hover,&.twitters:hover,&.github:hover,&.instagram:hover{
+            border:none;
+            background:none;
+        }
     }
     
 }
