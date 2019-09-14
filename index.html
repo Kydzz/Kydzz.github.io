@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="css/stylemusic.css">
+    <link rel="stylesheet" href="css/all.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <title>Made With Me</title>
 </head>
@@ -39,8 +41,8 @@
                 </div>
                 <div class="text1">
                     <div class="text"></div>
-                    <!-- <p >Tran-Quoc-Hiep</p>
-                    <p >06 - 07 - 1999</p>
+                    <p >Tran Quoc Hiep</p>
+                    <!-- <p >06 - 07 - 1999</p>
                     <p >Front-End</p> -->
                     <button type="button" class="triggle">Show My Location</button>
                 </div>
@@ -93,6 +95,8 @@
         <div class="off-set">
             <p>OFFSET - {{currentPosition}} px</p>
         </div>
+        <!-- END OFFSET -->
+
         <a class="back-to-top" @click="scrollOnTop" :class="{'hide-backtotop': showBacktotop}">
             <!-- <img src="1.svg" width="50px" height="50px"> -->
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -102,11 +106,62 @@
             </svg>
         </a>
         </div>
-    
+        <!-- END BACKTOTOP -->
+
+        <div id="app-cover">
+            <div id="player">
+                <div id="player-track">
+                    <div id="album-name"></div>
+                    <div id="track-name"></div>
+                    <div id="track-time">
+                        <div id="current-time"></div>
+                        <div id="track-length"></div>
+                    </div>
+                    <div id="s-area">
+                        <div id="ins-time"></div>
+                        <div id="s-hover"></div>
+                        <div id="seek-bar"></div>
+                    </div>
+                </div>
+                <div id="player-content">
+                    <div id="album-art">
+                        <img src="/music_image/_1.jpg" class="active" id="_1">
+                        <img src="/music_image/_2.jpg" id="_2">
+                        <img src="/music_image/_3.jpg" id="_3">
+                        <img src="/music_image/_4.jpg" id="_4">
+                        <img src="/music_image/_5.jpg" id="_5">
+                        <img src="/music_image/_6.jpg" id="_6">
+                        <img src="/music_image/_7.jpg" id="_7">
+                        <img src="/music_image/_111.jpg" id="_8">
+                        <div id="buffer-box">Buffering ...</div>
+                    </div>
+                    <div id="player-controls">
+                        <div class="control">
+                            <div class="button" id="play-previous">
+                                <i class="fas fa-backward"></i>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="button" id="play-pause-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="button" id="play-next">
+                                <i class="fas fa-forward"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MUSIC -->
 
     <script src="vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
     <script src="1.js"></script>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/music.js'></script>
     <script src="text.js"></script>
     <script src="main.js"></script>
     

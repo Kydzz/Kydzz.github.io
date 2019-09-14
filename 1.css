@@ -159,6 +159,9 @@ video.video-setting{
   color: #FAFAFA;
   text-shadow: 0px 0px 2px #41B883;
 }
+.text1 p{
+    font-size: 0.9em;
+}
 button {
     font-family: 'Dosis', sans-serif;
     padding: 10px 20px;
@@ -271,4 +274,50 @@ button:hover{
     visibility: hidden;
     opacity: 0;
     transition: .3s all;
+}
+
+
+/* MUSIC */
+
+@media only screen and (max-width: 890px){
+    #app-cover{
+        height: 20px !important;
+        width: auto !important;
+        left: -16px !important;
+        bottom: 95px !important;
+        margin: 0 auto;
+    }
+    #album-art,#player-track{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    #player-content{
+        background: none !important;
+        box-shadow: none !important;
+    }
+    #player-controls{
+        float: none !important;
+        height: auto !important;
+        position: relative;
+        bottom: 120px;
+        left: 20px;
+        width: auto !important;
+    }
+    .control{
+        padding: 0!important;
+        float: none !important;
+        width: auto !important;
+    }
+    .button{
+        padding: 0px !important;
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 20px 0;
+        
+    }
+    .button i{
+        color: #fff !important;
+    }
 }
