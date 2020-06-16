@@ -11,7 +11,7 @@ new Vue({
     methods: {
         onScroll(e) {
             this.currentPosition = window.pageYOffset;
-            if (window.pageYOffset < 0) return;
+            if (window.pageYOffset < 10) return;
             this.showNav = window.pageYOffset < this.lastScrollPosition;
             this.lastScrollPosition = window.pageYOffset;
             this.showBacktotop = window.pageYOffset < 10;
