@@ -144,7 +144,7 @@ video.video-setting {
     -ms-transform: translateX(0) scale(1);
     transform: translateX(0) scale(1);
 }
-.text1 {
+.content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -169,14 +169,14 @@ video.video-setting {
     padding: 5px;
     line-height: 3em;
 }
-.text1 p {
+.content p {
     font-size: 2rem;
     text-shadow: 0 0 2px #41b883;
     font-weight: 900;
     font-size: 28px;
     color: #fafafa;
 }
-.text1 p:nth-of-type(1) {
+.content p:nth-of-type(1) {
     position: relative;
 }
 .text {
@@ -185,7 +185,7 @@ video.video-setting {
     color: #fafafa;
     text-shadow: 0 0 2px #41b883;
 }
-.text1 p {
+.content p {
     font-size: 0.9em;
 }
 button {
