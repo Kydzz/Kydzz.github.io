@@ -61,7 +61,7 @@ nav .nav-social a:hover {
     display: block;
     position: absolute;
     background: #00000029;
-    border-radius: 9999px;
+    border-radius: 5px;
     color: rgb(37, 228, 94);
     font-size: 15px;
     font-weight: 900;
@@ -165,9 +165,11 @@ video.video-setting {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #fff;
-    width: 400px;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 5px;
-    line-height: 3em;
+
+    /* line-height: 3em; */
 }
 .content p {
     font-size: 2rem;
@@ -181,12 +183,12 @@ video.video-setting {
 }
 .text {
     font-weight: 900;
-    font-size: 2.3em;
-    color: #fafafa;
+    font-size: 2.7em;
+    color: #fff;
     text-shadow: 0 0 2px #41b883;
 }
 .content p {
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 button {
     font-family: "Dosis", sans-serif;
@@ -264,16 +266,16 @@ button:hover {
 .hidden {
     display: block !important;
 }
-.off-set {
+.offset {
     position: fixed;
-    top: 10em;
-    background: #39a576;
+    top: 5em;
+    /* background: #39a576; */
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-box-shadow: 0 0 3px 0 #ccc;
     box-shadow: 0 0 3px 0 #ccc;
 }
-.off-set p {
+.offset p {
     font-size: 1.5rem;
     font-weight: 900;
     color: white;
