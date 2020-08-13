@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="mb-200">
+            <h1>VIỆT NAM <img :src="data[210].countryInfo.flag" alt="" class="w-120 h-80"></h1> 
+            <h4>DÂN SỐ: {{format(data[210].population)}}</h4>
+            <h6 class="text-center">Code By hiepgadeptrai</h6>
+        </div>
+        <div class=" flex justify-space-between mb-200">
+            <div class="p-5 yellow-600">
+                <h3>Ca Nhiễm</h3>
+                <p>{{data[210].cases}}</p>
+            </div>
+            <div class=" p-20 yellow-400">
+                <h3>Ca Nhiễm Mới</h3>
+                <p>{{data[210].todayCases}}</p>
+            </div>
+            <div class="p-20 red-600">
+                <h3>Ca Tử Vong</h3>
+                <p>{{data[210].deaths}}</p>
+            </div>
+            <div class="p-20 red-400">
+                <h3>Ca Tử Vong Mới</h3>
+                <p>{{data[210].todayDeaths}}</p>
+            </div>
+            <div class="p-20 green-600">
+                <h3>Phục Hồi</h3>
+                <p>{{data[210].recovered}}</p>
+            </div>
+            <div class="p-20 green-400">
+                <h3>Ca Phục Hồi Mới</h3>
+                <p>{{data[210].todayRecovered}}</p>
+            </div>
+        </div>
+        <!-- end vietnam -->
+        <div v-for="(item,index) in data" v-if="index < currentLength">
+            <div class="mb-200">
+                <h1>{{data[index].country}} <img :src="data[index].countryInfo.flag" alt="" class="w-120 h-80"></h1> 
+                <h4>DÂN SỐ: {{format(data[index].population)}}</h4>
+            </div>
+            <div class=" flex justify-space-between mb-200">
+                <div class="p-5 yellow-600">
+                    <h3>Ca Nhiễm</h3>
+                    <p>{{data[index].cases}}</p>
+                </div>
+                <div class=" p-20 yellow-400">
+                    <h3>Ca Nhiễm Mới</h3>
+                    <p>{{data[index].todayCases}}</p>
+                </div>
+                <div class="p-20 red-600">
+                    <h3>Ca Tử Vong</h3>
+                    <p>{{data[index].deaths}}</p>
+                </div>
+                <div class="p-20 red-400">
+                    <h3>Ca Tử Vong Mới</h3>
+                    <p>{{data[index].todayDeaths}}</p>
+                </div>
+                <div class="p-20 green-600">
+                    <h3>Phục Hồi</h3>
+                    <p>{{data[index].recovered}}</p>
+                </div>
+                <div class="p-20 green-400">
+                    <h3>Ca Phục Hồi Mới</h3>
+                    <p>{{data[index].todayRecovered}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- end for  -->
+        <div v-show="loading">Loading...</div>
+        <div v-if="isShow">
+            <div class="mb-200">
+                <h1>{{data[id].country}} <img :src="data[id].countryInfo.flag" alt="" class="w-120 h-80"></h1> 
+                <h4>DÂN SỐ: {{format(data[id].population)}}</h4>
+            </div>
+            <div class=" flex justify-space-between mb-200">
+                <div class="p-5 yellow-600">
+                    <h3>Ca Nhiễm</h3>
+                    <p>{{data[id].cases}}</p>
+                </div>
+                <div class=" p-20 yellow-400">
+                    <h3>Ca Nhiễm Mới</h3>
+                    <p>{{data[id].todayCases}}</p>
+                </div>
+                <div class="p-20 red-600">
+                    <h3>Ca Tử Vong</h3>
+                    <p>{{data[id].deaths}}</p>
+                </div>
+                <div class="p-20 red-400">
+                    <h3>Ca Tử Vong Mới</h3>
+                    <p>{{data[id].todayDeaths}}</p>
+                </div>
+                <div class="p-20 green-600">
+                    <h3>Phục Hồi</h3>
+                    <p>{{data[id].recovered}}</p>
+                </div>
+                <div class="p-20 green-400">
+                    <h3>Ca Phục Hồi Mới</h3>
+                    <p>{{data[id].todayRecovered}}</p>
+                </div>
+            </div>
+            </div>
+        <button 
+            class="fw-700 outline-0 px-120 py-60 text-center br-999 ml--320"
+            @click="currentLength += 3"
+        >Xem Thêm</button>
+        <input type="text" v-model="query" placeholder="Tìm Kiếm Quốc Gia" @keyup.enter="fetchCountry">
+        <button class="ml--580 px-120 py-60 br-999 outline-0" @click="showListCountry = !showListCountry">Danh Sách Quốc Gia</button>
+        <!-- <list-country :showListCountry="showListCountry"></list-country> -->
+        <transition name="fade">
+            <div class="full" v-if="showListCountry">
+                <div class="cancel" @click="showListCountry = !showListCountry"></div>
+                <div class="container">
+                    <div style="position: relative;">   
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Quốc Gia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(item,index) in data" class="text-center">
+                                    <td>{{index}}</td>
+                                    <td>{{data[index].country}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </transition>
+        <p>{{query}}</p>
+        <p>{{id}}</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
