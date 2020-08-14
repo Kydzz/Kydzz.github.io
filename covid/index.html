@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Covid 19</title>
 </head>
 <body>
     <div id="app">
@@ -13,7 +14,7 @@
             <h4>DÂN SỐ: {{format(data[210].population)}}</h4>
             <h6 class="text-center">Code By hiepgadeptrai</h6>
         </div>
-        <div class=" flex justify-space-between mb-200">
+        <div class=" flex justify-space-between mb-200 fs-48">
             <div class="p-5 yellow-600">
                 <h3>Ca Nhiễm</h3>
                 <p>{{data[210].cases}}</p>
@@ -79,7 +80,7 @@
                 <h1>{{data[id].country}} <img :src="data[id].countryInfo.flag" alt="" class="w-120 h-80"></h1> 
                 <h4>DÂN SỐ: {{format(data[id].population)}}</h4>
             </div>
-            <div class=" flex justify-space-between mb-200">
+            <div class="flex justify-space-between mb-200 fs-48">
                 <div class="p-5 yellow-600">
                     <h3>Ca Nhiễm</h3>
                     <p>{{data[id].cases}}</p>
@@ -106,12 +107,15 @@
                 </div>
             </div>
             </div>
-        <button 
-            class="fw-700 outline-0 px-120 py-60 text-center br-999 ml--320"
-            @click="currentLength += 3"
-        >Xem Thêm</button>
-        <input type="text" v-model="query" placeholder="Tìm Kiếm Quốc Gia" @keyup.enter="fetchCountry">
-        <button class="ml--580 px-120 py-60 br-999 outline-0" @click="showListCountry = !showListCountry">Danh Sách Quốc Gia</button>
+        <div class="flex flex-direction-column">
+            <button 
+                class="fw-700 outline-0 px-120 py-60 text-center br-999 ml--320"
+                @click="currentLength += 3"
+                >Xem Thêm</button>
+            <input type="text" v-model="query" placeholder="Tìm Kiếm Quốc Gia" @keyup.enter="fetchCountry">
+            <button class="ml--580 px-120 py-60 br-999 outline-0" @click="showListCountry = !showListCountry">Danh Sách Quốc Gia</button>
+        </div>
+        
         <!-- <list-country :showListCountry="showListCountry"></list-country> -->
         <transition name="fade">
             <div class="full" v-if="showListCountry">

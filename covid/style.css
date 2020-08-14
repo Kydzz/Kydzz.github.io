@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -32,10 +40,14 @@ body {
     margin-bottom: 50px;
 }
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .justify-space-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .yellow-600 {
@@ -66,6 +78,8 @@ button {
     left: 50%;
     position: relative;
     cursor: pointer;
+    -webkit-transition: .3s all linear;
+    -o-transition: .3s all linear;
     transition: .3s all linear;
 }
 input {
@@ -106,14 +120,19 @@ button:hover {
 .ml--580 {
     margin-left: -145px;
 }
+/* .fs-48 {
+    font-size: 12px;
+} */
 .container {
-    height: 430px;
-    width: 550px;
+    height: 25rem;
+    width: 30rem;
     background: #105469;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     border-radius: 5px;
     overflow-y: auto;
     /* padding:10px; */
@@ -184,9 +203,15 @@ max-height: 30px;
     background: #00000066;
 }
 .cancel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -194,10 +219,15 @@ max-height: 30px;
     z-index: 4;
     top: 10%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     border-radius: 50%;
-    box-shadow: 0px 0px 12px 2px #06c1ff;
+    -webkit-box-shadow: 0px 0px 12px 2px #06c1ff;
+            box-shadow: 0px 0px 12px 2px #06c1ff;
     cursor: pointer;
+    -webkit-transition: background .2s linear;
+    -o-transition: background .2s linear;
     transition: background .2s linear
 }
 .cancel:hover {
@@ -216,12 +246,49 @@ max-height: 30px;
     opacity: 0;
 } */
 .fade-enter-active,.fade-leave-active {
+    -webkit-transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    -o-transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
     transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 /* .fade-enter-active,.fade-leave-active {
     transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 } */
 .fade-enter,.fade-leave-to {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px);
     opacity: 0;
+}
+
+@media screen and (max-width: 701px) {
+    #app {
+        width: 500px;
+    }
+    .fs-48 {
+        font-size: 12px;
+    }
+    .flex-direction-column {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    button {
+        left: 0;
+        margin-bottom: 10px;
+    }
+    input {
+        margin-bottom: 10px;
+    }
+    /* .px-120 {
+        padding: 0;
+    } */
+    .ml--320,.ml--580 {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    #app {
+        width: 300px;
+    }
 }
