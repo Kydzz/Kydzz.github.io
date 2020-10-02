@@ -124,11 +124,11 @@ img {
 .main {
   margin: 0 auto;
   @include breakpoint(xxs) {
-      max-width: 40rem;
+      max-width: 32rem;
       font-size: $primary-fs !important;
   }
   @include breakpoint(xs) { 
-    max-width: 65rem !important;
+    max-width: 64rem !important;
     font-size: $primary-fs !important;
   }
   @include breakpoint(sm) {
@@ -182,16 +182,19 @@ header {
         display: flex;
         align-items: center;
         flex-direction: row;
-        @include breakpoint(xs) {
-            flex-direction: column;
-            line-height: 2rem;
-            margin-bottom: 2rem;
-        }
         @include breakpoint(xxs) {
             flex-direction: column;
             line-height: 2rem;
             margin-bottom: 2rem;
+            width: 100%
+        }   
+        @include breakpoint(xs) {
+            flex-direction: column;
+            line-height: 2rem;
+            margin-bottom: 2rem;
+            width: 100%
         }
+        
     }
     &__logo {
         &--link {
@@ -209,7 +212,12 @@ header {
         }
     }
     &__right {
-
+        @include breakpoint(xxs) {
+            width: 100%;
+        }
+        @include breakpoint(xs) {
+            width: 100%;
+        }
     }
     &__flag {
         &--list {
@@ -229,7 +237,6 @@ header {
     &__search {
         position: relative;
         &--input {
-            // font-family: $primary-font;
             padding-left: 2.5rem;
             border-radius: 999px;
             border: none;
@@ -240,6 +247,12 @@ header {
             transition: .2s border-color linear;
             &:focus {
                 border-color: $primary-color;
+            }
+            @include breakpoint(xxs) {
+                width: 100%;
+            }
+            @include breakpoint(xs) {
+                width: 100%;
             }
         }
         &--button {
@@ -273,7 +286,7 @@ nav {
         @include breakpoint(xxs) {
             display: flex;
             justify-content: space-between;
-            padding: 2rem 0;
+            padding: 2rem;
             p {
                 font-size: 1.7rem;
                 color: #fff;

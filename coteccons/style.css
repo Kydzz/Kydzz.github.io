@@ -88,13 +88,13 @@ img {
 }
 @media (max-width: 479px) {
   .main {
-    max-width: 40rem;
+    max-width: 32rem;
     font-size: 1.4rem !important;
   }
 }
 @media (min-width: 480px) and (max-width: 834px) {
   .main {
-    max-width: 65rem !important;
+    max-width: 64rem !important;
     font-size: 1.4rem !important;
   }
 }
@@ -180,16 +180,6 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-@media (min-width: 480px) and (max-width: 834px) {
-  .header__left {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    line-height: 2rem;
-    margin-bottom: 2rem;
-  }
-}
 @media (max-width: 479px) {
   .header__left {
     -webkit-box-orient: vertical;
@@ -198,6 +188,18 @@ header {
             flex-direction: column;
     line-height: 2rem;
     margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 834px) {
+  .header__left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
   }
 }
 .header__logo--link {
@@ -210,6 +212,16 @@ header {
   font-size: 1.7rem;
   font-weight: 700;
   color: #ED1729;
+}
+@media (max-width: 479px) {
+  .header__right {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 834px) {
+  .header__right {
+    width: 100%;
+  }
 }
 .header__flag--list {
   display: -webkit-box;
@@ -245,6 +257,16 @@ header {
 }
 .header__search--input:focus {
   border-color: #ED1729;
+}
+@media (max-width: 479px) {
+  .header__search--input {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 834px) {
+  .header__search--input {
+    width: 100%;
+  }
 }
 .header__search--button {
   position: absolute;
@@ -284,7 +306,7 @@ nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 2rem 0;
+    padding: 2rem;
   }
   .nav__toggle p {
     font-size: 1.7rem;
