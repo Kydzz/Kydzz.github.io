@@ -41,6 +41,7 @@ body {
   color: #141414 !important;
   font-size: 1.4rem !important;
   font-weight: 400 !important;
+  overflow-x: hidden;
 }
 
 strong {
