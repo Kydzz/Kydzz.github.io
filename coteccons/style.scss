@@ -124,7 +124,7 @@ img {
 .main {
   margin: 0 auto;
   @include breakpoint(xxs) {
-      max-width: 40rem;
+      max-width: 36rem;
       font-size: $primary-fs !important;
   }
   @include breakpoint(xs) { 
