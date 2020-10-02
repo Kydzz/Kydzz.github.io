@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Slick css  -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+
+    <!-- Style  -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="preload">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <div class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="header__main">
+                            <div class="header__left">
+                                <div class="header__logo">
+                                    <a href="#" class="header__logo--link">
+                                        <img src="./images/goldenlotuscons.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="header__slogan">
+                                    <p>GOLDEN LOTUS CONSTRUCTION JSC.,</p>
+                                </div>
+                            </div>
+                            <div class="header__right">
+                                <div class="header__flag">
+                                    <ul class="header__flag--list">
+                                        <li class="header__flag--item">
+                                            <a href="#" class="header__flag--link">
+                                                <img src="./images/vi.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="header__flag--item">
+                                            <a href="#" class="header__flag--link">
+                                                <img src="./images/en.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="header__flag--item">
+                                            <a href="#" class="header__flag--link">
+                                                <img src="./images/zh.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header__search">
+                                    <form action="">
+                                        <input type="text" class="header__search--input" placeholder="Tìm Kiếm...">
+                                        <button type="submit" class="header__search--button">
+                                            <span><i class="fas fa-search"></i></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header  -->
+        <nav>
+            <div class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="nav__main">
+                            <div class="nav__toggle">
+                                <p>Menu</p>
+                                <a href="javascript:void(0);">
+                                    <i class="fas fa-bars"></i>
+                                </a>
+                            </div>
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a href="/" class="nav__link">Trang Chủ</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="javascript:void(0);" class="nav__link">Giới Thiệu <span><i class="fas fa-sort-down"></i></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="">
+                                            <a href="/">Tổng quan công ty</a>
+                                        </li>
+                                        <li class=""><a href="/">Cán bộ chủ
+                                                chốt</a></li>
+                                        <li class=""><a href="/">Thư đánh giá</a>
+                                        </li>
+                                        <li class=""><a href="/">Khách hàng
+                                                và Đối tác</a></li>
+                                        <li class=""><a href="/">Chứng Chỉ ISO</a>
+                                        </li>
+                                        <li class=""><a href="/">Chứng
+                                                chỉ Năng lực hoạt động xây dựng</a></li>
+                                        <li class=""><a href="/">Chính sách an
+                                                toàn sức khỏe – nghề nghiệp và môi trường</a></li>
+                                        <li class=""><a href="/">Năng
+                                                lực thiết bị thi công</a></li>
+                                        <li class=""><a href="/">Những
+                                                cải tiến trong cơ cấu tổ chức</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="javascript:void(0);" class="nav__link">Tin Tức <span><i
+                                                class="fas fa-sort-down"></i></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class=""><a
+                                                            href="https://www.coteccons.vn/thong-tin/tin-cong-ty/">Tin
+                                                            Công Ty</a></li>
+                                                    <li class=""><a
+                                                            href="https://www.coteccons.vn/thong-tin/tin-cong-trinh/">Tin
+                                                            Công Trình</a></li>
+                                                    <li class=""><a
+                                                            href="https://www.coteccons.vn/thong-tin/tin-thi-truong/">Tin
+                                                            Thị Trường</a></li>
+                                                    <li class=""><a
+                                                            href="https://www.coteccons.vn/thong-tin/tin-doan-the/">Hoạt
+                                                            động Cộng đồng - Đoàn thể</a></li>
+                                                    <li class=""><a
+                                                            href="https://www.coteccons.vn/thong-tin/landmark-81/">Hành
+                                                            trình chinh phục Landmark 81</a></li>
+                                                    <li class=""><a href="https://www.coteccons.vn/thong-tin/">Xem tất
+                                                            cả</a></li>
+                                                </ul>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__link">Công Trình</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__link">Tài Liệu</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__link">Đối Tác</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__link">Tuyển Dụng</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/" class="nav__link">Liên Hệ</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end nav  -->
+        <div class="banner">
+            <div class="banner-1">
+                <div class="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <div class="banner__text">
+                                    <p>Tating plastic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end banner  -->
+        <div class="projects">
+            <div class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="projects__main">
+                            <div class="projects__title">
+                                <h1>Dự Án Hạ Tầng</h1>
+                                <div class="projects__name">
+                                    <a href="/">Thiết Kế Và Thi Công</a>
+                                    <a href="/">Dân Dụng</a>
+                                    <a href="/">Công Nghiệp</a>
+                                    <a href="/">Hạ Tầng</a>
+                                </div>
+                            </div>
+                            <div>
+                                <ul class="projects__list">
+                                    <li class="projects__item">
+                                        <a href="" class="projects__link">
+                                            <div class="projects__link--block">
+                                                <div class="projects__link--img">
+                                                    <img src="./images/mahang.jpg" alt="">
+                                                </div>
+                                                <div class="projects__link--desc">
+                                                    <p>Công Ty TNHH Best Pacific</p>
+                                                    <p>* Dự án dân dụng có quy mô lớn</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="projects__item">
+                                        <a href="" class="projects__link">
+                                            <div class="projects__link--block">
+                                                <div class="projects__link--img">
+                                                    <img src="./images/770x400-1.jpg" alt="">
+                                                </div>
+                                                <div class="projects__link--desc">
+                                                    <p>Doanh Nghiệp Casta – AlC</p>
+                                                    <p>* Dự án dân dụng có quy mô lớn</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="projects__item">
+                                        <a href="" class="projects__link">
+                                            <div class="projects__link--block">
+                                                <div class="projects__link--img">
+                                                    <img src="./images/img-3.jpg" alt="">
+                                                </div>
+                                                <div class="projects__link--desc">
+                                                    <p>Công Ty TNHH New Mahang - VNC</p>
+                                                    <p>* Dự án dân dụng có quy mô lớn</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="projects__item">
+                                        <a href="" class="projects__link">
+                                            <div class="projects__link--block">
+                                                <div class="projects__link--img">
+                                                    <img src="./images/./img-4.jpg" alt="">
+                                                </div>
+                                                <div class="projects__link--desc">
+                                                    <p>Công Ty TNHH Nhựa Tating</p>
+                                                    <p>* Dự án dân dụng có quy mô lớn</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="projects__item">
+                                        <a href="" class="projects__link">
+                                            <div class="projects__link--block">
+                                                <div class="projects__link--img">
+                                                    <img src="./images/770x400-5.jpg" alt="">
+                                                </div>
+                                                <div class="projects__link--desc">
+                                                    <p>Công Ty TNHH Best Pacific</p>
+                                                    <p>* Dự án dân dụng có quy mô lớn</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end projects -->
+        <section>
+            <div class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="section__title">
+                            <h1 class="section__heading">Tin tức</h1>
+                        </div>
+                        <div class="section__main">
+                            <div class="section__left">
+                                <div class="section__top">
+                                    <a href="/coteccons/new.html" class="section__top--left">
+                                        <div class="section__top--img">
+                                            <img src="./images/img-1.jpg" alt="">
+                                        </div>
+                                        <div class="section__top--desc w-100">
+                                            <h1>Cập nhật tiến độ công trình Suncasa Project 16/09/2020</h1>
+                                            <p>Sáng nay 18/08, Coteccons cùng Unicons chính thức khởi công 06 tòa tháp
+                                                tại phân khu The Origami -</p>
+                                        </div>
+                                    </a>
+                                    <div class="section__top--right">
+                                        <ul>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__top--thumnail">
+                                                        <img src="./images/thumnail.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__top--desc">
+                                                        <p>Sáng nay 18/08, Coteccons cùng Unicons chính thức khởi công
+                                                            06 tòa tháp tại phân khu The Origami -</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__top--thumnail">
+                                                        <img src="./images/thumnail.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__top--desc">
+                                                        <p>Sáng nay 18/08, Coteccons cùng Unicons chính thức khởi công
+                                                            06 tòa tháp tại phân khu The Origami -</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__top--thumnail">
+                                                        <img src="./images/thumnail.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__top--desc">
+                                                        <p>Sáng nay 18/08, Coteccons cùng Unicons chính thức khởi công
+                                                            06 tòa tháp tại phân khu The Origami -</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__top--thumnail">
+                                                        <img src="./images/thumnail.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__top--desc">
+                                                        <p>Sáng nay 18/08, Coteccons cùng Unicons chính thức khởi công
+                                                            06 tòa tháp tại phân khu The Origami -</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Xem Tất Cả</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="section__bottom">
+                                    <div class="section__title">
+                                        <h1>Lĩnh Vực Hoạt Động Chính</h1>
+                                    </div>
+                                    <div class="section__bottom--list carousel">
+                                        <a href="/" class="section__bottom--item">
+                                            <div class="section__bottom--img">
+                                                <img src="./images/777x498-2.jpg" alt="">
+                                            </div>
+                                            <div class="section__bottom--text">
+                                                <p>CƠ ĐIỆN</p>
+                                            </div>
+                                        </a>
+                                        <a href="/" class="section__bottom--item">
+                                            <div class="section__bottom--img">
+                                                <img src="./images/img-1.jpg" alt="">
+                                            </div>
+                                            <div class="section__bottom--text">
+                                                <p>TỔNG THẦU XÂY LẮP</p>
+                                            </div>
+                                        </a>
+                                        <a href="/" class="section__bottom--item">
+                                            <div class="section__bottom--img">
+                                                <img src="./images/img-2.jpg" alt="">
+                                            </div>
+                                            <div class="section__bottom--text">
+                                                <p>THIẾT KẾ & THI CÔNG</p>
+                                            </div>
+                                        </a>
+                                        <a href="/" class="section__bottom--item">
+                                            <div class="section__bottom--img">
+                                                <img src="./images/img-4.jpg" alt="">
+                                            </div>
+                                            <div class="section__bottom--text">
+                                                <p>THIẾT KẾ & THI CÔNG</p>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <!-- end bottom -->
+                                <div class="section__media">
+                                    <div class="section__media--item">
+                                        <div class="section__title">
+                                            <h1>Thông tin cổ đông</h1>
+                                        </div>
+                                        <div class="section__media--list">
+                                            <ul>
+                                                <li>
+                                                    <a href="/">
+                                                        <div class="section__media--thumnail">
+                                                            <img src="./images/co-dong-2-287x172.jpg" alt="">
+                                                        </div>
+                                                        <div class="section__media--text">
+                                                            <p>Nghị quyết HĐQT về Bổ nhiệm Trưởng Tiểu ban Chiến lược
+                                                                thuộc HĐQT</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/">
+                                                        <div class="section__media--thumnail">
+                                                            <img src="./images/co-dong-2-287x172.jpg" alt="">
+                                                        </div>
+                                                        <div class="section__media--text">
+                                                            <p>Nghị quyết HĐQT về Bổ nhiệm Trưởng Tiểu ban Chiến lược
+                                                                thuộc HĐQT</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/">
+                                                        <div class="section__media--thumnail">
+                                                            <img src="./images/co-dong-2-287x172.jpg" alt="">
+                                                        </div>
+                                                        <div class="section__media--text">
+                                                            <p>Nghị quyết HĐQT về Bổ nhiệm Trưởng Tiểu ban Chiến lược
+                                                                thuộc HĐQT</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- 1  -->
+                                    <div class="section__media--item">
+                                        <div class="section__title">
+                                            <h1>Tên Thị Trường</h1>
+                                        </div>
+                                        <div class="section__media--list">
+                                            <ul>
+                                                <li>
+                                                    <a href="/">
+                                                        <div class="section__media--thumnail">
+                                                            <img src="./images/co-dong-2-287x172.jpg" alt="">
+                                                        </div>
+                                                        <div class="section__media--text">
+                                                            <p>Nghị quyết HĐQT về Bổ nhiệm Trưởng Tiểu ban Chiến lược
+                                                                thuộc HĐQT</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/">
+                                                        <div class="section__media--thumnail">
+                                                            <img src="./images/co-dong-2-287x172.jpg" alt="">
+                                                        </div>
+                                                        <div class="section__media--text">
+                                                            <p>Nghị quyết HĐQT về Bổ nhiệm Trưởng Tiểu ban Chiến lược
+                                                                thuộc HĐQT</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/">
+                                                        <div class="section__media--thumnail">
+                                                            <img src="./images/co-dong-2-287x172.jpg" alt="">
+                                                        </div>
+                                                        <div class="section__media--text">
+                                                            <p>Nghị quyết HĐQT về Bổ nhiệm Trưởng Tiểu ban Chiến lược
+                                                                thuộc HĐQT</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- 1  -->
+                                </div>
+                            </div>
+                            <div class="section__right">
+                                <div class="section__right--item">
+                                    <div class="section__right--title">
+                                        <h2>Giới Thiệu</h2>
+
+                                    </div>
+                                    <div class="section__right--gallery">
+                                        <div class="gallery">
+                                            <img src="./images/mahang.jpg" alt="">
+                                            <div class="gallery__text"><a href="/">Landmark 81 trên báo South East Asia
+                                                    Construction</a></div>
+                                        </div>
+                                        <div class="gallery">
+                                            <img src="./images/mahang.jpg" alt="">
+                                            <div class="gallery__text"><a href="/">Landmark 81 trên báo South East Asia
+                                                    Construction</a></div>
+                                        </div>
+                                        <div class="gallery">
+                                            <img src="./images/mahang.jpg" alt="">
+                                            <div class="gallery__text">
+                                                <a href="/">Landmark 81 trên báo South East Asia Construction</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                                <div class="section__right--item">
+                                    <div class="section__right--title">
+                                        <h2>Hợp Tác</h2>
+                                    </div>
+                                    <div class="section__right--desc">
+                                        <p>Nhấp chuột vào link liên kết để tham gia vào chuỗi cung ứng </p>
+                                    </div>
+                                    <div class="section__right--button">
+                                        <button type="button">
+                                            <a href="/">Giới Thiệu Năng Lực</a>
+
+                                        </button>
+                                        <button type="button">
+                                            <a href="/">Góp Ý</a>
+                                        </button>
+                                    </div>
+                                    <div class="section__right--contact">
+                                        <p>Contact Us</p>
+                                        <div class="section__right--phone">
+                                            <p><span><i class="fas fa-mobile-alt"></i></span>093 724 0168</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                                <div class="section__right--item">
+                                    <div class="section__right--title">
+                                        <h2>Video</h2>
+                                    </div>
+                                    <div class="section__right--projects">
+                                        <ul>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__right--thumnail">
+                                                        <span><i class="fab fa-youtube"></i></span>
+                                                        <img src="./images/img-3.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__right--text">
+                                                        <h3>SUNCASA PROJECT</h3>
+                                                        <p>Khu VSIP II, Bình Dương</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__right--thumnail">
+                                                        <span><i class="fab fa-youtube"></i></span>
+                                                        <img src="./images/img-3.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__right--text">
+                                                        <h3>SUNCASA PROJECT</h3>
+                                                        <p>Khu VSIP II, Bình Dương</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="section__right--thumnail">
+                                                        <span><i class="fab fa-youtube"></i></span>
+                                                        <img src="./images/img-3.jpg" alt="">
+                                                    </div>
+                                                    <div class="section__right--text">
+                                                        <h3>SUNCASA PROJECT</h3>
+                                                        <p>Khu VSIP II, Bình Dương</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 1 -->
+                                <div class="section__right--item">
+                                    <div class="section__right--title">
+                                        <h2>Tuyển Dụng</h2>
+                                    </div>
+                                    <div class="section__right--recruitment">
+                                        <ul>
+                                            <li>
+                                                <a href="/">CHUYÊN VIÊN CAO CẤP PHÂN TÍCH ĐẦU TƯ (MẢNG BĐS) – Tại: TP.
+                                                    HCM</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Nhân viên kế toán</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Chuyên viên kiểm toán nội bộ</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Giám sát Xây dựng</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Giám sát M&E</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end content  -->
+        <footer>
+            <div class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer">
+                            <div class="footer__top">
+                                <div class="footer__top--item">
+                                    <div class="footer__title">
+                                        <h1 class="footer__heading">KHÁCH HÀNG THÂN THIẾT</h1>
+                                    </div>
+                                    <div class="footer__top--list">
+                                        <ul>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="footer__top--thumnail">
+                                                        <img src="./images/1-01.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="footer__top--thumnail">
+                                                        <img src="./images/1-01.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="footer__top--thumnail">
+                                                        <img src="./images/1-01.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                                <div class="footer__top--item">
+                                    <div class="footer__title">
+                                        <h1 class="footer__heading">ĐỐI TÁC CHIẾN LƯỢC</h1>
+                                    </div>
+                                    <div class="footer__top--list">
+                                        <ul>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="footer__top--thumnail">
+                                                        <img src="./images/1-01.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="footer__top--thumnail">
+                                                        <img src="./images/1-01.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/">
+                                                    <div class="footer__top--thumnail">
+                                                        <img src="./images/1-01.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                            </div>
+                            <div class="footer__bottom">
+                                <div class="footer__bottom--item">
+                                    <div class="footer__title">
+                                        <h1>THÔNG TIN CÔNG TY </h1>
+                                    </div>
+                                    <div class="footer__bottom--list">
+                                        <ul>
+                                            <li>
+                                                <a href="/">Tổng quan công ty</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Cơ cấu tổ chức</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Cán bộ chủ chốt</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Chính sách nhân sự</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Những cải tiến trong tổ chức</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                                <div class="footer__bottom--item">
+                                    <div class="footer__title">
+                                        <h1>QUAN HỆ CỔ ĐÔNG</h1>
+                                    </div>
+                                    <div class="footer__bottom--list">
+                                        <ul>
+                                            <li>
+                                                <a href="/">Thông tin Cổ đông</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Báo cáo tài chính – thường niên</a>
+                                            </li>
+                                            <li>
+                                                <a href="/">Biên bản và nghị quyết</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                                <div class="footer__bottom--item">
+                                    <div class="footer__title">
+                                        <h1>CTD</h1>
+                                    </div>
+                                    <div class="footer__bottom--list">
+                                        <strong>69.2</strong>
+                                        <span><img src="./images/green.jpg" alt=""></span>
+                                        <div style="color:#fff;">
+                                            <br>
+                                            &nbsp; 2.2 (3.3%)
+                                            <br> &nbsp; 30/09/2020
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 1  -->
+                                <div class="footer__bottom--item">
+                                    <div class="footer__title">
+                                        <h1>Liên Hệ</h1>
+                                    </div>
+                                    <div class="footer__bottom--addr">
+                                        <h2>Văn phòng Chính:</h2>
+                                        <p>Tòa nhà Golden Lotus, 02 Điện Biên Phủ, P.17, Q.Bình Thạnh, Tp.HCM.</p>
+                                        <p>093.724.0168</p>
+                                        <p>Email: <a href="mailto:info@goldenlotuscons.vn">info@goldenlotuscons.vn></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end media  -->
+        <div class="copyright">
+            <div class="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="copyright__main">
+                            <p>Copyright © 2020 Goldenlotuscons. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end copyright  -->
+    </div>
+
+
+
+    <!-- JS  -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
