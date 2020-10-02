@@ -88,7 +88,7 @@ img {
 }
 @media (max-width: 479px) {
   .main {
-    max-width: 32rem;
+    max-width: 34rem;
     font-size: 1.4rem !important;
   }
 }
