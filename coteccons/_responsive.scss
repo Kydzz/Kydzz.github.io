@@ -3,9 +3,9 @@
       @media (max-width: 479px) { @content; }
     }
     @if $class == xs {
-      @media (min-width: 480px) and (max-width: 834px) { @content; }
+      @media (min-width: 690px) and (max-width: 834px) { @content; }
     }
-   
+    
     @else if $class == sm {
       @media (min-width: 835px) { @content; }
     }
