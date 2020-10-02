@@ -47,14 +47,14 @@ bar.onclick = () => {
 }
 
 // preload
-let preload = document.querySelector(".preload")
-window.addEventListener("load",() => {
-  setTimeout(function() {
-    console.log("da")
-    preload.style.opacity = 0;
-    preload.style.visibility = "hidden";
-  },2000)
-})
+// let preload = document.querySelector(".preload")
+// window.addEventListener("load",() => {
+//   setTimeout(function() {
+//     console.log("da")
+//     preload.style.opacity = 0;
+//     preload.style.visibility = "hidden";
+//   },1000)
+// })
 
 // dropdown 
 var navLink = document.querySelectorAll(".nav__link")
