@@ -346,9 +346,19 @@ nav {
             padding: 5px 0;
             background-color: #fff;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+            @include breakpoint(xxs) {
+                position: relative;
+                top: auto;
+                z-index: 10000;
+                display: none;
+                float: none;    
+                padding: 5px 0;
+                background-color: #fff;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+            }
             @include breakpoint(xs) {
                     position: relative;
-                    top: 100%;
+                    top: auto;
                     z-index: 10000;
                     display: none;
                     float: none;
