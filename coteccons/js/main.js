@@ -4,6 +4,7 @@ $(document).ready(function(){
     slidesToShow: 2,
     dots:true,
     centerMode: true,
+    arrows: false,
     autoplay:true,
     responsive: [
       {
@@ -18,14 +19,12 @@ $(document).ready(function(){
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
+          arrows: false,
           slidesToScroll: 1,
         },
       },
     ],
     });
-    
-
-
 
     $('.section__right--gallery').slick({
         arrows: true,
@@ -37,6 +36,42 @@ $(document).ready(function(){
         autoplay:true
       });
   });
+
+
+  $('.projects__list').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          
+          adaptiveHeight: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+
+
+
+
+
+
+
 
 
   // js 

@@ -161,7 +161,7 @@ img {
 }
 //  HEADER ---------------------
 header {
-    background: #f7f7f7;
+    // background: #f7f7f7;
 }
 .header {
     &__main {
@@ -275,12 +275,14 @@ header {
 }
 // NAV -----------------------
 nav {
-    background-color: #cf1c24;
     position: sticky;
     top: 0;
     z-index: 9999;
 }
 .nav {
+    &__main {
+        background-color: #cf1c24;
+    }
     &__toggle {
         display: none;
         @include breakpoint(xxs) {
@@ -408,14 +410,19 @@ nav {
 .banner {
     position: relative;
     height: 500px;
-    &-1 {
-        position: absolute;
+    &__main {
         background-image: url("./images/banner.jpg");
-        height: 100%;
-        width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        height: 500px;
+        position: relative;
+    }
+    &-1 {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
         overflow: hidden;
         &:hover {
             .banner__text {
@@ -441,8 +448,13 @@ nav {
 }
 
 // projects ------------------------
+
 .projects {
     padding: 2rem 0;
+    .slick-prev:before, .slick-next:before {
+        color: $primary-color;  
+    }
+    
     &__main {
 
     }
@@ -502,8 +514,8 @@ nav {
     }
     &__list {
         display: flex;
-        flex-wrap: wrap;
-        margin-left: -1rem;
+        // flex-wrap: wrap;
+        // margin-left: -1rem;
         @include breakpoint(xxs) {
             margin-left: 0;
         }
@@ -512,10 +524,14 @@ nav {
         }
     }
     &__item {
-        width: calc(20% - 2rem);
-        margin: 1rem;
-        flex-wrap: wrap;
+        width: calc(20% - 0rem);
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        // flex-wrap: wrap;
         box-shadow: 0px 0px 3px 0px #afafaf;
+        &:last-of-type {
+            margin-right: 0;
+        }
         @include breakpoint(xxs) {
             width: 100%;
             margin: 1rem 0;
