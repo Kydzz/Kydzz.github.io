@@ -1,11 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function () {
   var windowSize = $(window).width();
-    $('.carousel').slick({
-    slidesToShow: 2,
-    dots:true,
+  $('.carousel').slick({
+    slidesToShow: 3,
+    dots: true,
     centerMode: true,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -24,46 +24,83 @@ $(document).ready(function(){
         },
       },
     ],
-    });
-
-    $('.section__right--gallery').slick({
-        arrows: true,
-        centerPadding: "0px",
-        // dots: true,
-        slidesToShow: 1,
-        infinite: false,
-        centerMode: true,
-        autoplay:true
-      });
   });
 
-
-  $('.projects__list').slick({
-    dots: false,
+  $('.section__right--gallery').slick({
+    arrows: true,
+    centerPadding: "0px",
+    // dots: true,
+    slidesToShow: 1,
     infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          
-          adaptiveHeight: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    centerMode: true,
+    autoplay: true
   });
+});
+
+
+$('.projects__list').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+
+        adaptiveHeight: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+// footer 
+$('.footer__top--list').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true
+      }
+    }
+  ]
+});
 
 
 
@@ -72,9 +109,7 @@ $(document).ready(function(){
 
 
 
-
-
-  // js 
+// js 
 let bar = document.querySelector(".nav__toggle")
 let navList = document.querySelector(".nav__list")
 bar.onclick = () => {

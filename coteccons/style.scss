@@ -9,7 +9,6 @@ $secondary-color: #F8EF02;
 $ter-color: #6B6C6C;
 $primary-fs: 1.4rem;
 $secondary-fs: 1.7rem;
-
 *, *:before, *:after {
     margin: 0 ;
     padding: 0;
@@ -580,6 +579,15 @@ nav {
 }
 .section {
     &__title {
+        position: relative;
+        &:before {
+            content: "";
+            bottom: -1px;
+            width: 150px;
+            height: 2px;
+            background: $primary-color;
+            position: absolute;
+        }
         h1 {
             @extend %h1;
             border-bottom: 1px solid $ter-color;
@@ -742,7 +750,9 @@ nav {
     //bottom 
     &__bottom {
         padding: 2rem 0;
-
+        .slick-dots li button:before {
+            font-size: 15px;
+        }
         &--list {
             display: flex;
             flex-wrap: wrap;
@@ -773,7 +783,7 @@ nav {
             font-size: $primary-fs;
             color: $ter-color;
             padding: 2rem 1rem;
-            background-color: #fff;
+            background: #f7f7f7 url("./images/bgbox.png") repeat-x bottom left;
             transition: .2s color linear;
             text-transform: uppercase;
             &:hover {
@@ -849,7 +859,7 @@ nav {
             background: #cf1c24;
             padding: 1rem .5rem;
             color: #fff;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 1.4rem;
             text-align: left;
             padding-left: 2rem;
@@ -1009,7 +1019,26 @@ footer {
     // height: 363px;
 }
 .footer {
-    
+   /* width */
+   ::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
     &__title {
         h1 {
             @extend %h1;
@@ -1045,6 +1074,7 @@ footer {
             }
         }
         &--item {
+            
             padding: 0 2rem;
             width: calc(100%/4 - 0rem);
             @include breakpoint(xxs) {
@@ -1054,12 +1084,15 @@ footer {
                 width: 100%;
             }
         }
+         
         &--addr {
+            
             padding: 1rem 1rem;
             background: #e7eff6;
             height: 130px;
             overflow-y: scroll;
             line-height: 3rem;
+            
             h2 {
                 font-size: 1.7rem;
                 font-weight: 700;
@@ -1081,8 +1114,49 @@ footer {
         @include breakpoint(xs) {
             flex-direction: column;
         }
-        &--list ul {
+        &--list {
             display: flex;
+            .slick-prev {
+                left: inherit !important;
+                &:before {
+                    content: "a";
+                    
+                    background: url(./images/icon1.jpg);
+                    color: rgba(255, 255, 255, 0);
+                    
+                    &:hover {
+                        color: rgb(13, 99, 165)
+                    }
+                }
+            }
+            .slick-next {
+                right: -25px !important;
+                &:before {
+                    content: "a";
+                    
+                    background: url(./images/icon2.jpg);
+                    color: rgba(255, 255, 255, 0);
+                    &:hover {
+                        color: rgb(13, 99, 165)
+                    }
+                }
+            }
+            .slick-prev, .slick-next {             
+                top: -50%;               
+                margin-right: 25px;
+                right: 0;
+                background: transparent;
+                
+                
+                @include breakpoint(xxs) {
+                    top: -15%;
+                    margin-right: 43px;
+                }
+                @include breakpoint(xs) {
+                    top: -15%;
+                    margin-right: 43px;
+                }
+            }
             @include breakpoint(xxs) {
                 flex-direction: column;
             }
