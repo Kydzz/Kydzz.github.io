@@ -42,8 +42,8 @@ $('.projects__list').slick({
   dots: false,
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 5,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 1024,
@@ -101,10 +101,54 @@ $('.footer__top--list').slick({
     }
   ]
 });
+//hover img 
+
+$(() => {
+  $('.section__top--thumnail img').mouseover(function(){
+    let imgPath = $(this).attr('src')
+    $('.section__top--img img').attr('src',imgPath)
+  }) 
+})
+
+// back to top
+
+var btn = $('#button');
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+// tab panel
+  
 
 
+$(document).ready(function() {
+    
+  //alert('here');
 
+$('.tabs a').click(function(){
 
+   $('.panel').hide();
+   $('.tabs a.active').removeClass('active');
+   $(this).addClass('active');
+   
+   var panel = $(this).attr('href');
+   $(panel).fadeIn(1000);
+   
+   return false;  // prevents link action
+  
+});  // end click 
+
+   $('.tabs li:first a').click();
+   
+}); // end ready
 
 
 
@@ -127,13 +171,55 @@ bar.onclick = () => {
 // })
 
 // dropdown 
-var navLink = document.querySelectorAll(".nav__link")
-var dropmenu = document.querySelectorAll(".dropdown-menu")
-console.log(dropmenu)
+// var navLink = document.querySelectorAll(".nav__link")
+// var dropmenu = document.querySelectorAll(".dropdown-menu")
 
-for (let i = 0; i < navLink.length; i++) {
-  navLink[i].onclick = () => {
-    console.log(navLink[i])
-    dropmenu[i - 1].classList.toggle("open")
-  }
+// for (let i = 0; i < navLink.length; i++) {
+//   navLink[i].onclick = function() {
+//     dropmenu[i-1].classList.toggle("open");
+//     for (let j = 0; j < dropmenu.length; j++) {
+//       dropmenu[j].classList.remove("open");
+//     }
+//     dropmenu[i-1].classList.toogle("open");
+//   }
+// }
+// for (let i = 0; i < navLink.length; i++) {
+//   navLink[i].onclick = () => {
+
+//     dropmenu[i - 1].classList.toggle("open")
+//   }
+// }
+(function($) { 
+  $(function() { 
+    
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.dropdown-menu').toggle();
+    
+      $('.dropdown-menu').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+   
+    $('html').click(function() {
+      $('.dropdown-menu').hide();
+    });
+  }); 
+})(jQuery); 
+
+
+
+
+//modal 
+var imgVideo = document.querySelectorAll(".section__right--thumnail")
+var modal = document.querySelector(".modal")
+var modalMain = document.querySelector(".modal__main")
+imgVideo.forEach( (e,idx) => {
+    e.onclick = () => {
+      modal.style.opacity = "1"
+      modal.style.visibility = "visible"
+      modalMain.classList.add("translate")
+    }
+});
+modal.onclick = () => {
+  modal.style.opacity = "0"
+  modal.style.visibility = "hidden"
 }
