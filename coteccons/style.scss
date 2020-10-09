@@ -360,6 +360,12 @@ nav {
                     width: 23%;
                     padding: .5rem 2rem !important;
                     display: inline-block;
+                    @include breakpoint(xxs) {
+                        width: 100% !important;
+                    }
+                    @include breakpoint(xs) {
+                        width: 100% !important;
+                    }
                 }
                 .dropdown__title {
                     h1 {
