@@ -103,12 +103,12 @@ $('.footer__top--list').slick({
 });
 //hover img 
 
-$(() => {
-  $('.section__top--thumnail img').mouseover(function(){
-    let imgPath = $(this).attr('src')
-    $('.section__top--img img').attr('src',imgPath)
-  }) 
-})
+// $(() => {
+//   $('.section__top--thumnail img').mouseover(function(){
+//     let imgPath = $(this).attr('src')
+//     $('.section__top--img img').attr('src',imgPath)
+//   }) 
+// })
 
 // back to top
 

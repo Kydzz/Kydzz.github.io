@@ -33,16 +33,6 @@ $secondary-fs: 1.7rem;
         text-transform: uppercase;
         position: relative;
         padding-bottom: .5rem;
-        // &:after {
-        //     content: "";
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     height: 1px;
-        //     background-color: $primary-color;
-        //     width: 100%;
-        //     transition: .3s width linear;
-        // }
     } 
 }
 html {
@@ -318,6 +308,7 @@ nav {
     &__list {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
         @include breakpoint(xxs) {
             display: none !important;
         }
@@ -345,6 +336,40 @@ nav {
             background-color: #fff;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
             border-top: 2px solid #1b5faa;
+            &.meta {
+                left: 0;
+                width: 100%;
+                // display: flex;
+                & li {
+                    border-bottom: none;
+                }
+                .dropdown__list {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 .5rem;
+                    a {
+                        text-decoration: none;
+                        color: #333333;
+                        padding: 1rem;
+                        &:hover {
+                            background-color: #f5f5f5;
+                        }
+                    }
+                }
+                .dropdown__item {
+                    width: 23%;
+                    padding: .5rem 2rem !important;
+                    display: inline-block;
+                }
+                .dropdown__title {
+                    h1 {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #1b5faa;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
             @include breakpoint(xxs) {
                 position: relative;
                 top: auto;
@@ -368,6 +393,7 @@ nav {
             & > li {
                 padding: 5px 0px;
                 border-bottom: 1px #CCC dotted;
+                
                 & > a {
                     display: block;
                     padding: 3px 20px;
