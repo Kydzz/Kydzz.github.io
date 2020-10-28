@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick/slick.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <div class="header__logo">
+            <a href="#" >
+                <img src="./images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="overlay"></div>
+        <nav class="header__nav">
+            <div class="menu">
+                <a href="#">Menu</a>
+            </div>
+            <ul class="header__list">
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img active">
+                            <img src="./images/icon-1.png" alt="">
+                        </div>
+                        <p>Trang chủ</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-2.png" alt="">
+                        </div>
+                        <p>giới thiệu <span></span></p>
+                        
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Giới thiệu TVTS</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Sơ đồ tổ chức</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Nhân sự</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Đối tác công nghệ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-3.png" alt="">
+                        </div>
+                        <p>dịch vụ <span></span></p>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lí nước thải - tsd</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lí nước biển - nhiễm mặn</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lý nước rỉ rác</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lý khử khoáng</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Cung cấp hóa chất</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Sản phẩm-Dịch vụ kỹ thuật</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-4.png" alt="">
+                        </div>
+                        <p>thư viện <span></span></p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-5.png" alt="">
+                        </div>
+                        <p>Liên Hệ</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__features">
+            <a href="#" class="header__search">
+                <img src="./images/icon-6.png" alt="">
+            </a>
+            <div class="header__lang">
+                <a href="#">Vi</a>
+                <a href="#">En</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <div class="banner">
+        <div class="banner__slide">
+            <div class="banner-1 img fade">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <h3><strong>TVTS</strong> chuyên gia xử lí nước</h3>
+                                <p>Xử lí nước thải - tái sử dụng nước</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-2 img fade">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <h3><strong>TVTS</strong> chuyên gia xử lí biển</h3>
+                                <p>Xử lí nước biển - nhiễm mặn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-3 img fade">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <h3><strong>TVTS</strong> chuyên gia xử lí nước rỉ rác</h3>
+                                <p>Xử lí nước rỉ rác </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; position: absolute;bottom: 12rem;right: 12rem;">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+        </div>
+        
+    </div>
+    <!-- end banner -->
+    <div class="about">
+        <div class="about__bg">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="about__main">
+                            <div class="about__content">
+                                <h1>Về chúng tôi</h1>
+                                <p>Dịch Vụ Kỹ Thuật Thịnh Vượng là công ty chuyên ngành dịch vụ kỹ thuật trong ngành xử lý nước và môi trường. Được thành lập vào năm 2013, TVTS hoạt động tư vấn, thiết kế thi công lắp đặt các hệ thống xử lý nước sạch, nước biển, xử lý nước thải, tái sử dụng nước thải, xử lý khí thải. Cung cấp máy móc, thiết bị, hoá chất phục vụ trong ngành môi trường. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- end about -->
+    <div class="achievement">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="achievement__main">
+                        <ul class="achievement__list">
+                            <li class="achievement__item">
+                                <a href="#" class="achievement__link">    
+                                    <div class="achievement__img">
+                                        <img src="./images/archive-1.png" alt="">
+                                    </div>
+                                    <p>Dự án đã thực hện</p>
+                                    <span>15</span>
+                                </a>
+                            </li>
+                            <li class="achievement__item">
+                                <a href="#" class="achievement__link">    
+                                    <div class="achievement__img">
+                                        <img src="./images/archive-2.png" alt="">
+                                    </div>
+                                    <p>Dự án đang thực hiện</p>
+                                    <span>05</span>
+                                </a>
+                            </li>
+                            <li class="achievement__item">
+                                <a href="#" class="achievement__link">    
+                                    <div class="achievement__img">
+                                        <img src="./images/archive-3.png" alt="">
+                                    </div>
+                                    <p>Nhân sự</p>
+                                    <span>20</span>
+                                </a>
+                            </li>
+                            <li class="achievement__item">
+                                <a href="#" class="achievement__link">    
+                                    <div class="achievement__img">
+                                        <img src="./images/archive-4.png" alt="">
+                                    </div>
+                                    <p>Nhân công</p>
+                                    <span>50</span>
+                                </a>
+                            </li>
+                            <li class="achievement__item">
+                                <a href="#" class="achievement__link">    
+                                    <div class="achievement__img">
+                                        <img src="./images/archive-5.png" alt="">
+                                    </div>
+                                    <p>Đối tác</p>
+                                    <span>100+</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end achievement  -->
+    <div class="service">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="service__main">
+                        <h1>Dịch Vụ</h1>
+                        <div class="service__slide">
+                            <ul class="service__list">
+                                <li class="service__item">
+                                    <a href="#" class="service__link">
+                                        <div class="service__img">
+                                            <img src="./images/service-slide-1.jpg" alt="">
+                                        </div>
+                                        <p>xử lí nước khoáng</p>
+                                    </a>
+                                </li>
+                                <li class="service__item">
+                                    <a href="#" class="service__link">
+                                        <div class="service__img">
+                                            <img src="./images/service-slide-2.jpg" alt="">
+                                        </div>
+                                        <p>cung cấp hoá chất</p>
+                                    </a>
+                                </li>
+                                <li class="service__item">
+                                    <a href="#" class="service__link">
+                                        <div class="service__img">
+                                            <img src="./images/service-slide-3.jpg" alt="">
+                                        </div>
+                                        <p>dịch vụ kĩ thuật</p>
+                                    </a>
+                                </li>
+                                <li class="service__item">
+                                    <a href="#" class="service__link">
+                                        <div class="service__img">
+                                            <img src="./images/service-slide-3.jpg" alt="">
+                                        </div>
+                                        <p>dịch vụ kĩ thuật</p>
+                                    </a>
+                                </li>
+                                <li class="service__item">
+                                    <a href="#" class="service__link">
+                                        <div class="service__img">
+                                            <img src="./images/service-slide-3.jpg" alt="">
+                                        </div>
+                                        <p>dịch vụ kĩ thuật</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="service__arrow">
+                            <a href="#" class="prev">
+                                <img src="./images/prev.png" alt="">
+                            </a>
+                            <a href="#" class="next">
+                                <img src="./images/next.png" alt="">
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end service  -->
+    <div class="blog">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="blog__main">
+                        <h1>Blog Kĩ Thuật</h1>
+                        <ul class="blog__list">
+                            <li class="blog__item">
+                                <a href="" class="blog__link">
+                                    <div class="blog__img">
+                                        <img src="./images/blog-img-1.jpg" alt="">
+                                    </div>
+                                    <p>NGHIÊN CỨU VỀ HỆ THỐNG ROCHEM TRÊN THIẾT BỊ FCC TẠI NHÀ MÁY LỌC DẦU TESORO </p>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__link">
+                                    <div class="blog__img">
+                                        <img src="./images/blog-img-2.jpg" alt="">
+                                    </div>
+                                    <p>NGHIÊN CỨU VỀ HỆ THỐNG ROCHEM TRÊN THIẾT BỊ FCC TẠI NHÀ MÁY LỌC DẦU TESORO </p>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__link">
+                                    <div class="blog__img">
+                                        <img src="./images/blog-img-3.jpg" alt="">
+                                    </div>
+                                    <p>NGHIÊN CỨU VỀ HỆ THỐNG ROCHEM TRÊN THIẾT BỊ FCC TẠI NHÀ MÁY LỌC DẦU TESORO </p>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__link">
+                                    <div class="blog__img">
+                                        <img src="./images/blog-img-4.jpg" alt="">
+                                    </div>
+                                    <p>NGHIÊN CỨU VỀ HỆ THỐNG ROCHEM TRÊN THIẾT BỊ FCC TẠI NHÀ MÁY LỌC DẦU TESORO </p>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__link">
+                                    <div class="blog__img">
+                                        <img src="./images/blog-img-5.jpg" alt="">
+                                    </div>
+                                    <p>NGHIÊN CỨU VỀ HỆ THỐNG ROCHEM TRÊN THIẾT BỊ FCC TẠI NHÀ MÁY LỌC DẦU TESORO </p>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__link">
+                                    <div class="blog__img">
+                                        <img src="./images/blog-img-6.jpg" alt="">
+                                    </div>
+                                    <p>NGHIÊN CỨU VỀ HỆ THỐNG ROCHEM TRÊN THIẾT BỊ FCC TẠI NHÀ MÁY LỌC DẦU TESORO </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end blog  -->
+    <div class="methods">
+        <div class="man">
+            <img src="./images/human.png" alt="">
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="methods__main">
+                        <h1> giải pháp kĩ thuật </h1>
+                        <ul class="methods__list">
+                            <li class="methods__item">
+                                <a href="#" class="methods__link">
+                                    <div class="methods__img">
+                                        <img src="./images/methods-1.jpg" alt="">
+                                    </div>
+                                    <div class="methods__desc">
+                                        <p>Ứng dụng công nghệ màng xoắn <strong>TSRO - ROCHEM</strong> xử lý nước thải thủy</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="methods__item">
+                                <a href="#" class="methods__link">
+                                    <div class="methods__img">
+                                        <img src="./images/methods-2.jpg" alt="">
+                                    </div>
+                                    <div class="methods__desc">
+                                        <p>Ứng dụng công nghệ màng xoắn
+                                            <strong>TSRO - ROCHEM</strong> xử lý nước rỉ bãi rác
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="methods__item">
+                                <a href="#" class="methods__link">
+                                    <div class="methods__img">
+                                        <img src="./images/methods-3.jpg" alt="">
+                                    </div>
+                                    <div class="methods__desc">
+                                        <p>Ứng dụng công nghệ màng
+                                            <strong>TSRO - ROCHEM</strong> và Công nghệ xử lý sinh học trong xử lý nước thải nguy hại
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end methods  -->
+    <div class="back-top">
+        <a href="#" id="button">
+            <img src="./images/backtop.png" alt="">
+        </a>
+    </div>
+    <!-- end backtotop -->
+    <footer>
+        <div class="footer__top">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer__main">
+                            <a href="#" class="footer__img">
+                                <img src="./images/footer-logo.png" alt="">
+                            </a>
+                            <div class="footer__slogan">
+                                <p>XỬ LÝ NƯỚC THẢI | XỬ LÝ NƯỚC BIỂN | XỬ LÝ NƯỚC RÁC
+                                    HÓA CHẤT TẨY RỬA TURBINE | DỊCH VỤ - THIẾT BỊ KỸ THUẬT</p>
+                            </div>
+                            <div class="footer__info">
+                                <div class="footer__item">
+                                    <h2>Thông tin liên hệ</h2>
+                                    <div class="info-details">
+                                        <h3>CÔNG TY CỔ PHẦN DỊCH VỤ KỸ THUẬT THỊNH VƯỢNG</h3>
+                                        <p> <span><img src="./images/footer-icon-1.png" alt=""></span> 72 Đường số 18, Phường An Phú, Quận 2, TP.HCM</p>
+                                        <p><span><img src="./images/footer-icon-2.png" alt=""></span>  028.62922224 – FAX: 028.62922224</p>
+                                        <p><span><img src="./images/footer-icon-3.png" alt=""></span>  rochem@rochem.vn</p>
+                                    </div>
+                                </div>
+                                <div class="footer__item">
+                                    <h2>Dịch vụ</h2>
+                                    <div class="info-details">
+                                        <a href="">Giải pháp xử lý nước thải</a>
+                                        <a href="">Xử lý nước biển - nhiễm mặn</a>
+                                        <a href="">Hóa chất tẩy rửa Turbine</a>
+                                        <a href="">Dịch vụ - thiết bị kỹ thuật</a>
+                                    </div>
+                                </div>
+                                <div class="footer__item">
+                                    <h2>Trợ giúp</h2>
+                                    <div class="info-details">
+                                        <a href="">Phòng kinh doanh</a>
+                                        <a href="">Phòng kỹ thuật</a>
+                                        <a href="">Liên hệ</a>
+                                        <div class="info-social">
+                                            <a href="#">
+                                                <img src="./images/zalo.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/fb.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/skype.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/yt.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/fb-2.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>Copyright © 2020 TVTS. All rights reserved. Design by INTECH</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/scrollhide.js"></script>
+</body>
+</html>

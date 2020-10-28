@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick/slick.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <a href="#" >
+                <img src="./images/logo.png" alt="">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img active">
+                            <img src="./images/icon-1.png" alt="">
+                        </div>
+                        <p>Trang chủ</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-2.png" alt="">
+                        </div>
+                        <p>giới thiệu</p>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Giới thiệu TVTS</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Sơ đồ tổ chức</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Nhân sự</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Đối tác công nghệ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-3.png" alt="">
+                        </div>
+                        <p>dịch vụ</p>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lí nước thải - tsd</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lí nước biển - nhiễm mặn</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lý nước rỉ rác</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Xử lý khử khoáng</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Cung cấp hóa chất</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-link">Sản phẩm-Dịch vụ kỹ thuật</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-4.png" alt="">
+                        </div>
+                        <p>thư viện</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">
+                        <div class="header__img">
+                            <img src="./images/icon-5.png" alt="">
+                        </div>
+                        <p>Liên Hệ</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__features">
+            <a href="#" class="header__search">
+                <img src="./images/icon-6.png" alt="">
+            </a>
+            <div class="header__lang">
+                <a href="#">Vi</a>
+                <a href="#">En</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <div class="banner">
+        <div class="banner__slide">
+            <div class="banner-1 img fade">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <h3><strong>TVTS</strong> chuyên gia xử lí nước</h3>
+                                <p>Xử lí nước thải - tái sử dụng nước</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-2 img fade">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <h3><strong>TVTS</strong> chuyên gia xử lí biển</h3>
+                                <p>Xử lí nước biển - nhiễm mặn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-3 img fade">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="banner__main">
+                                <h3><strong>TVTS</strong> chuyên gia xử lí nước rỉ rác</h3>
+                                <p>Xử lí nước rỉ rác </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; position: absolute;bottom: 12rem;right: 12rem;">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+        </div>
+        
+    </div>
+    <!-- end banner -->
+    <div class="about-details">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="details-main">
+                        <div class="details-left">
+                            <h2>GIỚI THIỆU VỀ CÔNG TY TVTS </h2>
+                            <p>Công Ty Cổ Phần Dịch Vụ Kỹ Thuật Thịnh Vượng – TVTS là công ty chuyên ngành dịch vụ kỹ thuật trong ngành xử lý nước và môi trường. Được thành lập vào năm 2013, TVTS hoạt động tư vấn, thiết kế thi công lắp đặt các hệ thống xử lý nước sạch, nước biển, xử lý nước thải, tái sử dụng nước thải, xử lý khí thải. Cung cấp máy móc, thiết bị, hoá chất phục vụ trong ngành môi trường, tẩy rửa turbine và máy nén khí.</p>
+                            <p>Trên cơ sở hợp tác công nghệ với các tập đoàn hàng đầu thế giới trong từng lĩnh vực. TVTS mong muốn đưa các công nghệ tiên tiến ứng dựng cho ngành xử lý nước và môi trường tại Việt Nam. Giải quyết triệt để các vấn đề khó khăn mà thị trường Việt Nam đang gặp phải. Làm chủ công nghệ tiên tiến để sản xuất sản phẩm hoàn chỉnh xuất khẩu cho thị trường Châu Á.</p>
+                            <p>TVTS hiện nay đang hợp tác kỹ thuật và là đại lý chính thức của ROCHEM - một tập đoàn của Đức với hơn 40 năm thành lập, là một tập đoàn ứng dụng công nghệ màng RO, NF, MF đầu tiên trên thế giới xử lý cho nước biển, nước thải loại khó như: nước thải hoá chất, dệt nhuộm, nước rỉ rác và tái sử dụng nước thải. Công nghệ màng của ROCHEM đã được các tổ chức môi trường quốc tế hoan nghênh và lắp đặt hơn 3.000 hệ thống ở 79 quốc gia.</p>
+                            <p>Trong công nghệ xử lý hoá sinh, TVTS hợp tác với KWI - một tập đoàn của Áo với hơn 60 năm kinh nghiệm, là đơn vị đầu tiên phát minh ra công nghệ DAF (Dissolved Air Flotation) cho xử lý nước thải, nước cấp ở nhiều ứng dụng khác nhau. Với hơn 4.700 hệ thống hoạt động ở 77 quốc gia. </p>
+                            <p>TVTS với phương pháp làm việc dựa trên cơ sở nghiên cứu lý thuyết chuyên sâu cùng với thực nghiệm thực tiễn để đánh giá các vấn đề. Tất cả sản phẩm được TVTS thực hiện điều có hệ thống PILOT chạy thử nghiệm để đánh giá hiệu quả trên từng trường hợp cụ thể.</p>
+                        </div>
+                        <div class="details-right">
+                            <div class="details-img">
+                                <img src="./images/about-details.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about details-->
+    <div class="diagram">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="diagram-main">
+                        <h2>SƠ ĐỒ TỔ CHỨC</h2>
+                        <div class="diagram-img">
+                            <img src="./images/diagram.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end diagram  -->
+    <div class="brand">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="brand-main">
+                        <h2>NHÃN HIỆU SẢN PHẨM CỦA DOANH NGHỆP</h2>
+                        <div class="brand-list">
+                            <div class="brand-item brand--blue">
+                                <div class="brand-index">
+                                    <span>01</span>
+                                </div>
+                                <a href="#" class="brand-img">
+                                    <img src="./images/brand-thinhvuong.png" alt="">
+                                </a>
+                                <p>Sản phẩm thiết bị xử lý nước, xử lý nước thải </p>
+                                <p>Số văn bằng bảo hộ <br><strong>4-0249514-000</strong> </p>
+                            </div>
+                            <div class="brand-item brand--red">
+                                <div class="brand-index">
+                                    <span>02</span>
+                                </div>
+                                <a href="#" class="brand-img">
+                                    <img src="./images/brand-2.png" alt="">
+                                </a>
+                                <p>Sản phẩm thiết bị xử lý nước, xử lý nước thải </p>
+                                <p>Số văn bằng bảo hộ <br><strong>4-0249514-000</strong> </p>
+                            </div>
+                            <div class="brand-item brand--light-blue">
+                                <div class="brand-index">
+                                    <span>03</span>
+                                </div>
+                                <a href="#" class="brand-img">
+                                    <img src="./images/brand-3.png" alt="">
+                                </a>
+                                <p>Sản phẩm thiết bị xử lý nước, xử lý nước thải </p>
+                                <p>Số văn bằng bảo hộ <br><strong>4-0249514-000</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end brand  -->
+    <div class="personnel">
+        <div class="wrapper">
+            <div class="row">
+                <div class="personnel-main">
+                    <h2>Nhân sự</h2>
+                    <div class="personnel-list">   
+                        <div class="personnel-item">
+                            <div class="personnel-line">
+                                <div class="personnel-img">
+                                    <img src="./images/man-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="personnel-desc">
+                                <div class="personnel-name">
+                                    <h2>ÔNG LÊ BÁ ĐÌNH</h2>
+                                    <p>Giám đốc</p>
+                                </div>
+                                <div class="personnel-text">
+                                    <p>Thông tin: 20 năm kinh nghiệm trong ngành kỹ thuật, thiết bị và môi trường.</p>
+                                    <p>Ông là một trong những chuyên gia tư vấn về thiết bị kỹ thuật, công nghệ và giải pháp xử lý nước-môi trường</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="personnel-item">
+                            <div class="personnel-line">
+                                <div class="personnel-img">
+                                    <img src="./images/man-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="personnel-desc">
+                                <div class="personnel-name">
+                                    <h2>ÔNG LÊ BÁ ĐÌNH</h2>
+                                    <p>Giám đốc</p>
+                                </div>
+                                <div class="personnel-text">
+                                    <p>Thông tin: 20 năm kinh nghiệm trong ngành kỹ thuật, thiết bị và môi trường.</p>
+                                    <p>Ông là một trong những chuyên gia tư vấn về thiết bị kỹ thuật, công nghệ và giải pháp xử lý nước-môi trường</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="personnel-item">
+                            <div class="personnel-line">
+                                <div class="personnel-img">
+                                    <img src="./images/man-3.jpg" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="personnel-desc">
+                                <div class="personnel-name">
+                                    <h2>ÔNG LÊ BÁ ĐÌNH</h2>
+                                    <p>Giám đốc</p>
+                                </div>
+                                <div class="personnel-text">
+                                    <p>Thông tin: 20 năm kinh nghiệm trong ngành kỹ thuật, thiết bị và môi trường.</p>
+                                    <p>Ông là một trong những chuyên gia tư vấn về thiết bị kỹ thuật, công nghệ và giải pháp xử lý nước-môi trường</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="personnel-item">
+                            <div class="personnel-line">
+                                <div class="personnel-img">
+                                    <img src="./images/man-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="personnel-desc">
+                                <div class="personnel-name">
+                                    <h2>ÔNG LÊ BÁ ĐÌNH</h2>
+                                    <p>Giám đốc</p>
+                                </div>
+                                <div class="personnel-text">
+                                    <p>Thông tin: 20 năm kinh nghiệm trong ngành kỹ thuật, thiết bị và môi trường.</p>
+                                    <p>Ông là một trong những chuyên gia tư vấn về thiết bị kỹ thuật, công nghệ và giải pháp xử lý nước-môi trường</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="personnel-item">
+                            <div class="personnel-line">
+                                <div class="personnel-img">
+                                    <img src="./images/man-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="personnel-desc">
+                                <div class="personnel-name">
+                                    <h2>ÔNG LÊ BÁ ĐÌNH</h2>
+                                    <p>Giám đốc</p>
+                                </div>
+                                <div class="personnel-text">
+                                    <p>Thông tin: 20 năm kinh nghiệm trong ngành kỹ thuật, thiết bị và môi trường.</p>
+                                    <p>Ông là một trong những chuyên gia tư vấn về thiết bị kỹ thuật, công nghệ và giải pháp xử lý nước-môi trường</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="personnel-item">
+                            <div class="personnel-line">
+                                <div class="personnel-img">
+                                    <img src="./images/man-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="personnel-desc">
+                                <div class="personnel-name">
+                                    <h2>ÔNG LÊ BÁ ĐÌNH</h2>
+                                    <p>Giám đốc</p>
+                                </div>
+                                <div class="personnel-text">
+                                    <p>Thông tin: 20 năm kinh nghiệm trong ngành kỹ thuật, thiết bị và môi trường.</p>
+                                    <p>Ông là một trong những chuyên gia tư vấn về thiết bị kỹ thuật, công nghệ và giải pháp xử lý nước-môi trường</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end personnel  -->
+    <div class="teams">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="teams-main">
+                        <h2>TVTS TEAMS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end teams  -->
+    <div class="partner">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="partner-main">
+                        <h2>Đối tác công nghệ</h2>
+                        <div class="partner-img">
+                            <img src="./images/partner.png" alt="" usemap="#image-map">
+                        </div>
+                        <map name="image-map">
+                            <area target="_blank" alt="" title="" href="#" coords="84,318,248,319,332,462,250,605,88,605,1,461" shape="poly">
+                            <area target="_blank" alt="" title="" href="#" coords="352,159,510,159,599,299,514,441,351,443,269,302" shape="poly">
+                            <area target="_blank" alt="" title="" href="#" coords="620,312,783,314,869,453,784,596,620,597,536,453" shape="poly">
+                            <area target="_blank" alt="" title="" href="#" coords="887,153,1051,151,1133,294,1048,436,887,436,805,290" shape="poly">
+                            <area target="_blank" alt="" title="" href="#" coords="892,459,1058,462,1140,600,1055,745,890,745,810,605" shape="poly">
+                            <area target="_blank" alt="" title="" href="#" coords="351,467,517,467,601,610,512,751,351,751,269,607" shape="poly">
+                            <area target="_blank" alt="" title="" href="#" coords="1158,300,1320,302,1402,443,1321,585,1158,586,1073,443" shape="poly">
+                        </map>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partner -->
+    <div class="back-top">
+        <a href="#" id="button">
+            <img src="./images/backtop.png" alt="">
+        </a>
+    </div>
+    <!-- end back-top -->
+    <footer>
+        <div class="footer__top">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer__main">
+                            <a href="#" class="footer__img">
+                                <img src="./images/footer-logo.png" alt="">
+                            </a>
+                            <div class="footer__slogan">
+                                <p>XỬ LÝ NƯỚC THẢI | XỬ LÝ NƯỚC BIỂN | XỬ LÝ NƯỚC RÁC
+                                    HÓA CHẤT TẨY RỬA TURBINE | DỊCH VỤ - THIẾT BỊ KỸ THUẬT</p>
+                            </div>
+                            <div class="footer__info">
+                                <div class="footer__item">
+                                    <h2>Thông tin liên hệ</h2>
+                                    <div class="info-details">
+                                        <h3>CÔNG TY CỔ PHẦN DỊCH VỤ KỸ THUẬT THỊNH VƯỢNG</h3>
+                                        <p> <span><img src="./images/footer-icon-1.png" alt=""></span> 72 Đường số 18, Phường An Phú, Quận 2, TP.HCM</p>
+                                        <p><span><img src="./images/footer-icon-2.png" alt=""></span>  028.62922224 – FAX: 028.62922224</p>
+                                        <p><span><img src="./images/footer-icon-3.png" alt=""></span>  rochem@rochem.vn</p>
+                                    </div>
+                                </div>
+                                <div class="footer__item">
+                                    <h2>Dịch vụ</h2>
+                                    <div class="info-details">
+                                        <a href="">Giải pháp xử lý nước thải</a>
+                                        <a href="">Xử lý nước biển - nhiễm mặn</a>
+                                        <a href="">Hóa chất tẩy rửa Turbine</a>
+                                        <a href="">Dịch vụ - thiết bị kỹ thuật</a>
+                                    </div>
+                                </div>
+                                <div class="footer__item">
+                                    <h2>Trợ giúp</h2>
+                                    <div class="info-details">
+                                        <a href="">Phòng kinh doanh</a>
+                                        <a href="">Phòng kỹ thuật</a>
+                                        <a href="">Liên hệ</a>
+                                        <div class="info-social">
+                                            <a href="#">
+                                                <img src="./images/zalo.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/fb.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/skype.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/yt.png" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img src="./images/fb-2.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>Copyright © 2020 TVTS. All rights reserved. Design by INTECH</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
