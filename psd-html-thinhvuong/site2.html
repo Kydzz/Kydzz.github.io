@@ -9,13 +9,19 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="header__logo">
             <a href="#" >
                 <img src="./images/logo.png" alt="">
             </a>
         </div>
+        <div class="overlay"></div>
         <nav class="header__nav">
+            <div class="menu">
+                <a href="javascript:void(0);">
+                    <img src="./images/menu-outline.svg" alt="">
+                </a>
+            </div>
             <ul class="header__list">
                 <li class="header__item">
                     <a href="#" class="header__link">
@@ -30,7 +36,8 @@
                         <div class="header__img">
                             <img src="./images/icon-2.png" alt="">
                         </div>
-                        <p>giới thiệu</p>
+                        <p>giới thiệu <span></span></p>
+                        
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
@@ -52,7 +59,7 @@
                         <div class="header__img">
                             <img src="./images/icon-3.png" alt="">
                         </div>
-                        <p>dịch vụ</p>
+                        <p>dịch vụ <span></span></p>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
@@ -80,7 +87,7 @@
                         <div class="header__img">
                             <img src="./images/icon-4.png" alt="">
                         </div>
-                        <p>thư viện</p>
+                        <p>thư viện <span></span></p>
                     </a>
                 </li>
                 <li class="header__item">
@@ -469,6 +476,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./js/slick/slick.min.js"></script>
+    <script src="./js/scrollhide.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

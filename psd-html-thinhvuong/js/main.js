@@ -22,7 +22,6 @@ $('.service__list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
-        centerMode: true,
       },
     }
   ]
@@ -55,7 +54,6 @@ function showSlides(n) {
 
 var link = [...document.querySelectorAll('.header__link')];
 var img = [...document.querySelectorAll('.header__img')];
-console.log(img)
 link.forEach( (e,idx) => {
     e.onclick = function() {
         // console.log(this)
@@ -88,8 +86,20 @@ var overlay = document.querySelector('.overlay');
 var headerList = document.querySelector('.header__list');
 var menu = document.querySelector('.menu');
 menu.onclick = () => {
-  overlay.style.opacity = '1';
-  overlay.style.visibility = 'visible';
-  headerList.style.opacity = '1';
-  headerList.style.visibility = 'visible';
+  overlay.classList.toggle('show');
+  headerList.classList.toggle('show');
 }
+
+// ----overlay
+
+var contain = $('.overlay').hasClass('show');
+$(document).ready(function(){  
+  $('.menu').click(function(){  
+      if($('.overlay').hasClass('show')) {
+        $('#header').addClass('tozero')
+      }
+      else {
+        $('#header').removeClass('tozero')
+      }
+  });   
+}); 
