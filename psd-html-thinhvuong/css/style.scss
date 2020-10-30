@@ -107,7 +107,9 @@ ul {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
 }
-
+.bg {
+    background-color: #1b2e5cf7;
+}
 // -------------------------- //
 .menu {
     position: relative;
@@ -149,25 +151,23 @@ header {
     top: 0;
     transition: transform 0.5s ease-out;
     padding-top: 2rem;
-    background-color: #1b2e5ccf;
     @include breakpoint(xxs) {
         align-items: center;
         padding-bottom: 1rem;
         padding-top: 1rem;
-        background-color: #00aeef;
+        background-color: #00aeef !important;
         // background-color: #1b2e5ccf;
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
     @include breakpoint(xs) {
         align-items: center;
         padding-bottom: 2rem;
-        background-color: #1b2e5ccf;
+
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
     @include breakpoint(sm) {
         align-items: center;
         padding-bottom: 2rem;
-        background-color: #1b2e5ccf;
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
 }
@@ -775,13 +775,13 @@ header {
 
 // service
 .service {
-    height: 108rem;
+    height: 90rem;
     background: url('../images/service-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     &__main {
-        padding-top: 40rem;
+        padding-top: 20rem;
         width: 100%;
         & > h1 {
             font-family: $t-font;
@@ -834,9 +834,15 @@ header {
             z-index: 99;
             bottom: -130px;
             left: 0;
+            width: 70px;
+            height: 70px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
         .next {
-            left: 120px;
+            left: 80px;
         }
     }
     // &__arrow {

@@ -22,6 +22,7 @@ $('.service__list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
+        centerMode: true
       },
     }
   ]
@@ -131,3 +132,13 @@ $(document).ready(function(){
       }
   });   
 }); 
+
+
+// remove bg
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 310) {
+    $('#header').addClass('bg');
+  } else {
+    $('#header').removeClass('bg');
+  }
+});
