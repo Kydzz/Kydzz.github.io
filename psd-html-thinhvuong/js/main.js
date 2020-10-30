@@ -110,11 +110,13 @@ $(document).ready(function(){
 var searchbtn = document.querySelector('.header__search');
 var search = document.querySelector('.search');
 var close = document.querySelector('.close');
+var header = document.querySelector('#header');
 searchbtn.onclick = () => {
   search.classList.add('show');
 }
 close.onclick = () => {
   search.classList.remove('show');
+  header.classList.remove('tozero')
 }
 
 // ---sefdsa
