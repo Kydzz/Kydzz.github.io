@@ -42,7 +42,7 @@ body {
 h1 {
     font-size: 4rem;
     @include breakpoint(xxs) {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     @include breakpoint(xs) {
         font-size: 3rem;
@@ -171,6 +171,45 @@ header {
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
 }
+.search {
+    width: 100%;
+    height: 100vh;
+    background: #177da4;
+    top: 0;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    ::placeholder {
+        color: rgba(235, 235, 235, 0.877);
+        opacity: 1;
+    }
+    & > h3 {
+        position: absolute;
+        top: 30vh;
+        right: 27rem;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 600;
+        border-bottom: 2px solid #ffffff7d;
+        padding-bottom: .5rem;
+        cursor: pointer;
+    }
+    &__input {
+        position: absolute;
+        padding: 1.2rem 3rem;
+        background: transparent;
+        left: 20vw;
+        top: 40vh;
+        border: 0;
+        outline: 0;
+        /* border-bottom: 2px solid #00ffff42; */
+        color: white;
+        font-size: 25px;
+        background-image: url(../images/icon-6.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+}
 .overlay {
     position: fixed;
     top: 0;
@@ -243,6 +282,7 @@ header {
     &__nav {
         display: flex;
         flex-direction: row;
+        z-index: 99;
         @include breakpoint(xxs) {
             display: flex;
             flex-direction: column;
@@ -919,16 +959,22 @@ header {
     }
     &__link {
         display: flex;
+        @include breakpoint(xxs) {
+            flex-direction: column;
+        }
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
     }
     &__img {
         width: 33rem;
         height: auto;
         flex-shrink: 0;
         @include breakpoint(xxs) {
-            width: 16rem;
+            width: 100%
         }
         @include breakpoint(xs) {
-            width: 16rem;
+            width: 100%;
         }
         img {
             width: 100%;
@@ -950,12 +996,16 @@ header {
             padding-left: 2rem;
             padding-right: 1rem;
             // line-height: 2.5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
         @include breakpoint(xs) {
             line-height: 2rem;
             padding-left: 2rem;
             padding-right: 1rem;
             // line-height: 2.5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
         @include breakpoint(sm) {
             line-height: 2rem;
@@ -1132,7 +1182,7 @@ header {
 // site 2 css- --------------------- ------------------- ------------- --------
 .about-details {
     padding-top: 10rem;
-    padding-bottom: 15rem;
+    padding-bottom: 10rem;
     background-image: url('../images/Hompage.jpg');
     background-size: cover;
     background-position: center ;
@@ -1179,10 +1229,11 @@ header {
         color: $white;
         margin-bottom: 2rem;
         text-align: justify;
-        line-height: 2rem;
+        line-height: 2.3rem;
         @include breakpoint(xxs) {
             font-size: 1.6rem;
             margin-bottom: 1rem;
+
         }
         @include breakpoint(xs) {
             font-size: 1.6rem;
@@ -1408,10 +1459,10 @@ header {
     &-main {
         width: 100%;
         @include breakpoint(xxs) {
-            width: 90%;
+            width: 100%;
         }
         @include breakpoint(xs) {
-            width: 90%;
+            width: 100%;
         }
         & > h2 {
             font-family: $t-font;
@@ -1436,6 +1487,16 @@ header {
         margin-left: -28px;
         height: 19rem;
         overflow: hidden;
+        @include breakpoint(xxs) {
+            transform: none;
+            margin-left: 0;
+            height: auto;
+        }
+        @include breakpoint(xs) {
+            transform: none;
+            margin-left: 0;
+            height: auto;
+        }
     }
     &-name {
         background: $secondary-color;
@@ -1445,6 +1506,20 @@ header {
         h2 {
             margin-bottom: .5rem;
             font-weight: bold;
+            @include breakpoint(xxs) {
+                font-size: 2rem;
+            }
+            @include breakpoint(xs) {
+                font-size: 2rem;
+            }
+        }
+        p {
+            @include breakpoint(xxs) {
+                font-size: 1.8rem;
+            }
+            @include breakpoint(xs) {
+                font-size: 1.8rem;
+            }
         }
     }
     &-text {
@@ -1452,7 +1527,14 @@ header {
         padding-top: 1rem;
         font-size: 13px;
         line-height: 1.6rem;
-
+        @include breakpoint(xxs) {
+            line-height: 2.1rem;
+            font-size: 1.6rem;
+        }
+        @include breakpoint(xs) {
+            line-height: 2.1rem;
+            font-size: 1.6rem;
+        }
     }
     &-list {
         display: flex;
@@ -1468,15 +1550,17 @@ header {
             width: 100%;
             margin-right: 0;
             margin-bottom: 3rem;
+            flex-direction: column;
         }
         @include breakpoint(xs) {
             width: 100%;
             margin-right: 0;
+            flex-direction: column;
             margin-bottom: 3rem;
         }
         @include breakpoint(sm) {
             width: calc(50% - 2rem);
-            margin-bottom: 3rem;
+            margin-bottom: 7rem;;
 
         }
     }
@@ -1490,12 +1574,18 @@ header {
             height: 30px;
             background: $secondary-color;
             transform: skewX(-16deg);
+            @include breakpoint(xxs) {
+                content: none;
+            }
+            @include breakpoint(xs) {
+                content: none;
+            }
         }
         &::after {
             content: "";
             position: absolute;
             bottom: 0;
-            right: 222px;
+            right: 213px;
             width: 3px;
             height: 30px;
             background: $secondary-color;
@@ -1517,9 +1607,19 @@ header {
         height: 19rem;
         width: 22rem;
         flex-shrink: 0;
+        @include breakpoint(xxs) {
+            clip-path: none;
+            width: 100%;
+            height:100%
+        }
+        @include breakpoint(xs) {
+            clip-path: none;
+            height:100%;
+            width: 100%;
+        }
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
         }
     }
@@ -1569,9 +1669,11 @@ header {
             text-transform: uppercase;
             @include breakpoint(xxs) {
                 font-size: 2.8rem;
+                margin-bottom: 5rem;
             }
             @include breakpoint(xs) {
                 font-size: 2.8rem;
+                margin-bottom: 5rem;
             }
         }
     }
@@ -1912,6 +2014,10 @@ section {
     cursor: pointer;
 }
 #button.show {
+    opacity: 1;
+    visibility: visible;
+}
+.show {
     opacity: 1;
     visibility: visible;
 }

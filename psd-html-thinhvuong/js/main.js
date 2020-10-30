@@ -103,3 +103,29 @@ $(document).ready(function(){
       }
   });   
 }); 
+
+
+
+// ---search 
+var searchbtn = document.querySelector('.header__search');
+var search = document.querySelector('.search');
+var close = document.querySelector('.close');
+searchbtn.onclick = () => {
+  search.classList.add('show');
+}
+close.onclick = () => {
+  search.classList.remove('show');
+}
+
+// ---sefdsa
+
+$(document).ready(function(){  
+  $('.header__search').click(function(){  
+      if($('.search').hasClass('show')) {
+        $('#header').addClass('tozero')
+      }
+      else {
+        $('#header').removeClass('tozero')
+      }
+  });   
+}); 
