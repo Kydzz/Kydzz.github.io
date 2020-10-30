@@ -75,7 +75,10 @@ ul {
     // width: 117rem;
     margin: 0 auto;
     @include breakpoint(xxs) {
-        width: 34rem;
+        width: 100%;
+        padding-left: 1.5rem;
+        margin: 0 auto;
+        padding-right: 1.5rem;
     }
     @include breakpoint(xs) {
         width: 45rem;
@@ -146,20 +149,25 @@ header {
     top: 0;
     transition: transform 0.5s ease-out;
     padding-top: 2rem;
+    background-color: #1b2e5ccf;
     @include breakpoint(xxs) {
         align-items: center;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         background-color: #00aeef;
+        // background-color: #1b2e5ccf;
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
     @include breakpoint(xs) {
         align-items: center;
         padding-bottom: 2rem;
+        background-color: #1b2e5ccf;
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
     @include breakpoint(sm) {
         align-items: center;
         padding-bottom: 2rem;
+        background-color: #1b2e5ccf;
         box-shadow: 0px 1px 2px 0px #d4d4d475;
     }
 }
@@ -169,7 +177,7 @@ header {
     left: 0;
     width: 100%;
     height: 132vh;
-    background: #0000009e;
+    background: #1e3841e3;
     transform: none;
     opacity: 0;
     visibility: hidden;
@@ -268,27 +276,33 @@ header {
             position: absolute;
             top: 17rem;
             left: 0;
-            width: 100%;
+            width: 100vw;
             opacity: 0;
             visibility: hidden;
+            overflow-x: hidden;
+            overflow: auto;
         }
         @include breakpoint(xs) {
             flex-direction: column;
             position: absolute;
             top: 17rem;
             left: 0;
-            width: 100%;
+            width: 100vw;
             opacity: 0;
             visibility: hidden;
+            overflow-x: hidden;
+            overflow: auto;
         }
         @include breakpoint(sm) {
             flex-direction: column;
             position: absolute;
             top: 17rem;
             left: 0;
-            width: 100%;
+            width: 100vw;
             opacity: 0;
             visibility: hidden;
+            overflow-x: hidden;
+            overflow: auto;
         }
     }
     &__item {
@@ -310,10 +324,16 @@ header {
             }
         }
     }
+    &__text {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
     &__link {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2rem;
         @include breakpoint(xxs) {
             flex-direction: row;
         }
@@ -330,22 +350,23 @@ header {
         p {
             @include breakpoint(md) {
                 font-size: 1.4rem;
+                line-height: 2.4rem;
             }
             white-space: nowrap;
             text-transform: uppercase;
             font-size: 1.6rem;
             color: $white;
             font-family: $t-font;
-            span {
+            & + span {
                 position: absolute;
                 height: 10px;
                 width: 10px;
                 background: transparent;
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
-                border-top: 8px solid currentColor;
-                bottom: 0;
-                margin-left: 0.5rem;
+                border-top: 8px solid #fff;
+                right: -2rem;
+                top: 5px;
                 @include breakpoint(xxs) {
                     bottom: auto;
                 }
@@ -357,13 +378,14 @@ header {
                 }
             }
         }
+        
 //dropdown-menu
         & + ul.dropdown-menu {
             position: absolute;
             top: 100%;
             background-color: $secondary-color;
             padding: 2rem;
-            margin-top: 2rem;
+            
             opacity: 0;
             visibility: hidden;
             transition: 0.2s all linear;
@@ -810,12 +832,15 @@ header {
             color: $white;
             font-size: 1.6rem;
             padding:1rem 0;
+            line-height: 2.4rem;
             @include breakpoint(xxs) {
                 font-size: 1.4rem;
+                
             }
             @include breakpoint(xs) {
                 font-size: 1.4rem;
             }
+
             @include breakpoint(sm) {
                 font-size: 1.4rem;
             }
@@ -919,32 +944,38 @@ header {
         padding-right: 8rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+
         @include breakpoint(xxs) {
             line-height: 2rem;
             padding-left: 2rem;
             padding-right: 1rem;
+            // line-height: 2.5rem;
         }
         @include breakpoint(xs) {
             line-height: 2rem;
             padding-left: 2rem;
             padding-right: 1rem;
+            // line-height: 2.5rem;
         }
         @include breakpoint(sm) {
             line-height: 2rem;
             padding-left: 2rem;
             padding-right: 1rem;
+            line-height: 3rem;
         }
         p {
             font-size: 3.6rem;
             color: $secondary-color;
             @include breakpoint(xxs) {
                 font-size: 1.6rem;
+
             }
             @include breakpoint(xs) {
                 font-size: 1.6rem;
             }
             @include breakpoint(sm) {
                 font-size: 2rem;
+                
             }
             strong {
                 font-family: $t-font;
@@ -1127,10 +1158,10 @@ header {
     }
     & > h2 {
         font-family: $t-font;
-        font-size: 4.8rem;
+        font-size: 4rem;
         font-weight: bold;
         color: $primary-color;
-        margin-bottom: 6.5rem;
+        margin-bottom: 4.5rem;
         @include breakpoint(xxs) {
             font-size: 2.8rem;
             margin-bottom: 3.5rem;
@@ -1146,9 +1177,17 @@ header {
     }
     p {
         color: $white;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         text-align: justify;
-        
+        line-height: 2rem;
+        @include breakpoint(xxs) {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        @include breakpoint(xs) {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 .details-right {
@@ -1343,10 +1382,10 @@ header {
         text-align: center;
         height: 153px;
         @include breakpoint(xxs) {
-            height: 123px;
+            height: 200px;
         }
         @include breakpoint(xs) {
-            height: 123px;
+            height: 200px;
         }
         @include breakpoint(sm) {
             height: 123px;
@@ -1394,7 +1433,9 @@ header {
     }
     &-desc {
         transform: skewX(-16deg);
-        margin-left: -29px;
+        margin-left: -28px;
+        height: 19rem;
+        overflow: hidden;
     }
     &-name {
         background: $secondary-color;
@@ -1402,6 +1443,7 @@ header {
         font-size: 15px;
         color: $white;
         h2 {
+            margin-bottom: .5rem;
             font-weight: bold;
         }
     }
@@ -1409,6 +1451,8 @@ header {
         padding-left: 1rem;
         padding-top: 1rem;
         font-size: 13px;
+        line-height: 1.6rem;
+
     }
     &-list {
         display: flex;
@@ -1418,7 +1462,7 @@ header {
         display: flex;
         width: calc(33.33% - 2rem);
         margin-right: 2rem;
-        margin-bottom: 16rem;
+        margin-bottom: 10rem;
         position: relative;
         @include breakpoint(xxs) {
             width: 100%;
@@ -1456,8 +1500,14 @@ header {
             height: 30px;
             background: $secondary-color;
             transform: skewX(-16deg);
+            @include breakpoint(xxs) {
+                content: none;
+            }
+            @include breakpoint(xs) {
+                content: none;
+            }
             @include breakpoint(sm) {
-                right: 256px;
+                content: none;
             }
             
         }
@@ -1569,13 +1619,13 @@ section {
             font-size: 4.8rem;
             margin-bottom: 5rem;
             @include breakpoint(xxs) {
-                font-size: 3.8rem;
+                font-size: 2.8rem;
             }
             @include breakpoint(xs) {
-                font-size: 3.8rem;
+                font-size: 2.8rem;
             }
             @include breakpoint(sm) {
-                font-size: 3.8rem;
+                font-size: 2.8rem;
             }
         }
         &--blue {
@@ -1588,11 +1638,19 @@ section {
     &__quote {
         padding: 5rem 3rem;
         background-color: #e2f5fc;
-        line-height: 4.8rem;
+        line-height: 3.8rem;
         font-size: 2.4rem;
         color: $secondary-color;
         position: relative;
         margin-bottom: 5.6rem;
+        @include breakpoint(xxs) {
+            line-height: 2.8rem;
+            font-size: 1.6rem;
+        }
+        @include breakpoint(xs) {
+            line-height: 2.8rem;
+            font-size: 1.6rem;
+        }
         span {
             display: block;
             position: absolute;
@@ -1675,24 +1733,30 @@ section {
         height: 11rem;
     }
     &__say {
-        padding: 3rem 8rem;
+        padding-left: 8rem;
+        padding-right: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         background: #e1e1e1;
         border-radius: 7px;
         margin-left: 4rem;
         position: relative;
         margin-bottom: 3rem;
+        line-height: 3.8rem;
         @include breakpoint(xxs) {
             padding-top: 3rem;
             padding-bottom: 3rem;
             padding-right: 2rem;
             padding-left: 7rem;
             margin-bottom: 3rem;
+            line-height: 2rem;
         }
         @include breakpoint(xs) {
             padding-top: 3rem;
             padding-bottom: 3rem;
             padding-right: 2rem;
             padding-left: 7rem;
+            line-height: 2rem;
             margin-bottom: 3rem;
         }
         p {
@@ -1726,14 +1790,15 @@ section {
         p {
             margin-bottom: 2rem;
             font-size: 2.4rem;
+            line-height: 3rem;
             @include breakpoint(xxs) {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             @include breakpoint(xs) {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             @include breakpoint(sm) {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             &:first-of-type {
                 text-transform: uppercase;
@@ -1742,7 +1807,7 @@ section {
         }
     }
     &__products {
-        width: calc(50% - 1rem);
+        width: calc(50% - 2rem);
         height: auto;
         margin-right: 2rem;
         text-align: center;
@@ -1769,7 +1834,7 @@ section {
     }
     figure {
         margin-top: 5.5rem;
-        font-size: 3.4rem;
+        font-size: 3rem;
         font-weight: bold;
         color: #fff;
         text-align: center;
@@ -1778,7 +1843,7 @@ section {
             margin-top: 1.5rem;
         }
         @include breakpoint(xs) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
     }
     &__content {
@@ -1789,9 +1854,22 @@ section {
     &__left {
         font-size: 2.4rem;
         color: #fff;
-        line-height: 3.2rem;
+        line-height: 3rem;
         text-align: justify;
         margin-right: 4rem;
+        @include breakpoint(xxs) {
+            font-size: 1.6rem;
+            
+        }
+        @include breakpoint(xs) {
+            font-size: 1.6rem;
+        }
+        @include breakpoint(xs) {
+            font-size: 1.6rem;
+        }
+        @include breakpoint(sm) {
+            font-size: 1.6rem;
+        }
     }
     &__right {
         img {
