@@ -336,14 +336,14 @@ header {
   .header__logo a {
     margin-left: 2rem;
     margin-right: 3rem;
-    width: 75%;
+    width: 100%;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .header__logo a {
     margin-left: 2rem;
     margin-right: 3rem;
-    width: 75%;
+    width: 100%;
   }
 }
 .header__nav {
@@ -426,6 +426,12 @@ header {
 }
 .header__item {
   margin: 0px 4.5rem;
+}
+.header__item:hover p {
+  color: #5bcffb;
+}
+.header__item:hover span {
+  border-top-color: #5bcffb;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .header__item {
@@ -578,8 +584,11 @@ header {
     margin-right: 1rem;
   }
 }
-.header__img.active + p {
+.header__img.active + .header__text p {
   color: #5bcffb;
+}
+.header__img.active + .header__text span {
+  border-top-color: #5bcffb;
 }
 .header__img.active::before {
   content: "";
@@ -618,6 +627,11 @@ header {
   outline: none;
   color: #fff;
   text-transform: uppercase;
+  transition: 0.2s all linear;
+}
+.header__lang a:hover {
+  background-color: #fff;
+  color: #5bcffb;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .header__lang a {
@@ -725,6 +739,10 @@ header {
   color: #fff;
   padding: 2rem;
   z-index: 20;
+  transition: color 0.1s linear;
+}
+.banner__main:hover {
+  color: #5bcffb;
 }
 .banner__main h3 {
   font-family: "UTMAvoBold";
@@ -789,6 +807,7 @@ header {
 .about__main {
   position: relative;
   width: 100%;
+  height: 100vh;
 }
 .about__bg {
   height: 100vh;
@@ -800,17 +819,13 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 45vh;
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .about__bg {
-    padding-top: 40vh;
-  }
 }
 .about__content {
   position: absolute;
   width: 100%;
   height: auto;
+  bottom: 0;
+  padding-bottom: 8rem;
 }
 .about__content h1 {
   font-family: "UTMAvoBold";
@@ -930,6 +945,10 @@ header {
 .service__link {
   position: relative;
 }
+.service__link:hover > p {
+  background-color: rgba(255, 255, 255, 0.801);
+  color: #207a9b;
+}
 .service__link > p {
   font-family: "UTMAvoBold";
   font-size: 2.6rem;
@@ -944,6 +963,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
+  transition: 0.2s all linear;
 }
 .service__list {
   display: flex;
@@ -1064,7 +1084,11 @@ header {
 .blog__link {
   margin-bottom: 5rem;
 }
+.blog__link:hover p {
+  color: #5bcffb;
+}
 .blog__link > p {
+  transition: 0.2s color linear;
   color: #fff;
   font-size: 1.6rem;
   padding: 1rem 0;
@@ -1117,6 +1141,12 @@ header {
     order: 1;
   }
 }
+.blog__item:nth-child(3):hover h3 {
+  color: #d2dcf5;
+}
+.blog__item:nth-child(3):hover p {
+  color: #d2dcf5;
+}
 .blog__item:nth-child(3) a {
   color: #fff;
   background-color: #00aeef;
@@ -1126,11 +1156,17 @@ header {
   bottom: 0;
   left: 0;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .blog__item:nth-child(3) a {
+    height: 50rem;
+  }
+}
 .blog__item:nth-child(3) a h3 {
   margin-top: 2rem;
   line-height: 2rem;
   font-family: "UTMAvoBold";
   font-size: 1.6rem;
+  transition: 0.2s all linear;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .blog__item:nth-child(3) a h3 {
@@ -1163,11 +1199,7 @@ header {
   background: currentColor;
   height: 2px;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
-  .blog__item:nth-child(3) a {
-    height: 50rem;
-  }
-}
+
 .methods {
   background: url("../images/methods-bg.jpg");
   background-repeat: no-repeat;
@@ -1240,10 +1272,20 @@ header {
   }
 }
 .methods__plus {
+  height: 55px;
+  overflow: hidden;
+  position: relative;
   text-align: center;
 }
+.methods__plus img {
+  position: absolute;
+  top: -55px;
+}
+.methods__plus img:hover {
+  top: 0;
+}
 .methods__desc {
-  background: #ffffffc2;
+  background-color: #ffffffc2;
   line-height: 5rem;
   display: flex;
   align-items: center;
@@ -1251,6 +1293,10 @@ header {
   padding-right: 8rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  transition: 0.2s background-color linear;
+}
+.methods__desc:hover {
+  background-color: #fff;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .methods__desc {
@@ -1318,6 +1364,8 @@ header {
 }
 .footer__img {
   text-align: center;
+  margin: 0 auto;
+  max-width: max-content;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .footer__img img {
@@ -1340,7 +1388,7 @@ header {
 }
 .footer__slogan a {
   color: #1b2e5c;
-  transition: color 0.2s linear;
+  transition: color 0.1s linear;
 }
 .footer__slogan a:hover {
   color: #00aeef;
@@ -1470,6 +1518,10 @@ header {
 .footer__item .info-details a {
   font-size: 2.1rem;
   color: #1b2e5c;
+  transition: color 0.1s linear;
+}
+.footer__item .info-details a:hover {
+  color: #5bcffb;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .footer__item .info-details a {
@@ -1815,9 +1867,6 @@ header {
   .brand-img {
     height: 123px;
   }
-}
-.brand-img img {
-  width: 100%;
 }
 
 .personnel {

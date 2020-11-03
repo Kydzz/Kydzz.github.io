@@ -263,12 +263,12 @@ header {
             @include breakpoint(xxs) {
                 margin-left: 2rem;
                 margin-right: 3rem;
-                width: 75%;
+                width: 100%;
             }
             @include breakpoint(xs) {
                 margin-left: 2rem;
                 margin-right: 3rem;
-                width: 75%;
+                width: 100%;
             }
         }
     }
@@ -340,6 +340,15 @@ header {
     }
     &__item {
         margin: 0px 4.5rem;
+        &:hover {
+            
+            p {
+                color: $primary-color;
+            }
+            span {
+                border-top-color: $primary-color;
+            }
+        }
         @include breakpoint(xxs){
             margin-bottom: 4rem;;
         }
@@ -465,8 +474,11 @@ header {
             margin-right: 1rem;
         }
         &.active {
-            & + p {
+            & + .header__text p{
                 color: $primary-color;
+            }
+            & + .header__text span {
+                border-top-color: $primary-color;
             }
             &::before {
                 content: "";
@@ -501,6 +513,11 @@ header {
             outline: none;
             color: #fff;
             text-transform: uppercase;
+            transition: .2s all linear;
+            &:hover {
+                background-color: #fff;
+                color: $primary-color;
+            }
             @include breakpoint(xxs) {
                 margin: 0 5px;
             }
@@ -606,12 +623,17 @@ header {
         color: #fff;
         padding: 2rem;
         z-index: 20;
+        transition: color .1s linear;
+        &:hover {
+            color: $primary-color;
+        }
         h3 {
             font-family: $t-font;
             font-size: 3.6rem;
             font-weight: bold;
             text-transform: uppercase;
             margin-bottom: 4rem;
+            
             @include breakpoint(xxs) {
                 font-size: 2.5rem;
             }
@@ -660,7 +682,8 @@ header {
     background-position: center;
     &__main {
         position: relative;
-        width: 100%;
+        width: 100%;  
+        height: 100vh;
     }
     &__bg {
         height: 100vh;
@@ -672,15 +695,13 @@ header {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        padding-top: 45vh;
-        @include breakpoint(sm) {
-            padding-top: 40vh;
-        }
     }
     &__content {
         position: absolute;
         width: 100%;
         height: auto;
+        bottom: 0;
+        padding-bottom: 8rem;
         h1 {
             font-family: $t-font;
             color: $primary-color;
@@ -793,6 +814,10 @@ header {
     }
     &__link {
         position: relative;
+        &:hover > p {
+            background-color: rgba(255, 255, 255, 0.801);
+            color: #207a9b;
+        }
         & > p {
             font-family: $t-font;
             font-size: 2.6rem;
@@ -807,6 +832,7 @@ header {
             position: absolute;
             bottom: 0;
             left: 0;
+            transition: .2s all linear;
         }
     }
     &__list {
@@ -846,12 +872,6 @@ header {
             left: 80px;
         }
     }
-    // &__arrow {
-    //     margin-top: 3rem;
-    //     a {
-    //         display: inline-block !important;
-    //     }
-    // }
 }
 
 // blog
@@ -899,7 +919,6 @@ header {
         
 }
 .blog {
-    // height: 108rem;
     background-color: #1b2e5c;
     &__main {
         padding-top: 10rem;
@@ -924,7 +943,14 @@ header {
     }
     &__link {
         margin-bottom: 5rem;
+        &:hover {
+            p {
+               
+                color: $primary-color;
+            }
+        }
         & > p {
+            transition: .2s color linear;
             color: $white;
             font-size: 1.6rem;
             padding:1rem 0;
@@ -966,12 +992,33 @@ header {
             }
         }
         &:nth-child(3) {
+            &:hover {
+               h3 {
+                   color: #d2dcf5;
+               }
+                p {
+                    color: #d2dcf5;
+                }
+            }
             a {
+                color: $white;
+                background-color: #00aeef;
+                height: 60rem;
+                padding: 1.5rem 3rem 4rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                
+                
+                @include breakpoint(sm) {
+                    height: 50rem;
+                }
                 h3 {
                     margin-top: 2rem;
                     line-height: 2rem;
                     font-family: $t-font;
                     font-size: 1.6rem;
+                    transition: .2s all linear;
                     @include breakpoint(sm) {
                         font-size: 1.4rem;
                     }
@@ -1000,21 +1047,9 @@ header {
                         height: 2px;
                     }
                 }
-                color: $white;
-                background-color: #00aeef;
-                height: 60rem;
-                padding: 1.5rem 3rem 4rem;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                @include breakpoint(sm) {
-                    height: 50rem;
-                }
+                
             }
         }
-    }
-    &__img {
-        
     }
 }
 
@@ -1079,10 +1114,20 @@ header {
         }
     }
     &__plus {
+        height: 55px;
+        overflow: hidden;
+        position: relative;
         text-align: center;
+        img {
+            position: absolute;
+            top: -55px;
+            &:hover {
+                top: 0;
+            }
+        }
     }
     &__desc {
-        background: #ffffffc2;
+        background-color: #ffffffc2;
         line-height: 5rem;
         display: flex;
         align-items: center;
@@ -1090,7 +1135,10 @@ header {
         padding-right: 8rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-
+        transition: .2s background-color linear;
+        &:hover {
+            background-color: #fff;
+        }
         @include breakpoint(xxs) {
             line-height: 2rem;
             padding-left: 2rem;
@@ -1149,9 +1197,12 @@ header {
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        
     }
     &__img {
         text-align: center;
+        margin: 0 auto;
+        max-width: max-content;
         img {
             @include breakpoint(xxs) {
                 width: 100%;
@@ -1173,7 +1224,7 @@ header {
         margin-bottom: 5rem;
         a {
             color: $secondary-color;
-            transition: color .2s linear;
+            transition: color .1s linear;
             &:hover {
                 color: #00aeef;
             }
@@ -1277,6 +1328,10 @@ header {
             a {
                 font-size: 2.1rem;
                 color: $secondary-color;
+                transition: color .1s linear;
+                &:hover {
+                    color: $primary-color;
+                }
                 @include breakpoint(xxs) {
                     font-size: 1.6rem;
                 }
@@ -1565,9 +1620,6 @@ header {
         }
         @include breakpoint(sm) {
             height: 123px;
-        }
-        img {
-            width: 100%;
         }
     }
 }
