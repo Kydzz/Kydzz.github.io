@@ -22,14 +22,14 @@
         </div>
         <nav class="header__nav">
             <div class="menu">
-                <a href="javascript:void(0);">
-                    <img src="./images/menu-outline.svg" alt="">
-                </a>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
             <ul class="header__list">
                 <li class="header__item">
                     <a href="#" class="header__link">
-                        <div class="header__img active">
+                        <div class="header__img ">
                             <img src="./images/icon-1.png" alt="">
                         </div>
                         <p>Trang chủ</p>
@@ -37,7 +37,7 @@
                 </li>
                 <li class="header__item">
                     <a href="#" class="header__link">
-                        <div class="header__img">
+                        <div class="header__img active">
                             <img src="./images/icon-2.png" alt="">
                         </div>
                         <div class="header__text">
@@ -48,16 +48,16 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
-                            <a href="#" class="dropdown-link">Giới thiệu TVTS</a>
+                            <a href="#about" class="dropdown-link">Giới thiệu TVTS</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="#" class="dropdown-link">Sơ đồ tổ chức</a>
+                            <a href="#diagram" class="dropdown-link">Sơ đồ tổ chức</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="#" class="dropdown-link">Nhân sự</a>
+                            <a href="#personnel" class="dropdown-link">Nhân sự</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="#" class="dropdown-link">Đối tác công nghệ</a>
+                            <a href="#partner" class="dropdown-link">Đối tác công nghệ</a>
                         </li>
                     </ul>
                 </li>
@@ -121,54 +121,9 @@
         </div>
     </header>
     <!-- end header -->
-    <div class="banner">
-        <div class="banner__slide">
-            <div class="banner-1 img fade">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <a href="#" class="banner__main">
-                                <h3><strong>TVTS</strong> chuyên gia xử lí nước</h3>
-                                <p>Xử lí nước thải - tái sử dụng nước</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-2 img fade">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <a href="#" class="banner__main">
-                                <h3><strong>TVTS</strong> chuyên gia xử lí biển</h3>
-                                <p>Xử lí nước biển - nhiễm mặn</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-3 img fade">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <a href="#" class="banner__main">
-                                <h3><strong>TVTS</strong> chuyên gia xử lí nước rỉ rác</h3>
-                                <p>Xử lí nước rỉ rác </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; position: absolute;bottom: 12rem;right: 12rem;">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
-        </div>
-        
-    </div>
+    <div class="banner-child bg-about-us"></div>
     <!-- end banner -->
-    <div class="about-details">
+    <div id="about" class="about-details">
         <div class="wrapper">
             <div class="container">
                 <div class="row">
@@ -192,7 +147,7 @@
         </div>
     </div>
     <!-- end about details-->
-    <div class="diagram">
+    <div class="diagram" id="diagram">
         <div class="wrapper">
             <div class="container">
                 <div class="row">
@@ -251,7 +206,7 @@
         </div>
     </div>
     <!-- end brand  -->
-    <div class="personnel">
+    <div class="personnel" id="personnel">
         <div class="wrapper">
             <div class="container">
                 <div class="row">
@@ -387,7 +342,7 @@
         </div>
     </div>
     <!-- end teams  -->
-    <div class="partner">
+    <div class="partner" id="partner">
         <div class="wrapper">
             <div class="container">
                 <div class="row">
@@ -412,7 +367,7 @@
     </div>
     <!-- partner -->
     <div class="back-top">
-        <a href="#" id="button">
+        <a href="javascript:void(0);" id="button">
             <img src="./images/backtop.png" alt="">
         </a>
     </div>
@@ -495,5 +450,16 @@
     <script src="./js/rwd.js"></script>
     <script src="./js/scrollhide.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+        $("a[href*='#']:not([href='#])").click(function() {
+            let target = $(this).attr("href");
+            $('html,body').stop().animate({
+            scrollTop: $(target).offset().top
+            }, 1000);
+            event.preventDefault();
+        });
+        });
+    </script>
 </body>
 </html>

@@ -22,14 +22,14 @@
         </div>
         <nav class="header__nav">
             <div class="menu">
-                <a href="javascript:void(0);">
-                    <img src="./images/menu-outline.svg" alt="">
-                </a>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
             <ul class="header__list">
                 <li class="header__item">
                     <a href="#" class="header__link">
-                        <div class="header__img active">
+                        <div class="header__img ">
                             <img src="./images/icon-1.png" alt="">
                         </div>
                         <p>Trang chủ</p>
@@ -63,7 +63,7 @@
                 </li>
                 <li class="header__item">
                     <a href="#" class="header__link">
-                        <div class="header__img">
+                        <div class="header__img active">
                             <img src="./images/icon-3.png" alt="">
                         </div>
                         <div class="header__text">
@@ -121,54 +121,9 @@
         </div>
     </header>
     <!-- end header -->
-    <div class="banner">
-        <div class="banner__slide">
-            <div class="banner-1 img fade">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <a href="#" class="banner__main">
-                                <h3><strong>TVTS</strong> chuyên gia xử lí nước</h3>
-                                <p>Xử lí nước thải - tái sử dụng nước</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-2 img fade">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <a href="#" class="banner__main">
-                                <h3><strong>TVTS</strong> chuyên gia xử lí biển</h3>
-                                <p>Xử lí nước biển - nhiễm mặn</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-3 img fade">
-                <div class="wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <a href="#" class="banner__main">
-                                <h3><strong>TVTS</strong> chuyên gia xử lí nước rỉ rác</h3>
-                                <p>Xử lí nước rỉ rác </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; position: absolute;bottom: 12rem;right: 12rem;">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
-        </div>
-        
-    </div>
+    <div class="banner-child bg-service"></div>
     <!-- end banner -->
-    <section class="service-details">
+    <section class="service-details bg--circle">
         <div class="wrapper">
             <div class="container">
                 <div class="row">
@@ -176,33 +131,27 @@
                         <div class="service-details__title service-details__title--blue">
                             <h2>XỬ LÝ NƯỚC THẢI - TÁI SỬ DỤNG</h2>
                         </div>
-                        <div class="service-details__quote">
+                        <div class="service-details__quote radius">
                             <span>
-                                <img src="./images/img-6.png" alt="">
+                                <img src="./images/img-22.png" alt="">
                             </span>
                             <p>Đội ngũ kĩ sư của chúng tôi luôn sẵn sàng tư vấn, thiết kế, thi công hoặc nâng cấp tất cả hệ thống của những công trình có quy mô khác nhau để đáp ứng được nhu cầu của đối tác. Các giải pháp của chúng tôi đảm bảo được những vấn đề về chi phí, tính hiệu quả và có thể dễ dàng ứng dụng trong những điều kiện khác nhau
                             </p>
-                            <span>
-                                <img src="./images/img-7.png" alt="">
-                            </span>
                         </div>
                         <div class="service-details__list">
                             <a href="#" class="service-details__item">
                                 <div class="service-details__img">
                                     <img src="./images/img-9.jpg" alt="">
                                 </div>
-                                <div class="service-details__text">
-                                    <p>Nước thải các ngành sản xuất</p>
-                                    <p> - Ngành thực phẩm</p>
-                                    <p> - Sản xuất phụ</p>
-                                    <p> - Nước giải khát</p>
+                                <div class="service-details__text rounded">
+                                    <p>Nước thải các ngành sản xuất <br> - Ngành thực phẩm <br> - Sản xuất phụ <br>  - Nước giải khát</p>
                                 </div>
                             </a>
                             <a href="#" class="service-details__item">
                                 <div class="service-details__img">
                                     <img src="./images/img-10.jpg" alt="">
                                 </div>
-                                <div class="service-details__text">
+                                <div class="service-details__text rounded">
                                     <p>Nước thải dệt nhuộm</p>
                                     <p>Nước thải thuộc da</p>
                                     <p>Nước thải xi mạ</p>
@@ -213,7 +162,7 @@
                                 <div class="service-details__img">
                                     <img src="./images/img-11.jpg" alt="">
                                 </div>
-                                <div class="service-details__text">
+                                <div class="service-details__text rounded">
                                     <p>Nước thải sinh hoạt</p>
                                     <p>Khu dân cư</p>
                                     <p>Dự án khu nghỉ dưỡng</p>
@@ -223,12 +172,12 @@
                                 <div class="service-details__img">
                                     <img src="./images/img-12.jpg" alt="">
                                 </div>
-                                <div class="service-details__text">
+                                <div class="service-details__text rounded">
                                     <p>Nước thải ngành công nghiệp hoá chất, các dòng nước thải nguy hại và khó xử lí</p>
                                 </div>
                             </a>
                         </div>
-                        <div class="service-details__say">
+                        <div class="service-details__say bg--white">
                             <div class="water">
                                 <img src="./images/img-8.png" alt="">
                             </div>
@@ -312,7 +261,7 @@
                         <div class="service-details__title service-details__title--blue">
                             <h2>XỬ LÝ NƯỚC THẢI - TÁI SỬ DỤNG</h2>
                         </div>
-                        <div class="service-details__quote">
+                        <div class="service-details__quote no-radius">
                             <span>
                                 <img src="./images/img-6.png" alt="">
                             </span>
@@ -327,18 +276,15 @@
                                 <div class="service-details__img">
                                     <img src="./images/img-16.jpg" alt="">
                                 </div>
-                                <div class="service-details__text fs-16">
-                                    <p>Nước thải các ngành sản xuất</p>
-                                    <p> - Ngành thực phẩm</p>
-                                    <p> - Sản xuất phụ</p>
-                                    <p> - Nước giải khát</p>
+                                <div class="service-details__text fs-16 no-rounded">
+                                    <p>Nước thải các ngành sản xuất <br> - Ngành thực phẩm <br> - Sản xuất phụ <br>  - Nước giải khát</p>
                                 </div>
                             </a>
                             <a href="#" class="service-details__item w-50">
                                 <div class="service-details__img">
                                     <img src="./images/img-15.jpg" alt="">
                                 </div>
-                                <div class="service-details__text fs-16">
+                                <div class="service-details__text fs-16 no-rounded">
                                     <p>Nước thải dệt nhuộm</p>
                                     <p>Nước thải thuộc da</p>
                                     <p>Nước thải xi mạ</p>
@@ -351,7 +297,7 @@
                             <div class="water">
                                 <img src="./images/img-8.png" alt="">
                             </div>
-                            <p>Chúng tôi đã thiết kế,xây dựng, cung cấp, hỗ trợ, chuyển giao kỹ thuật với hơn 3000 hệ thống màng trên toàn thế giới.
+                            <p>Chúng tôi đã thiết kế,xây dựng, cung cấp, hỗ trợ, chuyển giao kỹ thuật với hơn 3000 hệ thống màng trên toàn thế giới. Nhằm đáp ứng việc nhu cầu xử lý nước.
                             </p>
                         </div>
                     </div>
@@ -360,72 +306,368 @@
         </div>
     </section>
     <!-- xu li nuoc khu khoang -->
-    <section class="service-details bg-chemistry">
+    <section class="no-pd">
+        <section class="service-details bg-chemistry bg-fixed h-108">
+            <div class="service-details__images">
+                <img src="./images/img-24.png" alt="" width="700px" height="auto">
+                <img src="./images/thung.png" alt="" width="400px">
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="service-details__main ">
+                            <div class="service-details__title service-details__title--blue">
+                                <h2>HÓA CHẤT TẨY RỬA TURBINE VÀ MÁY NÉN KHÍ</h2>
+                            </div>
+                            <div class="service-details__content">
+                                <div class="service-details__content-top">
+                                    <div class="service-details__content-fyrewash fyrewash yellow">
+                                        <strong>FYREWASH® F1</strong>
+                                    </div>
+                                    <div class="service-details__content-img">
+                                        <img src="./images/img-23.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-details__content-bottom">
+                                    <h3 class="service-details__content-title light-yellow">Hoá Chất Tẩy rửa</h3>
+                                    <div class="service-details__content-desc">
+                                        <p>FYREWASH® F1 là sự kế thừa thành công của FYREWASH®SB,  đã được phát triển để cung cấp tối đa khả năng tẩy rửa, hiệu suất và hiệu quả của hóa chất làm sạch máy nén của tua-bin khí. FYREWASH® F1 có thể sử dụng cho cả tẩy rửa máy nén online và offline, cung cấp cho người sử dụng giải pháp hỗ trợ cao về tắc nghẽn máy nén tua-bin khí, hóa chất tẩy rửa tua-bin khí FYREWASH®F1 tinh khiết nhất và thân thiện với môi trường.</p>
+                                        <br><br>
+                                        <p>Được phê duyệt và đạt chuẩn của các nhà sản xuất thiết bị chính hãng lớn trên toàn thế giới.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 1 -->
+        <section class="service-details bg-company bg-fixed h-108">
+            <div class="service-details__images">
+                <img src="./images/img-30.png" alt="" width="700px" height="auto">
+                <img src="./images/thung.png" alt="" width="400px">
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="service-details__main ">
+                            <div class="service-details__content">
+                                <div class="service-details__content-top">
+                                    <div class="service-details__content-fyrewash fyrewash green">
+                                        <strong>FYREWASH® F2</strong>
+                                    </div>
+                                    <div class="service-details__content-img">
+                                        <img src="./images/img-27.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-details__content-bottom">
+                                    
+                                    <h3 class="service-details__content-title light-green">Hoá Chất Tẩy rửa</h3>
+                                    <div class="service-details__content-desc">
+                                        <p>FYREWASH®F2  được phát triển để mang lại hiệu quả và hiệu suất làm sạch tối đa có thể từ một hóa chất dung môi tự nhiên .</p>
+                                        <br><br>
+                                        <p>Dung môi dầu thông & chất hoạt động bề mặt siêu tinh khiết được sử dụng trong  công thức FYREWASH® F2 làm cho nó trở thành một sản phẩm rất an toàn và thân thiện với người dùng cho cả việc vệ sinh máy nén trực tuyến và ngoại tuyến.
+                                            Được chấp thuận và đáp ứng hầu hết các OEM lớn trên toàn thế giới..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 2 -->
+        <section class="service-details bg-chemistry-2 bg-fixed h-108">
+            <div class="service-details__images">
+                <img src="./images/img-31.png" alt="" width="700px" height="auto">
+                <img src="./images/thung.png" alt="" width="400px">
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="service-details__main ">
+                            <div class="service-details__content">
+                                <div class="service-details__content-top">
+                                    <div class="service-details__content-fyrewash fyrewash dark-blue">
+                                        <strong>FYREWASH® F3</strong>
+                                    </div>
+                                    <div class="service-details__content-img">
+                                        <img src="./images/img-28.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="service-details__content-bottom">
+                                    
+                                    <h3 class="service-details__content-title light-green">Hoá Chất Tẩy rửa</h3>
+                                    <div class="service-details__content-desc">
+                                        <p>FYREWASH®F3 được phát triển để mang lại hiệu quả và hiệu quả làm sạch tối đa có thể từ hóa chất không dung môi. Khi phát triển và thử nghiệm FYREWASH®F3, các nhà hóa học của Rochem đã đánh giá tất cả các hóa chất gốc nước không dung môi hàng đầu khác để đảm bảo rằng F3 sẽ có chất lượng làm sạch vượt trội.</p>
+                                        <br><br>
+                                        <p>Được phê duyệt và đạt chuẩn của các nhà sản xuất thiết bị chính hang lớn trên toàn thế giới. Được CEFAS (Trung tâm Khoa học Môi trường, Khai thác và Nuôi trồng thuỷ sản của Anh) phê duyệt sử dụng ngoài khơi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-details__content-button">
+                                <button type="button" class="bg-light-yellow">FYREWASH® F1</button>
+                                <button type="button" class="bg-red">FYREWASH® F1</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- hoa chat -->
+    <div class="clean-system">
+        <div class="clean-system__background">
+            <div class="clean-system--bg bg-dark-blue-500 w-60"></div>
+            <div class="clean-system--bg w-40">
+                <img src="./images/img-32.jpg" alt="">
+            </div>
+        </div>
         <div class="wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="service-details__main ">
-                        <div class="service-details__title service-details__title--blue">
-                            <h2>XỬ LÝ NƯỚC THẢI - TÁI SỬ DỤNG</h2>
+                    <div class="clean-system__main">
+                        <div class="clean-system__title">
+                            <h3>HỆ THỐNG TẨY RỬA TUA-BIN KHÍ</h3>
                         </div>
-                        <div class="service-details__heading">
-                            <p>FYREWASH® F1</p>
-                        </div>
-                        <div class="service-details__content">
-                            <div class="service-details__left w-50">
-                                <p>FYREWASH® F1 là sự kế thừa thành công của FYREWASH®SB,  đã được phát triển để cung cấp tối đa khả năng tẩy rửa, hiệu suất và hiệu quả của hóa chất làm sạch máy nén của tua-bin khí. FYREWASH® F1 có thể sử dụng cho cả tẩy rửa máy nén online và offline, cung cấp cho người sử dụng giải pháp hỗ trợ cao về tắc nghẽn máy nén tua-bin khí, hóa chất tẩy rửa tua-bin khí FYREWASH®F1 tinh khiết nhất và thân thiện với môi trường.
-                                    Được phê duyệt và đạt chuẩn của các nhà sản xuất thiết bị chính hãng lớn trên toàn thế giới.</p>
+                        <div class="clean-system__content">
+                            <div class="clean-system__content-left">
+                                <h4 class="light-blue-500">HỆ THỐNG TẨY RỬA
+                                    HT RANGE
+                                    (Công suất từ 0.5-250MW)
+                                </h4>
+                                <p class="light-blue-500">
+                                    HT RANGE được thiết kế để sử dụng cho các Tua-bin khí công nghiệp, bao gồm cả 2 dạng tĩnh và động.
+                                    HT RANGE hoàn toàn khép kín và vận hành đơn giản. kích thước nhỏ gọn cho phép lắp đặt vào những không gian nhỏ hẹp.
+                                </p>
+                                <ul>
+                                    <li>Thùng thép không gỉ</li>
+                                    <li>Ống thép không gỉ</li>
+                                    <li>Bảng điều khiển</li>
+                                    <li>Ổ cắm đơn</li>
+                                    <li>Pha trộn hoá chất chính xác</li>
+                                    <li>Biểu thị nhiệt độ, áp suất, thể tích</li>
+                                    <li>Chân đế có lỗ thoát nước</li>
+                                    <li>Tự làm sạch bằng khí nén</li>
+                                    <li>Giấy chứng nhận đạt tiêu chuẩn</li>
+                                    <li>Cài đặt và bảo trì đơn giản</li>
+                                    <li>Giảm thời gian vận hành cho công nhân</li>
+                                </ul>
+                                <p class="light-blue-500">Rochem đã được đạt  chứng nhận tiêu chuẩn : <strong>ISO9001:2008</strong></p>
                             </div>
-                            <a href="#" class="service-details__right w-50">
-                                <img src="./images/img-21.jpg" alt="">
-                            </a>
+                            <div class="clean-system__content-right">
+                                <img src="./images/img-34.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="service-details__list">
-                            <a href="#" class="service-details__item yt">
-                                <div class="service-details__img">
-                                    <img src="./images/img-16.jpg" alt="">
-                                </div>
-                                <div class="service-details__name">
-                                    <p>Tẩy rửa turbine khí</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 1 -->
+    <div class="clean-system">
+        <div class="clean-system__background">
+            <div class="clean-system--bg bg-light-blue-500 w-60"></div>
+            <div class="clean-system--bg w-40">
+                <img src="./images/img-32.jpg" alt="">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="clean-system__main">
+                        <div class="clean-system__title">
+                            <h3>HỆ THỐNG TẨY RỬA TUA-BIN KHÍ</h3>
+                        </div>
+                        <div class="clean-system__content">
+                            <div class="clean-system__content-left">
+                                <h4 class="dark-blue-500">HỆ THỐNG VIP RANGE SỬ DỤNG CHO CÁC TUA-BIN KHÍ NHỎ, VỪA VÀ LỚN
+                                    (Công suất từ 0.5-250MW)</h4>
+                                <ul class="dark-blue-500">
+                                    <li>VIP RANGE được thiết kế để sử dụng cho các tuabin khí công nghiệp và bao gồm cả 2 dạng cố định và di động.</li>
+                                    <li>VIP RANGE hoàn toàn khép kín và vận hành đơn giản. Kích thước nhỏ gọn cho phép lắp đặt vào những không gian hẹp.</li>
+                                    <li>Bằng cách sử dụng công nghệ đã được chứng nhận, VIP RANGE đem lại cách vận hành đơn giản, hiệu quả trong việc tẩy rửa máy nén khí của tuabin khí. Sự linh động của hệ thống cho phép.</li>
+                                    <li>IP RANGE có thể sử dụng trong hệ thống đa vòi phun cho cả tẩy rửa online/offline.</li>
+                                    <li>Có nhiều lựa chọn chuẩn và có thể tuỳ chỉnh sao cho phù hợp với các yêu cầu được đặt ra.</li>
+                                </ul>
+                                <p class="dark-blue-500">Rochem đã được chứng nhận đạt tiêu chuẩn <strong>ISO9001:2008</strong></p>
+                            </div>
+                            <div class="clean-system__content-right">
+                                <img src="./images/img-33.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2 -->
+    <div class="clean-system">
+        <div class="clean-system__background">
+            <div class="clean-system--bg bg-dark-blue-500 w-60"></div>
+            <div class="clean-system--bg w-40">
+                <img src="./images/img-32.jpg" alt="">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="clean-system__main">
+                        <div class="clean-system__title">
+                            <h3>HỆ THỐNG TẨY RỬA TUA-BIN KHÍ</h3>
+                        </div>
+                        <div class="clean-system__content">
+                            <div class="clean-system__content-left">
+                                <h3 class="light-blue-500">Hệ thống Ro-Jet-Wash™</h3>
+                                <span>Ứng dụng cho các loại động cơ phản lực trong máy bay</span>
+                                <strong class="light-blue-500">Tăng hiệu quả của việc đốt nhiên liệu</strong>
+                                <p class="light-blue-500">Giúp giảm đáng kể việc tiêu hao nhiên liệu cho máy bay, thông thường khoảng 1-1.5% mỗi năm.</p>
+                                <strong class="light-blue-500">Thời gian tẩy rửa trên cánh</strong>
+                                <p class="light-blue-500">Ro-Jet-Wash™ có thể triển khai ở cửa hoặc ngay cả trên ray trượt trong các tình huống khẩn cấp.</p>
+                                <strong class="light-blue-500"> Vận hành và cài đặt nhanh</strong>
+                                <strong class="light-blue-500">Hệ thống vận hành đơn giản dễ dàng</strong>
+                                <strong class="light-blue-500">ROI  vượt trội</strong>
 
-                                </div>
-                            </a>
-                            <a href="#" class="service-details__item yt">
-                                <div class="service-details__img">
-                                    <img src="./images/img-17.jpg" alt="">
-                                </div>
-                                <div class="service-details__name">
-                                    <p>Hải quân – hàng hải</p>
-
-                                </div>
-                            </a>
-                            <a href="#" class="service-details__item yt">
-                                <div class="service-details__img">
-                                    <img src="./images/img-18.jpg" alt="">
-                                </div>
-                                <div class="service-details__name">
-                                    <p>Xử lý nước</p>
-
-                                </div>
-                            </a>
-                            <a href="#" class="service-details__item yt">
-                                <div class="service-details__img">
-                                    <img src="./images/img-19.jpg" alt="">
-                                </div>
-                                <div class="service-details__name">
-                                    <p>Lĩnh vực khác</p>
-
-                                </div>
+                            </div>
+                            <a href="#" class="clean-system__content-right youtube">
+                                <img src="./images/img-35.jpg" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- 3 -->
+    <div class="clean-system">
+        <div class="clean-system__background">
+            <div class="clean-system--bg bg-light-blue-500 w-60"></div>
+            <div class="clean-system--bg w-40">
+                <img src="./images/img-32.jpg" alt="">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="clean-system__main">
+                        <div class="clean-system__title">
+                            <h3>CHUYÊN GIA HÀNG ĐẦU THẾ GIỚI VỀ HÓA CHẤT & TẨY RỬA TUA-BIN KHÍ</h3>
+                        </div>
+                        <div class="clean-system__content">
+                            <div class="clean-system__content-left">
+                                <h4 class="dark-blue-500">Ứng dụng trong ngành nhiệt điện</h4>
+                                <strong class="dark-blue-500">Dịch vụ của chúng tôi sẵn sàng phục vụ toàn cầu</strong>
+                                <p class="dark-blue-500">Hệ thống tẩy rửa tua-bin khí được biết đến trên toàn thế giới với tên thương mại FYREWASH® đối với hệ thống tẩy rửa on-line và KRANKWASH® đối với hệ thống và hóa chất tẩy rửa off-line/on-crank</p>
+                                <strong class="dark-blue-500">Lắp đặt và vận hành nhanh chóng</strong>
+                                <strong class="dark-blue-500">An toàn</strong>
+                                <p class="dark-blue-500">Hệ thống độc lập, được chứng nhận bởi các nhà sản xuất Tua-bin khí lớn trên thế giới. Hệ thống vận hành đơn giản dễ dàng</p>
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <img src="./images/img-37.jpg" alt="">
+                                    <img src="./images/img-38.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="clean-system__content-right">
+                                <img src="./images/img-36.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end clean-system -->
+    <section class="service-technical">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="service-technical__main">
+                        <h2>Dịch vụ kỹ thuật</h2>
+                        <div class="service-technical__list">
+                            <div class="service-technical__item">
+                                <div class="service-technical__img">
+                                    <img src="./images/icon-7.png" alt="">
+                                </div>
+                                <div class="service-technical__desc">
+                                    <h3>Tư vấn kỹ thuật</h3>
+                                    <p>Chuyên tư vấn, thiết kế, thi công những hệ thống hoạt động hiệu quả và luôn đặt ra những giai đoạn cải tiến liên tục. Am hiểu về các công nghệ xử lý nước giúp cho <strong>TVTS</strong> luôn đưa ra được những giải pháp, phương án xử lý trong các tình huống khó khăn trước và trong quá trình thực hiện dự án.</p>
+                                </div>
+                            </div>
+                            <div class="service-technical__item">
+                                <div class="service-technical__img">
+                                    <img src="./images/icon-8.png" alt="">
+                                </div>
+                                <div class="service-technical__desc">
+                                    <h3>Giải pháp xử lý nước</h3>
+                                    <p>Chúng tôi kết hợp và phát triển những Công nghệ để tạo ra những giải pháp xử lý triệt để các loại nước thải, tái sử dụng và nâng cao hiệu suất tái thu nước.
+                                        Luôn cung cấp những giải pháp hiệu quả, an toàn, tiết kiệm đáp ứng được tất cả các yêu cầu về xả thải trong các ngành sản xuất.</p>
+                                </div>
+                            </div>
+                            <div class="service-technical__item">
+                                <div class="service-technical__img">
+                                    <img src="./images/icon-9.png" alt="">
+                                </div>
+                                <div class="service-technical__desc">
+                                    <h3>Vận hành hệ thống</h3>
+                                    <p>Đội ngũ kỹ thuật viên TVTS với bề dày kinh nghiệm trong sản xuất và vận hành hệ thống xử lý nước thải, được đào tạo từ kỹ thuật xử lý truyền thống đến công nghệ cao. Thường xuyên cập nhật những công nghệ mới để luôn đảm bảo nhiệm vụ vận hành và phát triển nâng cấp sản phẩm.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- hoa chat -->
+    <!-- end serive-technical -->
+    <section class="product-related">
+        <h2>Sản Phẩm Liên Quan</h2>
+        <div class="product-related__main">
+            <div class="wrapper">   
+                <div class="container">
+                    <div class="row">
+                        <div class="product-related__content">
+                            <div class="product-related__content--left">
+                                <a href="#" class="product-related__content--link">
+                                    <span>
+                                        <img src="./images/icon-10.png" alt="">
+                                        
+                                    </span>
+                                    <p>MÔ ĐUN PFRO-ROCHEM</p>
+                                </a>
+                                <a href="#" class="product-related__content--link">
+                                    <span>
+                                        <img src="./images/icon-10.png" alt="">
+                                        
+                                    </span>
+                                    <p>MÔ-ĐUN ROCHEM TRIPLE S/TS (MỚI)</p>
+                                </a>
+                                <a href="#" class="product-related__content--link">
+                                    <span>
+                                        <img src="./images/icon-10.png" alt="">
+                                        
+                                    </span>
+                                    <p>MÔ-ĐUN UF/MF/NF ROCHEM</p>
+                                </a>
+                                <a href="#" class="product-related__content--link">
+                                    <span>
+                                        <img src="./images/icon-10.png" alt="">
+                                        
+                                    </span>
+                                    <p>MÀNG TRÒN</p>
+                                </a>
+                            </div>
+                            <div class="product-related__content--right">
+                                <img src="./images/img-39.jpg" class="product-related__content--img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="back-top">
-        <a href="#" id="button">
+        <a href="javascript:void(0);" id="button">
             <img src="./images/backtop.png" alt="">
         </a>
     </div>
@@ -506,5 +748,16 @@
     <script src="./js/slick/slick.min.js"></script>
     <script src="./js/scrollhide.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("a[href*='#']:not([href='#])").click(function() {
+                let target = $(this).attr("href");
+                $('html,body').stop().animate({
+                scrollTop: $(target).offset().top
+                }, 1000);
+                event.preventDefault();
+            });
+        });
+    </script>
 </body>
 </html>

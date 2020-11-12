@@ -1,6 +1,7 @@
 
 var backButton = '<a href="#" class="prev"><img src="./images/prev.png" alt=""></a>';
 var nextButton = '<a href="#" class="next"><img src="./images/next.png" alt=""></a>';
+
 $('.service__list').slick({
   infinite: true,
   slidesToShow: 3,
@@ -28,28 +29,40 @@ $('.service__list').slick({
   ]
 });
 
-
-var slideIndex = 1;
-showSlides(slideIndex);
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("img");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+$('.blog-details__list').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        adaptiveHeight: true,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        
+      },
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active-dot", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active-dot";
-  }
+  ]
+});
+
+$('.methods-details__list').slick({
+});
+
+// slide index
+
+  
+
 
 
 
@@ -89,6 +102,7 @@ var menu = document.querySelector('.menu');
 menu.onclick = () => {
   overlay.classList.toggle('show');
   headerList.classList.toggle('show');
+  menu.classList.toggle('bar-change');
 }
 
 // ----overlay
@@ -143,3 +157,74 @@ $(window).scroll(function() {
   }
 });
 
+
+
+// modal site document
+document.addEventListener('DOMContentLoaded',() => {
+  let blogItem = document.querySelectorAll('.blog-details__block');
+  let blogModal = document.querySelector('.blog-modal');
+  let blogClose = document.querySelector('.blog-modal__close')
+  blogItem.forEach( e => {
+    e.onclick = function() {
+      blogModal.classList.add('show-blog-modal')
+      // fix body has class show blog modal
+      if (blogModal.classList.contains('show-blog-modal')) {
+        document.body.style =
+          "overflow-y:hidden; position: relative; margin-right: 15px";
+      } 
+    }
+  });
+  blogClose.onclick = function() {
+    blogModal.classList.remove('show-blog-modal');
+      // fix body hasn't class show blog modal
+    if (!blogModal.classList.contains('show-blog-modal')) {
+    document.body.style =
+         "overflow-y:visible; position: static; margin-right: 0;";
+    }
+  }
+})
+
+
+
+  function startTrigger(e) {
+      var $elem = $(this);
+      $elem.data('mouseheld_timeout', setTimeout(function() {
+          $elem.trigger('mouseheld');
+      }, e.data));
+  }
+
+  function stopTrigger() {
+      var $elem = $(this);
+      clearTimeout($elem.data('mouseheld_timeout'));
+  }
+
+
+  var mouseheld = $.event.special.mouseheld = {
+      setup: function(data) {
+          // the first binding of a mouseheld event on an element will trigger this
+          // lets bind our event handlers
+          var $this = $(this);
+          $this.bind('mousedown', +data || mouseheld.time, startTrigger);
+          $this.bind('mouseleave mouseup', stopTrigger);
+      },
+      teardown: function() {
+          var $this = $(this);
+          $this.unbind('mousedown', startTrigger);
+          $this.unbind('mouseleave mouseup', stopTrigger);
+      },
+      time: 70 // default to 750ms
+  };
+
+// usage
+// $(".blog-details__block").bind('mouseheld', function(e) {
+//   // blogModal.classList.remove('show-blog-modal');
+//   $('.blog-modal').addClass('d-none')
+// })
+
+// $(document).ready(function() {
+//   if ($('.blog-details__block').hasClass('show-blog-modal')) {
+//     console.log('nhieu class the')
+//   }else {
+//     console.log('s')
+//   }
+// })
