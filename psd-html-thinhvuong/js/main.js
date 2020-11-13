@@ -228,3 +228,16 @@ document.addEventListener('DOMContentLoaded',() => {
 //     console.log('s')
 //   }
 // })
+
+
+//modal site 3 
+document.addEventListener('DOMContentLoaded', function(){
+  let yt = document.querySelector('.youtube');
+  let cleanModal= document.querySelector('.clean-system-modal');
+  yt.addEventListener('click',() => {
+    cleanModal.classList.add('show');
+  })
+  cleanModal.onclick = () => {
+    cleanModal.classList.remove('show');
+  }
+})

@@ -1031,6 +1031,7 @@ header {
     background-color: $secondary-color;
     &__main {
         padding-top: 10rem;
+        width: 100%;
         & > h1 {
             font-family: $t-font;
             color: $primary-color;
@@ -1993,7 +1994,7 @@ section {
 .h-108 {
     height: 108rem;
     @include breakpoint(xxs) {
-        height: 147rem;
+        height: 160rem;
     }
     @include breakpoint(xs) {
         height: 165rem;
@@ -2503,6 +2504,21 @@ section {
     overflow: hidden;
     display: flex;
     position: relative;
+    &-modal {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: hsla(0, 0%, 0%, 0.769);
+        z-index: 99999;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        transition: .2s all linear;
+        opacity: 0;
+        visibility: hidden;
+    }
     &__background {
         display: flex;
         width: 100%;
@@ -2949,6 +2965,15 @@ section {
     opacity: 0;
     visibility: hidden;
     transform: scale(.5);
+    @include breakpoint(xxs) {
+        flex-direction: column;
+    }
+    @include breakpoint(xs) {
+        flex-direction: column;
+    }
+    @include breakpoint(sm) {
+        flex-direction: column;
+    }
     &__close {
         cursor: pointer;
         position: absolute;
@@ -2968,7 +2993,19 @@ section {
     &__img {
         width: 70%;
         @include display(row, center, center);
-        background: hsla(0, 0%, 0%, 0.612);
+        background: rgba(0, 0, 0, 0.86);
+        @include breakpoint(xxs) {
+            width: 100%;
+            height: 50vh;
+        }
+        @include breakpoint(xs) {
+            width: 100%;
+            height: 50vh;
+        }
+        @include breakpoint(sm) {
+            width: 100%;
+            height: 50vh;
+        }
         img {
             max-height: 100vh;
         }
@@ -2978,6 +3015,21 @@ section {
         background: rgba(255, 255, 255, 0.96);
         color: black;
         padding: 5rem 2rem;
+        @include breakpoint(xxs) {
+            width: 100%;
+            height: 50vh;
+            overflow: auto;
+        }
+        @include breakpoint(xs) {
+            width: 100%;
+            height: 50vh;
+            overflow: auto;
+        }
+        @include breakpoint(sm) {
+            width: 100%;
+            height: 50vh;
+            overflow: auto;
+        }
         h4 {
             font-size: 2rem;
             font-family: $t-font;
@@ -3012,15 +3064,28 @@ section {
         background-color: $secondary-color;
         width: 50px;
         height: 35px;
+        z-index: 999;
         &::before {
             font-family: '';
         }
     }
     .slick-prev {
         left: -50px;
+        @include breakpoint(xxs) {
+            left: -14px;
+        }
+        @include breakpoint(xs) {
+            left: -14px;
+        }
     }
     .slick-next {
         right: -50px;
+        @include breakpoint(xxs) {
+            right: -14px;
+        }
+        @include breakpoint(xs) {
+            right: -14px;
+        }
     }
     h2 {
         text-align: center;
@@ -3121,10 +3186,12 @@ section {
     @include breakpoint(xxs) {
         width: 100%;
         overflow: auto;
+        height: 144rem;
     }
     @include breakpoint(xs) {
         width: 100%;
         overflow: auto;
+        height: 144rem;
     }
 }
 .methods-details {
@@ -3132,12 +3199,12 @@ section {
     position: relative;
     width: calc(100vw);
     outline: none;
-    @include breakpoint(xs) {
-        height: 137rem;
+    @include breakpoint(xxs) {
+        height: 144rem;
         width: 100%;
     }
     @include breakpoint(xs) {
-        height: 137rem;
+        height: 144rem;
         width: 100%;
     }
     &__background {
@@ -3168,23 +3235,24 @@ section {
             }
         }
         @include breakpoint(xxs) {
-            height: 137rem;
+            height: 144rem;
+            flex-direction: column;
             div:first-of-type {
-                height: 40% !important;
+                height: 35% !important;
             }
             div:last-of-type {
-                height: 60% !important;
+                height: 67% !important;
             }
-            flex-direction: column;
+            
         }
         @include breakpoint(xs) {
-            height: 137rem;
+            height: 144rem;
             flex-direction: column;
             div:first-of-type {
-                height: 40% !important;
+                height: 39% !important;
             }
             div:last-of-type {
-                height: 60% !important;
+                height: 67% !important;
             }
         }
     }
