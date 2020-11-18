@@ -2617,7 +2617,7 @@ header {
 .teams {
   height: 108rem;
   background-image: url("../images/teams.jpg");
-  padding-top: 9rem;
+  padding-top: 5rem;
 }
 .teams-main {
   width: 100%;
@@ -4313,24 +4313,40 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.methods-details__list .slick-next {
-  margin-right: 10rem;
+.methods-details__list .slick-prev,.methods-details__list .slick-next {
   right: 0;
   bottom: 5rem;
-  top: auto;
   width: 212px;
   height: 60px;
-  background: url("../images/next-slide.jpg");
+  top: auto;
   background-repeat: no-repeat;
   border-radius: 10px;
+  z-index: 9;
+
+}
+.methods-details__list .slick-prev {
+  margin-right: 20rem;  
+  background: url("../images/prevv.jpg");
+}
+.methods-details__list .slick-prev:before,.methods-details__list .slick-next:before {
+  content: none;
+}
+.methods-details__list .slick-next {
+  margin-right: 10rem;
+  background: url("../images/next-slide.jpg");
+
+}
+.methods-details__list .slick-prev {
+  right: 13rem !important;
+  left: auto;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .methods-details__list .slick-next {
     bottom: 3rem;
   }
-}
-.methods-details__list .slick-next::before {
-  content: none;
+  .methods-details__list .slick-prev {
+    bottom: 3rem;
+  }
 }
 .methods-details__img {
   position: absolute;

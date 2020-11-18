@@ -10,11 +10,11 @@
         max-width: 100%;
     }
     .header__item:first-of-type .header__img.active::before {
-        margin-left: -4px;
+        margin-left: -22px;
     }
 
     .header__img.active::before {
-        margin-left: -8px;
+        margin-left: -23px;
     }
     .personnel-img {
         height: 19rem;
