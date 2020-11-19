@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -208,7 +209,9 @@ ul {
 }
 
 .bg {
-  background-color: hsla(220, 60%, 25%, 0.57);
+  background-image: -o-linear-gradient(45deg, #4c6d81, #26a0da);
+  background-image: linear-gradient(45deg, #4c6d81, #26a0da);
+  
 }
 
 .ml-auto {
@@ -1066,8 +1069,8 @@ header {
   left: 0;
   width: 100%;
   height: 262px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#131042));
   background-image: -o-linear-gradient(bottom, transparent 0%, #131042 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#131042));
   background-image: linear-gradient(to top, transparent 0%, #131042 100%);
 }
 
@@ -1102,8 +1105,8 @@ header {
   left: 0;
   width: 100%;
   height: 262px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#131042));
   background-image: -o-linear-gradient(bottom, transparent 0%, #131042 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#131042));
   background-image: linear-gradient(to top, transparent 0%, #131042 100%);
 }
 .banner .img::after {
@@ -1113,8 +1116,8 @@ header {
   left: 0;
   width: 100%;
   height: 262px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#131042), to(transparent));
   background-image: -o-linear-gradient(bottom, #131042 0%, transparent 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#131042), to(transparent));
   background-image: linear-gradient(to top, #131042 0%, transparent 100%);
 }
 .banner__main {
@@ -1163,7 +1166,8 @@ header {
   z-index: -1;
 }
 .banner__main p {
-  font-size: 6rem;
+  font-size: 5rem;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .banner__main p {
@@ -2257,7 +2261,7 @@ header {
   margin-right: 5rem;
   border-top-right-radius: 210px;
   border-bottom-left-radius: 210px;
-  padding: 10rem 6rem;
+  padding: 8rem 6rem;
   position: relative;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
@@ -2310,14 +2314,17 @@ header {
 .brand-item:last-of-type {
   margin-right: 0;
 }
+.brand-img + p {
+  font-family: "UTMAvoBold";
+}
 .brand-item p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   background-color: #f1f1f1;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 4rem 2.8rem;
-  text-align: center;
+  text-align: left;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .brand-item p {
@@ -2338,6 +2345,7 @@ header {
   font-weight: 400;
   color: #09193f;
   line-height: 3rem;
+  text-align: center;
 }
 .brand-item p strong {
   font-size: 2.6rem;
@@ -2381,24 +2389,35 @@ header {
 
 .personnel {
   background-image: url("../images/bg-2.jpg");
-  padding-top: 9rem;
+  padding-top: 7rem;
+}
+@media (min-width: 1200px) {
+  .personnel {
+    height: 102vh;
+  }
 }
 .personnel-main {
   width: 100%;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
+  .personnel {
+    height: auto;
+  }
   .personnel-main {
     width: 100%;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
+  .personnel {
+    height: auto;
+  }
   .personnel-main {
     width: 100%;
   }
 }
 .personnel-main > h2 {
   font-family: "UTMAvoBold";
-  margin-bottom: 9rem;
+  margin-bottom: 7rem;
   font-size: 4.8rem;
   font-weight: bold;
   color: #1a2e5b;
@@ -2508,7 +2527,7 @@ header {
   display: flex;
   width: calc(33.33% - 2rem);
   margin-right: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
   position: relative;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
@@ -2746,6 +2765,19 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media only screen and (max-width: 500px) {
+  .service-details__images img {
+    width: 300px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .service-details__images img {
+    width: 500px;
+    height: auto;
+  }
+
 }
 .service-details__images img:last-of-type {
   margin-left: -190px;
@@ -3325,6 +3357,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  
+}
+@media only screen and (min-width: 1300px) {
+  .clean-system {
+    height: 56vw;
+  }
+  #mw-90 .clean-system__content-right img {
+    max-width: 90%;
+  }
 }
 .clean-system-modal {
   position: fixed;
@@ -3375,14 +3416,30 @@ section {
     height: 135rem;
   }
 }
-.clean-system__background .clean-system--bg:first-of-type {
-  width: 100%;
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+  .clean-system__background .clean-system--bg:first-of-type {
+    width: 100%;
+  }
+  .clean-system__background .clean-system--bg:last-of-type {
+    display: none;
+  }
 }
-.clean-system__background .clean-system--bg:last-of-type {
-  display: none;
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .clean-system__background .clean-system--bg:first-of-type {
+    width: 100%;
+  }
+  .clean-system__background .clean-system--bg:last-of-type {
+    display: none;
+  }
 }
+
 .clean-system--bg {
   height: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .clean-system--bg {
+    height: 56vw;
+  }
 }
 .clean-system--bg img {
   width: 100%;
@@ -3407,7 +3464,7 @@ section {
   }
 }
 .clean-system__title {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   color: white;
   font-family: "UTMAvoBold";
   margin-bottom: 5rem;
@@ -3517,7 +3574,7 @@ section {
           transform: rotate(45deg);
 }
 .clean-system__content-left > p {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .clean-system__content-left > p {
@@ -3576,7 +3633,7 @@ section {
   }
 }
 .clean-system__content-left p {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .clean-system__content-left p {
@@ -4547,20 +4604,30 @@ section {
   line-height: 6rem;
   width: 100%;
   /* overflow: hidden; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .document__main ul .slick-next,.document__main ul .slick-prev {
     top: auto;
     bottom: -8rem;
-    width: 125px;
+    width: 145px;
     height: 40px;
+    background-image: -webkit-gradient(linear, left top, right top, from(hsl(0, 0%, 96%)), color-stop(51%, hsl(0, 0%, 100%)), to(hsl(197, 100%, 96%)));
+    background-image: -o-linear-gradient(left, hsl(0, 0%, 96%) 0%, hsl(0, 0%, 100%) 51%, hsl(197, 100%, 96%) 100%);
     background-image: linear-gradient(to right, hsl(0, 0%, 96%) 0%, hsl(0, 0%, 100%) 51%, hsl(197, 100%, 96%) 100%);
     left: 5rem;
     background-size: 200% auto;
     border-radius: 5px;
+    -webkit-transition: .2s all linear;
+    -o-transition: .2s all linear;
     transition: .2s all linear;
-    box-shadow: 0px 2px 4px 0px hsl(0, 1%, 52%);
+    -webkit-box-shadow: 0px 2px 4px 0px hsl(0, 1%, 52%);
+            box-shadow: 0px 2px 4px 0px hsl(0, 1%, 52%);
 }
 .document__main ul .slick-next:hover,.document__main ul .slick-prev:hover {
   background-position: right center;
@@ -4573,18 +4640,20 @@ section {
   color: hsl(222, 56%, 23%);
 }
 .document__main ul .slick-prev:before {
-  content: 'QUAY LẠI'
+  content: '\2190  QUAY LẠI'
 }
 .document__main ul .slick-next:before {
-  content: 'TIẾP THEO'
+  content: 'TIẾP THEO \2192'
 }
 .document__main ul .slick-next {
   margin-left: 15rem;
   right: auto;
 }
 .document__main ul > div {
-  flex-shrink: 0;
-  flex-basis: 99%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 99%;
+      flex-basis: 99%;
 }
 
 .document__main ul li a {
@@ -4653,6 +4722,7 @@ section {
   height: 100%;
   z-index: 1;
   opacity: 0.9;
+  width: 35vw;
 }
 
 .mapouter {
@@ -4746,8 +4816,8 @@ section {
   font-size: 2.5rem;
   font-family: "UTMAvoBold";
   background-size: 200% auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(#447cf6), color-stop(51%, #5bcdfa), to(#2d5eff));
   background-image: -o-linear-gradient(left, #447cf6 0%, #5bcdfa 51%, #2d5eff 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#447cf6), color-stop(51%, #5bcdfa), to(#2d5eff));
   background-image: linear-gradient(to right, #447cf6 0%, #5bcdfa 51%, #2d5eff 100%);
   -webkit-transition: 0.2s all linear;
   -o-transition: 0.2s all linear;
