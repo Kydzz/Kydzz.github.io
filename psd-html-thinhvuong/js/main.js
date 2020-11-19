@@ -58,7 +58,9 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.methods-details__list').slick({});
+  $('.methods-details__list').slick({
+    infinite: false
+  });
 });
 
 // scroll
@@ -216,6 +218,16 @@ $(document).ready(function() {
       }, 1000);
       event.preventDefault();
   });
+});
+
+
+// slide document
+
+$(document).ready(function(){
+  $('.document__main ul').slick({
+    infinite: false,
+    
+    });
 });
 
 
