@@ -2050,7 +2050,7 @@ header {
 }
 
 .about-details {
-  padding-top: 10rem;
+  padding-top: 7rem;
   padding-bottom: 10rem;
   background-image: url("../images/Hompage.jpg");
 }
@@ -2160,7 +2160,7 @@ header {
 
 .diagram {
   height: 100vh;
-  padding-top: 9rem;
+  padding-top: 6rem;
   background-image: url("../images/diagram-bg.jpg");
   background-attachment: fixed;
 }
@@ -2199,7 +2199,7 @@ header {
 }
 
 .brand {
-  padding-top: 9rem;
+  padding-top: 6rem;
   padding-bottom: 15rem;
 }
 .brand-main {
@@ -2389,7 +2389,7 @@ header {
 
 .personnel {
   background-image: url("../images/bg-2.jpg");
-  padding-top: 7rem;
+  padding-top: 5rem;
 }
 @media (min-width: 1200px) {
   .personnel {
