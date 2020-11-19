@@ -52,7 +52,7 @@ table {
   font-weight: bold;
   src: local("UTMAvoBold"), url("../fonts/utm-avobold.woff") format("woff");
 }
-.document, .product-related, .service-technical, .service-details, .partner, .teams, .personnel, .diagram, .about-details, .footer__top, .methods, .service, .about__bg, .about, .banner-3, .banner-2, .banner-1, .banner-child {
+.document, .product-related, .service-technical, .service-details, .partner, .personnel, .diagram, .about-details, .footer__top, .methods, .service, .about__bg, .about, .banner-3, .banner-2, .banner-1, .banner-child {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -208,14 +208,14 @@ ul {
 }
 
 .bg {
-  background-color: #1a2e5b;
+  /* background-color: hsla(222, 56%, 23%, 0.82); */
 }
 
 .ml-auto {
   margin-left: auto;
 }
 
-.no-pd {
+.p-0 {
   padding: 0;
 }
 
@@ -365,6 +365,7 @@ header {
           justify-content: space-between;
   right: 0;
   top: 0;
+  box-shadow: 0px 0px 17px 0px hsla(0, 0%, 0%, 0.329);
   -webkit-transition: -webkit-transform 0.5s ease-out;
   transition: -webkit-transform 0.5s ease-out;
   -o-transition: transform 0.5s ease-out;
@@ -1001,7 +1002,7 @@ header {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbbbbb;
+  background-color: hsla(0, 0%, 100%, 0.8);
   border-radius: 50%;
   display: inline-block;
   -webkit-transition: background-color 0.6s ease;
@@ -1013,14 +1014,14 @@ header {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 2.5s;
+  
   animation-name: fade;
-  animation-duration: 2.5s;
+  
 }
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.5;
+    opacity: 0.9;
   }
   to {
     opacity: 1;
@@ -1028,14 +1029,14 @@ header {
 }
 @keyframes fade {
   from {
-    opacity: 0.5;
+    opacity: 0.9;
   }
   to {
     opacity: 1;
   }
 }
 .active-dot, .dot:hover {
-  background-color: #5bcdfb;
+  background-color: hsl(197, 95%, 67%);
 }
 
 .bg-banner-document {
@@ -1073,7 +1074,7 @@ header {
 
 .banner {
   width: 100%;
-  height: 108rem;
+  height: 100vh;
   position: relative;
   z-index: 1;
   margin-bottom: -9.4rem;
@@ -1089,7 +1090,7 @@ header {
 }
 .banner .img {
   position: absolute;
-  height: 108rem;
+  height: calc(100vh + 9.4rem);
   width: 100%;
   top: 0;
   left: 0;
@@ -1119,7 +1120,7 @@ header {
 }
 .banner__main {
   position: absolute;
-  bottom: 12rem;
+  bottom: 8rem;
   color: white;
   padding: 2rem;
   z-index: 20;
@@ -1317,11 +1318,11 @@ header {
 }
 
 .service {
-  height: 80rem;
+  height: 100vh;
   background-image: url("../images/service-bg.jpg");
 }
 .service__main {
-  padding-top: 20rem;
+  padding-top: 5rem;
   width: 100%;
 }
 .service__main > h1 {
@@ -1384,27 +1385,26 @@ header {
 .service__slide {
   width: 100%;
 }
-.service__slide .slick-next {
-  background-image: url("../images/next.png") !important;
-  left: 115px;
+.service__slide .slick-next,.service__slide .slick-prev {
   top: 100%;
   margin-top: 7rem;
-
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.service__slide .slick-next {
+  background-image: url("../images/next.png") !important;
+  left: 95px;
 }
 .service__slide .slick-prev {
   background-image: url("../images/prev.png") !important;
   left: 0;
-  top: 100%;
-  margin-top: 7rem;
-
 }
 .service__slide .slick-arrow {
   position: absolute;
   z-index: 99;
   bottom: -130px;
-  /* left: auto; */
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .service__slide .slick-arrow img {
   width: 100%;
@@ -2155,12 +2155,16 @@ header {
 }
 
 .diagram {
+  height: 100vh;
   padding-top: 9rem;
-  padding-bottom: 15rem;
   background-image: url("../images/diagram-bg.jpg");
 }
 .diagram-img {
   max-width: 100%;
+  max-width: 100%;
+    /* height: calc(100vh - 23rem); */
+  width: 90rem;
+  margin: 0 auto;
 }
 .diagram-main {
   width: 100%;
@@ -2615,9 +2619,12 @@ header {
 }
 
 .teams {
-  height: 108rem;
+  height: 100vh;
   background-image: url("../images/teams.jpg");
   padding-top: 5rem;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .teams-main {
   width: 100%;
@@ -2688,9 +2695,11 @@ section {
 
 .bg--water {
   background-image: url("../images/bg-3.jpg");
+  background-attachment: fixed;
 }
 
 .bg--man {
+  background-attachment: fixed;
   background-image: url("../images/bg-4.jpg");
 }
 
@@ -3635,10 +3644,27 @@ section {
 }
 
 .service-technical {
+  height: 100vh;
+  background-attachment: fixed;
   background-image: url("../images/bg-11.jpg");
-  padding-bottom: 15rem;
   position: relative;
   overflow: hidden;
+  padding-top: 3rem;
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+  .service-technical {
+    height: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .service-technical {
+    height: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-technical {
+    height: 100%;
+  }
 }
 .service-technical__main {
   width: 100%;
@@ -3657,7 +3683,7 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  margin-top: 35rem;
+  margin-top: 12rem;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .service-technical__list {
@@ -3741,12 +3767,12 @@ section {
   text-align: center;
   font-family: "UTMAvoBold";
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 .service-technical__desc p {
   text-align: justify;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2.5rem;
   color: #09193f;
 }
@@ -3760,6 +3786,7 @@ section {
   padding-bottom: 20rem;
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 .product-related h2 {
   text-align: center;
@@ -4484,6 +4511,7 @@ section {
   padding-top: 10rem;
   padding-bottom: 10rem;
   background-image: url("../images/bg-13.jpg");
+  background-attachment: fixed;
 }
 .document__main h3 {
   font-size: 3.8rem;
