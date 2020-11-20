@@ -3,7 +3,7 @@
 // var nextButton = '<a href="#" class="next"><img src="./images/next.png" alt=""></a>';
 $(document).ready(function(){
   $('.service__list').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [
@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.blog-details__list').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     autoplay: true,
@@ -117,7 +117,16 @@ menu.onclick = function() {
   menu.classList.toggle('bar-change');
 };
 
+
 // ----overlay
+$(document).scroll(function(){
+  if( $('header').hasClass('bg') ) {
+    $('.dropdown-menu').addClass('t-83');
+  }
+  else {
+    $('.dropdown-menu').removeClass('t-83');
+  }
+});
 
 var contain = $('.overlay').hasClass('show');
 $(document).ready(function(){  
