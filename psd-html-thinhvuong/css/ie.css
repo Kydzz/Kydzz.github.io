@@ -36,3 +36,9 @@
         width: calc(50% - 3rem) !important;
     }
 }
+@media (min-aspect-ratio:16/9) {
+    #elem {
+        height: 100vh;
+        width: calc((16/9)*100vh);
+    }
+}

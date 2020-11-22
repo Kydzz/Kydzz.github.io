@@ -1,4 +1,5 @@
 
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -213,8 +214,31 @@ ul {
 .bg {
   /* background-image: -o-linear-gradient(45deg, #4c6d81, #26a0da);
   background-image: linear-gradient(45deg, #4c6d81, #26a0da); */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(23%, #1B2E5B),color-stop(95%, transparent));
+  background-image: -o-linear-gradient(top, #1B2E5B 23%,transparent 95%);
   background-image: linear-gradient(180deg, #1B2E5B 23%,transparent 95%);
   height: 190px;
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+  .bg {
+    height: auto;
+    background-image: none;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .bg {
+    height: auto;
+    background-image: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  header {
+    box-shadow: none !important;
+  }
+  .bg {
+    height: 125px;
+  }
+  
 }
 .bg .dropdown-menu {
   top: 83%;
@@ -2328,7 +2352,7 @@ header {
   background-color: #f1f1f1;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  padding: 4rem 2.8rem;
+  padding: 3rem 2.8rem;
   text-align: left;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
@@ -2347,10 +2371,12 @@ header {
   }
 }
 .brand-item p:last-of-type {
-  font-weight: 400;
+  font-weight: 700;
   color: #09193f;
   line-height: 3rem;
   text-align: center;
+  white-space: nowrap;
+  margin-bottom: 3rem;
 }
 .brand-item p strong {
   font-size: 2.6rem;
@@ -2369,6 +2395,14 @@ header {
 @media (min-width: 768px) and (max-width: 1199px) {
   .brand-item p strong {
     font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+  .brand-item p strong {
+    font-size: 2.1rem;
+  }
+  .brand-item {
+    padding: 8rem 5rem;
   }
 }
 .brand-img {
@@ -4301,14 +4335,14 @@ section {
   .methods-details-block {
     width: 100%;
     overflow: auto;
-    height: 144rem;
+    height: auto;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .methods-details-block {
     width: 100%;
     overflow: auto;
-    height: 144rem;
+    height: auto;
   }
 }
 
@@ -4323,11 +4357,19 @@ section {
     height: 144rem;
     width: 100%;
   }
+  .methods-details__background {
+    height: 100%;
+  }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .methods-details {
     height: 144rem;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1600px ) {
+  .methods-details {
+    height: calc((9/16)*100vw);
   }
 }
 .methods-details__background {
@@ -4343,19 +4385,22 @@ section {
           flex-direction: row;
   top: 0;
   left: 0;
-  height: 77rem;
-  width: 100%;
   z-index: -1;
+}
+.methods-details__background div:last-of-type {
+  height: 95%;
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .methods-details__img {
     height: 62rem !important;
   }
-  .methods-details__background {
-    height: 71rem;
-  }
   .methods-details {
     height: 76rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .methods-details__img {
+    height: 85% !important; 
   }
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
@@ -4415,15 +4460,15 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.slick-disabled {
+/* .slick-disabled {
   display: none !important;
-}
-.methods-datails__list.slick-disabled {
+} */
+.methods-details-block button.slick-arrow.slick-disabled {
   display: none !important;
 }
 .methods-details__list .slick-prev,.methods-details__list .slick-next {
   right: 0;
-  bottom: 5rem;
+  bottom: 2rem;
   width: 212px;
   height: 60px;
   top: auto;
@@ -4560,7 +4605,7 @@ section {
 }
 .methods-details__right p {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .methods-details__right table {
   width: 100%;
@@ -4604,6 +4649,9 @@ section {
   background-image: url("../images/bg-13.jpg");
   background-attachment: fixed;
 }
+.document button.slick-disabled {
+  display: none !important;
+}
 .document__main {
   /* overflow: hidden; */
   width: 100%;
@@ -4633,8 +4681,8 @@ section {
     bottom: -8rem;
     width: 145px;
     height: 40px;
-    background-image: -webkit-gradient(linear, left top, right top, from(hsl(0, 0%, 96%)), color-stop(51%, hsl(0, 0%, 100%)), to(hsl(197, 100%, 96%)));
     background-image: -o-linear-gradient(left, hsl(0, 0%, 96%) 0%, hsl(0, 0%, 100%) 51%, hsl(197, 100%, 96%) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(hsl(0, 0%, 96%)), color-stop(51%, hsl(0, 0%, 100%)), to(hsl(197, 100%, 96%)));
     background-image: linear-gradient(to right, hsl(0, 0%, 96%) 0%, hsl(0, 0%, 100%) 51%, hsl(197, 100%, 96%) 100%);
     left: 5rem;
     background-size: 200% auto;
@@ -4806,7 +4854,7 @@ section {
   width: 500px;
   height: auto;
   background: white;
-  padding: 3rem;
+  padding: 3rem 2rem 2rem;
   border-radius: 2rem;
   position: relative;
   z-index: 2;
@@ -4890,7 +4938,7 @@ section {
     height: 77px;
   }
   .contact__main input {
-    padding: 1rem 0rem .5rem;
+    padding: 1rem 0rem 1rem;
   }
 }
 #button {
