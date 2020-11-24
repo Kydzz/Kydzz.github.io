@@ -1727,10 +1727,27 @@ header {
   bottom: 0;
   width: 30rem;
 }
+
+.methods__main {
+  padding-top: 10rem;
+  width: 100%;
+  padding-bottom: 6rem;
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+  .methods__main,.blog__main {
+    padding-top: 5rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .methods__main,.blog__main {
+    padding-top: 5rem;
+  }
+}
+
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .methods .man {
     width: 15rem;
-    height: 15rem;
+    height: 135.9px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -1738,11 +1755,6 @@ header {
     width: 15rem;
     height: 15rem;
   }
-}
-.methods__main {
-  padding-top: 10rem;
-  width: 100%;
-  padding-bottom: 6rem;
 }
 .methods__main > h1 {
   font-family: "UTMAvoBold";
@@ -1803,6 +1815,7 @@ header {
 .methods__plus img {
   position: absolute;
   top: -55px;
+  transform: translateX(-50%);
 }
 .methods__plus img:hover {
   top: 0;
@@ -2823,7 +2836,7 @@ section {
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .h-108 {
-    height: 160rem;
+    height: 170rem;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -3006,17 +3019,25 @@ section {
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .service-details__title > h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    text-align: left;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .service-details__title > h2 {
     font-size: 2.8rem;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    text-align: left;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .service-details__title > h2 {
     font-size: 2.8rem;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    text-align: left;
   }
 }
 .service-details__title--blue {
@@ -3441,9 +3462,14 @@ section {
   position: relative;
   
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1700px) {
   .clean-system {
-    height: 56vw;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+  .clean-system {
+    height: 100%;
   }
   #mw-90 .clean-system__content-right img {
     max-width: 90%;
@@ -3478,7 +3504,7 @@ section {
   display: flex;
   width: 100%;
   position: absolute;
-  height: 108rem;
+  height: 100%;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .clean-system__background {
@@ -3520,7 +3546,7 @@ section {
 }
 @media only screen and (min-width: 1200px) {
   .clean-system--bg {
-    height: 56vw;
+    height: 100%;
   }
 }
 .clean-system--bg img {
@@ -3532,7 +3558,7 @@ section {
 .clean-system__main {
   position: relative;
   padding-top: 7rem;
-  padding-bottom: 15rem;
+  padding-bottom: 7rem;
   width: 100%;
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
@@ -3921,7 +3947,16 @@ section {
   font-family: "UTMAvoBold";
   font-weight: bold;
 }
-
+@media only screen and (min-width: 1700px) {
+  .service-technical__desc h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .service-technical__desc p{
+    font-size: 2.8rem;
+    line-height: 4rem;
+   }
+}
 .product-related {
   background-image: url("../images/img-40.jpg");
   padding-bottom: 20rem;
@@ -4036,6 +4071,13 @@ section {
   -webkit-transform: translateY(-19rem);
       -ms-transform: translateY(-19rem);
           transform: translateY(-19rem);
+}
+@media only screen and (min-width: 1700px) {
+  .product-related__content--img {
+    -webkit-transform: translateY(-25rem);
+      -ms-transform: translateY(-25rem);
+          transform: translateY(-25rem);
+  }
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .product-related__content--img {
@@ -4469,7 +4511,7 @@ section {
 }
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
   .methods-details__img {
-    height: 80% !important;
+    height: 84% !important;
   }
   .methods-details {
     height: 100vh;
@@ -4760,9 +4802,20 @@ section {
   font-size: 3.8rem;
   font-family: "UTMAvoBold";
   margin-bottom: 5rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
-
+@media only screen and (min-width: 1600px){
+  .methods-details__title {
+    margin-bottom: 5rem !important;
+    margin-top: 5rem !important;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .methods-details__title {
+    margin-bottom: 5rem;
+    margin-top: 3rem !important;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .methods-details__title {
     margin-bottom: 5rem;
