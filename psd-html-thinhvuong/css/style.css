@@ -2231,8 +2231,12 @@ header {
 }
 .diagram-img {
   max-width: 100%;
-  max-width: 100%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1500px) {
+  .diagram-img {
+    width: 90rem;
+  }
 }
 .diagram-main {
   width: 100%;
@@ -4976,7 +4980,7 @@ section {
 }
 @media only screen and (min-width: 1366px) and (max-width: 1600px) {
   .location > img {
-    width: 25% !important;
+    width: 23% !important;
   }
 }
 @media only screen and (min-width: 1601px) and (max-width: 1700px) {
