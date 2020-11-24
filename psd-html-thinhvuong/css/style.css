@@ -4509,12 +4509,19 @@ section {
 .methods-details__background div:last-of-type {
   height: 95%;
 }
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+  .methods-details {
+    height: 100% !important;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+  .methods-details {
+    height: 100vh !important;
+  }
+}
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
   .methods-details__img {
     height: 84% !important;
-  }
-  .methods-details {
-    height: 100vh;
   }
   .methods-details__right .methods-details__title {
     font-size: 2.5rem !important;
@@ -4608,7 +4615,7 @@ section {
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .methods-details__background {
-    height: 144rem;
+    height: 200rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4831,6 +4838,12 @@ section {
 .methods-details__title h3 {
   text-transform: uppercase;
   line-height: 4rem;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 1200px) and (min-width: 1100px) {
+  .methods-details__left .methods-details__title h3 {
+    margin-left: -10rem !important;
+  }
 }
 .document {
   height: 100vh;

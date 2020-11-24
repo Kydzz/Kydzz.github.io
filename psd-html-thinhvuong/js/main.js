@@ -6,6 +6,7 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    centerMode: false,
     responsive: [
         {
         breakpoint: 1200,
@@ -21,7 +22,7 @@ $(document).ready(function(){
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: true,
-            centerMode: true
+            centerMode: false
         },
         }
     ]
