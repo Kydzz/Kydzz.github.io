@@ -1372,6 +1372,17 @@ header {
   padding-top: 5rem;
   width: 100%;
 }
+@media only screen and (min-width: 1700px) {
+  .service__main {
+    padding-top: 10rem !important;
+  }
+  .service__img {
+    height: 50rem !important; 
+  }
+  .service__main > h1 {
+    margin-bottom: 5rem;
+  }
+}
 .service__main > h1 {
   font-family: "UTMAvoBold";
   color: #5bcdfb;
@@ -2210,8 +2221,6 @@ header {
 .diagram-img {
   max-width: 100%;
   max-width: 100%;
-    /* height: calc(100vh - 23rem); */
-  width: 90rem;
   margin: 0 auto;
 }
 .diagram-main {
@@ -2638,7 +2647,7 @@ header {
     content: none;
   }
 }
-.personnel-line::after {
+/* .personnel-line::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2649,7 +2658,7 @@ header {
   -webkit-transform: skewX(-16deg);
       -ms-transform: skewX(-16deg);
           transform: skewX(-16deg);
-}
+} */
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .personnel-line::after {
     content: none;
@@ -4266,6 +4275,17 @@ section {
 .blog-details__block {
   background-color: white;
   text-align: justify;
+}
+@media only screen and (min-width: 1700px) {
+  .blog-details__block img{
+    width: 47rem !important;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .blog-details {
+    height: auto;
+    padding-bottom: 10rem !important;
+  }
 }
 .blog-details__block h4 {
   line-height: 2.2rem;
