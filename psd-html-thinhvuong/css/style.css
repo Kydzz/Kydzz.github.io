@@ -2881,15 +2881,7 @@ section {
   display: -ms-flexbox;
   display: flex;
 }
-@media only screen and (max-width: 500px) {
-  .service-details__images img {
-    width: 170px !important;
-    height: auto;
-  }
-  .service-details__images img:last-of-type {
-    margin-left: -58px !important;
-  }
-}
+
 @media only screen and (max-width: 1500px) {
   .service-details__images img {
     width: 500px;
@@ -5614,5 +5606,16 @@ section {
   }
   .diagram {
     height: 50rem;
+  }
+  .service-details__images img {
+    width: 190px !important;
+    height: auto;
+  }
+  .service-details__images img:last-of-type {
+    margin-left: -58px !important;
+  }
+  .service-details__images {
+    width: 100%;
+    /* bottom: -1rem; */
   }
 }
