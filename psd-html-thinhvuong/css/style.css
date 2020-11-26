@@ -5616,7 +5616,7 @@ section {
   }
   .service-details__images {
     /* width: 200px; */
-    width: 100%;
+    width: 58% !important;
     justify-content: space-between;
   }
 }
