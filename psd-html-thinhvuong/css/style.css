@@ -5546,7 +5546,7 @@ section {
 
 
 /* < 1920 */
-@media only screen and (max-width: 1919px) {
+@media only screen and (max-width: 1919px) and (min-width: 1200px) {
   .about {
     height: 100vh;
   }
@@ -5562,5 +5562,25 @@ section {
   .about__content p {
     font-size: 2.5rem;
     line-height: 4rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .about {
+    height: 100vh;
+    background-attachment: initial;
+  }
+  .about__bg {
+    height: 80vh;
+    background-attachment: initial;
+  }
+  .about__main {
+    height: 80vh;
+    background-attachment: initial;
+  }
+  .service {
+    background-attachment: initial;
+  }
+  .service__img, .service__link > p {
+    width: 110%;
   }
 }
