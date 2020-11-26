@@ -1731,6 +1731,7 @@ header {
   right: 0;
   bottom: 0;
   width: 30rem;
+  margin-bottom: -1px;
 }
 
 .methods__main {
@@ -5596,17 +5597,25 @@ a#button:hover img {
   .blog__main {
     padding-top: 5rem;
   }
+  .methods {
+    height: 100vh;
+  }
   .methods__main {
     padding-top: 5rem;
   }
-  .methods {
-    height: 100vh;
+  .methods__main > h1 {
+    margin-bottom: 3rem;
+  }
+  ul.methods__list {
+    margin-bottom: 2rem;
   }
   .methods__img {
     width: 17rem;
   }
+  
   .methods__item {
     padding-top: 2rem;
+    padding-bottom: 0rem;
   }
   .blog__item:nth-child(3) a {
     height: 57rem;
