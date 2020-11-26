@@ -2856,7 +2856,7 @@ section {
 }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .h-108 {
-    height: 170rem;
+    height: 145rem;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -3022,6 +3022,7 @@ section {
 .service-details__content-button button.bg-light-yellow {
   background-color: #ee8649;
   margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 .service-details__title {
   text-align: center;
@@ -3035,7 +3036,7 @@ section {
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   .service-details__title > h2 {
     font-size: 3rem;
-    line-height: 3.2rem;
+    line-height: 3.8rem;
     text-align: left;
   }
 }
