@@ -5608,14 +5608,13 @@ section {
     height: 50rem;
   }
   .service-details__images img {
-    width: 190px !important;
+    width: auto !important;
     height: auto;
   }
   .service-details__images img:last-of-type {
     margin-left: -58px !important;
   }
   .service-details__images {
-    width: 100%;
-    /* bottom: -1rem; */
+    width: 200px;
   }
 }
