@@ -38,14 +38,6 @@ $(document).ready(function(){
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          
-        }
-      },
-      {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
@@ -53,6 +45,15 @@ $(document).ready(function(){
           adaptiveHeight: true,
         }
       },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          
+        }
+      },
+      
       {
         breakpoint: 500,
         settings: {
