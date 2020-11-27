@@ -1287,7 +1287,11 @@ header {
 }
 
 .achievement {
-  background-color: white;
+  /* background-color: white; */
+  background-image: url("../images/white.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   padding-top: 8rem;
   padding-bottom: 6rem;
 }
@@ -1557,7 +1561,11 @@ header {
 }
 
 .blog {
-  background-color: #1a2e5b;
+  /* background-color: #1a2e5b; */
+  background-image: url("../images/blue-dark.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .blog__main {
   padding-top: 10rem;
@@ -1725,6 +1733,7 @@ header {
 .methods {
   background-image: url("../images/methods-bg.jpg");
   position: relative;
+  background-attachment: fixed;
 }
 .methods .man {
   position: absolute;
@@ -2139,6 +2148,7 @@ header {
   padding-top: 7rem;
   padding-bottom: 10rem;
   background-image: url("../images/Hompage.jpg");
+  background-attachment: fixed;
 }
 
 .details-main {
@@ -2287,6 +2297,11 @@ header {
 .brand {
   padding-top: 6rem;
   padding-bottom: 15rem;
+  background-image: url("../images/white.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .brand-main {
   width: 100%;
@@ -2486,6 +2501,7 @@ header {
 .personnel {
   background-image: url("../images/bg-2.jpg");
   padding-top: 5rem;
+  background-attachment: fixed;
 }
 @media (min-width: 1200px) {
   .personnel {
@@ -2789,6 +2805,7 @@ header {
   background-image: url("../images/partner-bg.png");
   padding-top: 7rem;
   padding-bottom: 10rem;
+  background-attachment: fixed;
 }
 .partner-main {
   width: 100%;
@@ -2869,6 +2886,7 @@ section {
 .service-details {
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 .service-details__main {
   width: 100%;
@@ -4287,6 +4305,7 @@ section {
 }
 
 .blog-details {
+  /* background-attachment: fixed !important; */
   background: url("../images/bg-12.jpg"), #dbdbdb;
   background-size: contain;
   background-repeat: no-repeat;
