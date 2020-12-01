@@ -5260,23 +5260,19 @@ section {
 }
 .contact .submit input {
   border-radius: 999px;
-  border: none;
-  color: white;
-  font-size: 2.5rem;
-  font-family: "UTMAvoBold";
-  background-size: 200% auto;
-  background-image: -o-linear-gradient(left, #447cf6 0%, #5bcdfa 51%, #2d5eff 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(#447cf6), color-stop(51%, #5bcdfa), to(#2d5eff));
-  background-image: linear-gradient(to right, #447cf6 0%, #5bcdfa 51%, #2d5eff 100%);
-  -webkit-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 7px rgba(59, 97, 222, 0.388);
-          box-shadow: 0px 0px 7px rgba(59, 97, 222, 0.388);
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    font-family: "UTMAvoBold";
+    background-size: 200% auto;
+    background: url(../images/icon-30.png) no-repeat 23rem center;
+    background: url(../images/icon-30.png) no-repeat 23rem center, linear-gradient(to right, #5f8beb 0%, #5bcdfa 80%) center center;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 7px rgba(59, 97, 222, 0.388);
+    box-shadow: 0px 0px 7px rgba(59, 97, 222, 0.388);
 }
 .contact .submit input:hover {
-  background-position: right center;
+  background: url(../images/icon-30.png) no-repeat 23rem center, linear-gradient(to right, #477de1 0%, #3fb2e0 80%);
 }
 @media only screen and (max-width: 1600px) {
   .contact__main h3 {
@@ -5302,6 +5298,7 @@ section {
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
+  transition: .2s all ease;
 }
 
 #button:hover {
@@ -5312,7 +5309,9 @@ section {
   opacity: 1;
   visibility: visible;
 }
-
+#button:hover {
+  transform: translateY(-7px);
+}
 .show {
   opacity: 1;
   visibility: visible;
