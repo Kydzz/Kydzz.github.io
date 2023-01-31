@@ -15,8 +15,13 @@
       display: block;
       width: 100%;
     }
-    button {
+    .btn {
+      display: flex;
+      align-items: center;
       margin: 10px 0;
+    }
+    .btn button {
+      margin-right: 20px;
     }
   </style>
 </head>
@@ -26,7 +31,11 @@
     <input type="number" name="min" id="min" value="0">
     <label for="max">Max</label>
     <input type="number" name="max" id="max" value="200">
-    <button type="submit">Generate</button>
+    <div class="btn">
+      <button type="submit">Generate</button>
+      <p class="count">Count: 0</p>
+    </div>
+    
     <textarea name="result" id="result" cols="30" rows="10"></textarea>
   </form>
 
@@ -36,10 +45,13 @@
     let min = document.querySelector('#min');
     let max = document.querySelector('#max')
     let button = document.querySelector('button')
+    let count = document.querySelector('.count')
+    let s = 1
 
     function getRandomArbitrary(min, max) {
       let a = Math.floor((Math.random() * (max - min + 1) + min)/5) * 5
       textarea.innerHTML = a
+      count.innerHTML = "Count: " + s++
     }
 
     button.onclick = () => {
