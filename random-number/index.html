@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Generate</title>
+  <style>
+    form {
+      width: 300px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    label, input {
+      display: block;
+      width: 100%;
+    }
+    button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <form action="javascript:void(0)">
+    <label for="min">Min</label>
+    <input type="number" name="min" id="min" value="0">
+    <label for="max">Max</label>
+    <input type="number" name="max" id="max" value="200">
+    <button type="submit">Generate</button>
+    <textarea name="result" id="result" cols="30" rows="10"></textarea>
+  </form>
+
+  <script>
+    
+    let textarea = document.querySelector('textarea')
+    let min = document.querySelector('#min');
+    let max = document.querySelector('#max')
+    let button = document.querySelector('button')
+
+    function getRandomArbitrary(min, max) {
+      let a = Math.floor(Math.random() * (max - min + 1) + min)
+      textarea.innerHTML = a
+    }
+
+    button.onclick = () => {
+      getRandomArbitrary(min.value, max.value)
+    }
+  </script>
+</body>
+</html>
