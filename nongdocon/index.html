@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg">
-  <div class="py-32 mx-16 h-full w-full">
+  <div class="py-32 md:mx-16 h-full w-full">
     <div class="flex">
       <div class="col-1 flex flex-col pointer-events-auto relative">
         <div class="mx-auto">
@@ -52,7 +52,7 @@
         <!-- form -->
         <!-- gender -->
         <div class="md:w-1/4 w-3/4">
-          <select id="gender" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+          <select id="gender" class="p-4 md:p-2 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
             <option selected disabled value="">Giới tính</option>
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
@@ -61,7 +61,7 @@
 
         <!-- age -->
         <div class="md:w-1/4 w-3/4">
-          <select id="age" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+          <select id="age" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
             <option selected disabled value="">Tuổi</option>
             <option value="16">16</option>
             <option value="17">17</option>
@@ -94,7 +94,7 @@
         <!-- weight -->
         <div class="flex items-center">
           <div class="md:w-1/4 w-3/4">
-            <select id="weight" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <select id="weight" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
               <option selected disabled value="">Cân nặng</option>
               <option value="30">30</option>
               <option value="31">31</option>
@@ -140,7 +140,7 @@
         <!-- height -->
         <div class="flex items-center">
           <div class="md:w-1/4 w-3/4">
-            <select id="height" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <select id="height" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
               <option selected disabled value="">Chiều cao</option>
             </select>
           </div>
@@ -149,7 +149,7 @@
 
         <!-- type of drink -->
         <div class="md:w-1/4 w-3/4">
-          <select onchange="handleChangeType()" id="drink" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+          <select onchange="handleChangeType()" id="drink" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
             <option selected value="beer">Bia</option>
             <option value="alcohol">Rượu</option>
           </select>
@@ -157,7 +157,7 @@
 
         <!-- type of beer -->
         <div class="md:w-1/4 w-3/4" id="beer">
-          <select id="beerSelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+          <select id="beerSelect" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
             <option selected disabled value="">Loại bia</option>
             <option value="threethreethree">333</option>
             <option value="heineken250">Heineken 250ml</option>
@@ -173,7 +173,7 @@
         <!-- quatity -->
         <div class="flex items-center" id="quatity">
           <div class="md:w-1/4 w-3/4">
-            <select id="quatitySelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <select id="quatitySelect" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
               <option selected disabled value="">Uống mấy lon</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -200,7 +200,7 @@
 
         <!-- alcohol -->
         <div class="md:w-1/4 w-3/4 hidden" id="alcohol">
-          <select id="alcoholSelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+          <select id="alcoholSelect" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
             <option selected disabled value="">Loại rượu</option>
             <option value="gao">Gạo</option>
             <option value="nep">Nếp</option>
@@ -213,7 +213,7 @@
         <!-- glass -->
         <div class="flex items-center hidden" id="glass">
           <div class="md:w-1/4 w-3/4">
-            <select id="glassSelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <select id="glassSelect" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
               <option selected disabled value="">Loại ly</option>
               <option value="50">50</option>
               <option value="100">100</option>
@@ -228,7 +228,7 @@
         <!-- alcohol quatity -->
         <div class="flex items-center hidden" id="ancolholQuatity">
           <div class="md:w-1/4 w-3/4">
-            <select id="alcolholQuatitySelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <select id="alcolholQuatitySelect" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
               <option selected disabled value="">Uống mấy ly</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -256,7 +256,7 @@
         <!-- minutes -->
         <div class="flex items-center">
           <div class="md:w-1/4 w-3/4">
-            <select id="minutes" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <select id="minutes" class="p-4 md:p-3 my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
               <option selected disabled value="">Uống được mấy phút rồi</option>
               <option value="15">15 phút</option>
               <option value="30">30 phút</option>
