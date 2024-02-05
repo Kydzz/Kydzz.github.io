@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Đo nồng độ cồn</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body class="bg">
@@ -50,18 +51,18 @@
 
         <!-- form -->
         <!-- gender -->
-        <div class="w-1/4">
+        <div class="md:w-1/4 w-3/4">
           <select id="gender" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-            <option selected disabled>Giới tính</option>
+            <option selected disabled value="">Giới tính</option>
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
           </select>
         </div>
 
         <!-- age -->
-        <div class="w-1/4">
+        <div class="md:w-1/4 w-3/4">
           <select id="age" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-            <option selected disabled>Tuổi</option>
+            <option selected disabled value="">Tuổi</option>
             <option value="16">16</option>
             <option value="17">17</option>
             <option value="18">18</option>
@@ -92,9 +93,9 @@
 
         <!-- weight -->
         <div class="flex items-center">
-          <div class="w-1/4">
+          <div class="md:w-1/4 w-3/4">
             <select id="weight" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-              <option selected disabled>Cân nặng</option>
+              <option selected disabled value="">Cân nặng</option>
               <option value="30">30</option>
               <option value="31">31</option>
               <option value="32">32</option>
@@ -138,43 +139,42 @@
         
         <!-- height -->
         <div class="flex items-center">
-          <div class="w-1/4">
+          <div class="md:w-1/4 w-3/4">
             <select id="height" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-              <option selected disabled>Chiều cao</option>
+              <option selected disabled value="">Chiều cao</option>
             </select>
           </div>
           <span class="text-white ml-4">CM</span>
         </div>
 
         <!-- type of drink -->
-        <div class="w-1/4">
-          <select id="drink" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-            <option selected disabled>Đồ uống</option>
-            <option value="male">Bia</option>
-            <option value="female">Rượu</option>
+        <div class="md:w-1/4 w-3/4">
+          <select onchange="handleChangeType()" id="drink" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <option selected value="beer">Bia</option>
+            <option value="alcohol">Rượu</option>
           </select>
         </div>
 
         <!-- type of beer -->
-        <div class="w-1/4">
-          <select id="beer" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-            <option selected disabled>Loại bia</option>
-            <option value="male">333</option>
-            <option value="female">Heineken 250ml</option>
-            <option value="female">Heineken 330ml</option>
-            <option value="female">Heineken 500ml</option>
-            <option value="female">Tiger 330ml</option>
-            <option value="female">Tiger 500ml</option>
-            <option value="female">Huda 330ml</option>
-            <option value="female">Huda 500ml</option>
+        <div class="md:w-1/4 w-3/4" id="beer">
+          <select id="beerSelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <option selected disabled value="">Loại bia</option>
+            <option value="threethreethree">333</option>
+            <option value="heineken250">Heineken 250ml</option>
+            <option value="heineken330">Heineken 330ml</option>
+            <option value="heineken500">Heineken 500ml</option>
+            <option value="tiger330">Tiger 330ml</option>
+            <option value="tiger500">Tiger 500ml</option>
+            <option value="huda330">Huda 330ml</option>
+            <option value="huda500">Huda 500ml</option>
           </select>
         </div>
 
         <!-- quatity -->
-        <div class="flex items-center">
-          <div class="w-1/4">
-            <select id="quatity" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-              <option selected disabled>Uống mấy lon</option>
+        <div class="flex items-center" id="quatity">
+          <div class="md:w-1/4 w-3/4">
+            <select id="quatitySelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+              <option selected disabled value="">Uống mấy lon</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -198,33 +198,88 @@
           <span class="text-white ml-4">LON</span>
         </div>
 
+        <!-- alcohol -->
+        <div class="md:w-1/4 w-3/4 hidden" id="alcohol">
+          <select id="alcoholSelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+            <option selected disabled value="">Loại rượu</option>
+            <option value="gao">Gạo</option>
+            <option value="nep">Nếp</option>
+            <option value="vodka">Vodka</option>
+            <option value="chuoi">Chuối</option>
+            <option value="thapcam">Thập cẩm</option>
+          </select>
+        </div>
+
+        <!-- glass -->
+        <div class="flex items-center hidden" id="glass">
+          <div class="md:w-1/4 w-3/4">
+            <select id="glassSelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+              <option selected disabled value="">Loại ly</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="300">300</option>
+              <option value="400">400</option>
+            </select>
+          </div>
+          <span class="text-white ml-4">LY</span>
+        </div>
+
+        <!-- alcohol quatity -->
+        <div class="flex items-center hidden" id="ancolholQuatity">
+          <div class="md:w-1/4 w-3/4">
+            <select id="alcolholQuatitySelect" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
+              <option selected disabled value="">Uống mấy ly</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="" disabled>Xỉn rồi chọn làm gì nữa</option>
+            </select>
+          </div>
+          <span class="text-white ml-4">LY</span>
+        </div>
+
         <!-- minutes -->
         <div class="flex items-center">
-          <div class="w-1/4">
+          <div class="md:w-1/4 w-3/4">
             <select id="minutes" class="my-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black">
-              <option selected disabled>Uống được mấy phút rồi</option>
-              <option value="1">15 phút</option>
-              <option value="2">30 phút</option>
-              <option value="3">45 phút</option>
-              <option value="4">1 tiếng</option>
-              <option value="5">1 tiếng 15 phút</option>
-              <option value="5">1 tiếng 30 phút</option>
-              <option value="5">1 tiếng 45 phút</option>
-              <option value="5">2 tiếng</option>
-              <option value="5">2 tiếng 15 phút</option>
-              <option value="5">2 tiếng 30 phút</option>
-              <option value="5">2 tiếng 45 phút</option>
-              <option value="5">3 tiếng</option>
-              <option value="5">3 tiếng 15 phút</option>
-              <option value="5">3 tiếng 30 phút</option>
-              <option value="5">3 tiếng 45 phút</option>
-              <option value="5">4 tiếng</option>
-              <option value="5">4 tiếng 15 phút</option>
-              <option value="5">4 tiếng 30 phút</option>
-              <option value="5">4 tiếng 45 phút</option>
-              <option value="5">5 tiếng 15 phút</option>
-              <option value="5">6 tiếng</option>
-              <option value="5">7 tiếng</option>
+              <option selected disabled value="">Uống được mấy phút rồi</option>
+              <option value="15">15 phút</option>
+              <option value="30">30 phút</option>
+              <option value="45">45 phút</option>
+              <option value="60">1 tiếng</option>
+              <option value="75">1 tiếng 15 phút</option>
+              <option value="90">1 tiếng 30 phút</option>
+              <option value="105">1 tiếng 45 phút</option>
+              <option value="120">2 tiếng</option>
+              <option value="135">2 tiếng 15 phút</option>
+              <option value="150">2 tiếng 30 phút</option>
+              <option value="165">2 tiếng 45 phút</option>
+              <option value="180">3 tiếng</option>
+              <option value="195">3 tiếng 15 phút</option>
+              <option value="210">3 tiếng 30 phút</option>
+              <option value="225">3 tiếng 45 phút</option>
+              <option value="240">4 tiếng</option>
+              <option value="255">4 tiếng 15 phút</option>
+              <option value="270">4 tiếng 30 phút</option>
+              <option value="285">4 tiếng 45 phút</option>
+              <option value="300">5 tiếng 15 phút</option>
+              <option value="360">6 tiếng</option>
+              <option value="420">7 tiếng</option>
               <option value="" disabled>Chạy về đi</option>
             </select>
           </div>
@@ -232,8 +287,8 @@
 
         <!-- submit -->
         <div class="flex items-center">
-          <div class="w-1/4">
-            <button class="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+          <div class="md:w-1/4 w-3/4">
+            <button id="submit" class="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
               <span class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Đo
               </span>
@@ -243,6 +298,8 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+  
   <script src="./index.js"></script>
 </body>
 
